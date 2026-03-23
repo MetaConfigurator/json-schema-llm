@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A product available in the inventory or catalog.",
+    "title": "Product",
+    "type": "object",
+    "properties": {
+        "productId": {
+            "description": "Unique identifier for the product",
+            "type": "string"
+        },
+        "name": {
+            "description": "Name of the product",
+            "type": "string"
+        },
+        "description": {
+            "description": "Detailed description of the product",
+            "type": "string"
+        },
+        "price": {
+            "description": "Price of the product",
+            "type": "number"
+        },
+        "currency": {
+            "description": "Currency in which the price is specified",
+            "type": "string"
+        },
+        "inStock": {
+            "description": "Availability status of the product",
+            "type": "boolean"
+        },
+        "createdAt": {
+            "description": "Date and time when the product was created",
+            "type": "string"
+        }
+    },
+    "required": ["productId", "name", "description", "price", "currency", "inStock", "createdAt"]
+}

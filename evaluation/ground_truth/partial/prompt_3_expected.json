@@ -1,0 +1,62 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "An order placed by a customer including customer details and ordered items.",
+    "title": "Order",
+    "type": "object",
+    "properties": {
+        "orderId": {
+            "description": "Unique identifier for the order",
+            "type": "string"
+        },
+        "customer": {
+            "description": "Customer information for the order",
+            "type": "object",
+            "properties": {
+                "customerId": {
+                    "description": "Unique identifier for the customer",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "Email address of the customer",
+                    "type": "string"
+                },
+                "phone": {
+                    "description": "Phone number of the customer",
+                    "type": "string"
+                }
+            },
+            "required": ["customerId", "email", "phone"]
+        },
+        "items": {
+            "description": "List of items included in the order",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "productId": {
+                        "description": "Identifier for the product",
+                        "type": "string"
+                    },
+                    "quantity": {
+                        "description": "Quantity of the product ordered",
+                        "type": "integer"
+                    },
+                    "unitPrice": {
+                        "description": "Price per unit of the product",
+                        "type": "number"
+                    }
+                },
+                "required": ["productId", "quantity", "unitPrice"]
+            }
+        },
+        "orderDate": {
+            "description": "Date and time when the order was placed",
+            "type": "string"
+        },
+        "totalAmount": {
+            "description": "Total amount for the order",
+            "type": "number"
+        }
+    },
+    "required": ["orderId", "customer", "items", "orderDate", "totalAmount"]
+}

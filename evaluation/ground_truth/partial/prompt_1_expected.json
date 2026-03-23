@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A user registration object containing basic user information.",
+    "title": "UserRegistration",
+    "type": "object",
+    "properties": {
+        "userId": {
+            "description": "Unique identifier for the user",
+            "type": "string"
+        },
+        "email": {
+            "description": "Email address of the user",
+            "type": "string"
+        },
+        "age": {
+            "description": "Age of the user",
+            "type": "integer"
+        }
+    },
+    "required": ["userId", "email", "age"]
+}

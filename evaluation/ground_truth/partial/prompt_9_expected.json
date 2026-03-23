@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A patient's medical record in a healthcare system.",
+    "title": "PatientRecord",
+    "type": "object",
+    "properties": {
+        "patientId": {"type": "string"},
+        "name": {"type": "string"},
+        "dateOfBirth": {"type": "string"},
+        "gender": {"type": "string"},
+        "contactInfo": {
+            "type": "object",
+            "properties": {
+                "phone": {"type": "string"},
+                "email": {"type": "string"}
+            },
+            "required": ["phone", "email"]
+        },
+        "medicalHistory": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "condition": {"type": "string"},
+                    "diagnosisDate": {"type": "string"},
+                    "medication": {"type": "string"}
+                },
+                "required": ["condition", "diagnosisDate", "medication"]
+            }
+        },
+        "allergies": {"type": "array", "items": {"type": "string"}},
+        "createdAt": {"type": "string"}
+    },
+    "required": ["patientId", "name", "dateOfBirth", "gender", "contactInfo", "medicalHistory", "createdAt"]
+}

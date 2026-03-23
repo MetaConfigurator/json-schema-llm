@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A sensor reading from an IoT device.",
+    "title": "SensorReading",
+    "type": "object",
+    "properties": {
+        "sensorId": {"type": "string"},
+        "type": {"type": "string"},
+        "value": {"type": "number"},
+        "unit": {"type": "string"},
+        "location": {
+            "type": "object",
+            "properties": {
+                "latitude": {"type": "number"},
+                "longitude": {"type": "number"},
+                "altitude": {"type": "number"}
+            },
+            "required": ["latitude", "longitude", "altitude"]
+        },
+        "timestamp": {"type": "string"}
+    },
+    "required": ["sensorId", "type", "value", "unit", "location", "timestamp"]
+}

@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A payment transaction object capturing payment details and methods.",
+    "title": "PaymentTransaction",
+    "type": "object",
+    "properties": {
+        "transactionId": {
+            "description": "Unique identifier for the transaction",
+            "type": "string"
+        },
+        "amount": {
+            "description": "Amount of money involved in the transaction",
+            "type": "number"
+        },
+        "paymentMethod": {
+            "description": "Method used for the payment (e.g., card, PayPal, bank transfer)",
+            "type": "string"
+        },
+        "cardNumber": {
+            "description": "Credit or debit card number used for payment",
+            "type": "string"
+        },
+        "cvv": {
+            "description": "CVV of the card used for the transaction",
+            "type": "string"
+        },
+        "paypalEmail": {
+            "description": "PayPal email address if PayPal was used",
+            "type": "string"
+        },
+        "iban": {
+            "description": "IBAN if bank transfer was used",
+            "type": "string"
+        },
+        "createdAt": {
+            "description": "Date and time when the transaction was created",
+            "type": "string"
+        }
+    },
+    "required": ["transactionId", "amount", "paymentMethod", "createdAt"]
+}

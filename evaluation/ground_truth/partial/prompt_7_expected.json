@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A post made by a user on a social media platform.",
+    "title": "SocialMediaPost",
+    "type": "object",
+    "properties": {
+        "postId": {"type": "string"},
+        "userId": {"type": "string"},
+        "content": {"type": "string"},
+        "media": {"type": "string"},
+        "likes": {"type": "integer"},
+        "comments": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "userId": {"type": "string"},
+                    "commentText": {"type": "string"}
+                },
+                "required": ["userId", "commentText"]
+            }
+        },
+        "createdAt": {"type": "string"}
+    },
+    "required": ["postId", "userId", "content", "createdAt"]
+}

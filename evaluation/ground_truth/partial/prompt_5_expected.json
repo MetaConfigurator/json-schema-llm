@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "An event message object representing an action or change in the system.",
+    "title": "EventMessage",
+    "type": "object",
+    "properties": {
+        "eventId": {
+            "description": "Unique identifier for the event",
+            "type": "string"
+        },
+        "eventType": {
+            "description": "Type of the event",
+            "type": "string"
+        },
+        "timestamp": {
+            "description": "Date and time when the event occurred",
+            "type": "string"
+        },
+        "payload": {
+            "description": "Details related to the event",
+            "type": "object",
+            "properties": {
+                "userId": {
+                    "description": "Identifier of the user related to the event",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "Email of the user related to the event",
+                    "type": "string"
+                },
+                "role": {
+                    "description": "Role of the user related to the event",
+                    "type": "string"
+                },
+                "reason": {
+                    "description": "Reason for the event, if applicable",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "Current status related to the event",
+                    "type": "string"
+                }
+            },
+            "required": ["userId", "email"]
+        },
+        "metadata": {
+            "description": "Additional metadata associated with the event",
+            "type": "object"
+        }
+    },
+    "required": ["eventId", "eventType", "timestamp", "payload"]
+}
