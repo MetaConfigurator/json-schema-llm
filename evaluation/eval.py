@@ -531,7 +531,7 @@ def evaluate_difficulty(difficulty):
         "keyword_count": keyword_count
         })
 
-        generated_path = f"{EVAL_DIR}/qwen-0.5b-coder-roleprompting/generated_trained/{difficulty}/prompt_{i}_generated.json"
+        generated_path = f"{EVAL_DIR}/generated/qcoder/generated_trained/{difficulty}/prompt_{i}_generated.json"
 
         generated_schema, valid = load_json_safe(
             generated_path
@@ -637,7 +637,7 @@ def evaluate_difficulty(difficulty):
 
 if __name__ == "__main__":
 
-    difficulties = ["easy", "medium","modification", "partial"]
+    difficulties = ["simple", "nested","modification", "partial"]
 
     rows = []
     keyword_count_all_df = pd.DataFrame()

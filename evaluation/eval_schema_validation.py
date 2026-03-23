@@ -14,7 +14,7 @@ from typing import Set, Dict, Any
 from deepdiff import DeepDiff
 
 
-EVAL_DIR = Path("/content/drive/MyDrive/json_generation/evaluation")
+EVAL_DIR = "evaluation"
 
 def remove_markdown_fencing(text: str) -> str:
     """
@@ -73,7 +73,7 @@ def evaluate_difficulty(difficulty):
     for i in range(1, 11):
         print(f"==================================={i}===========================================")
 
-        generated_path = f"{EVAL_DIR}/qwen-0.5b-coder-roleprompting/generated_baseline/{difficulty}/prompt_{i}_generated.json"
+        generated_path = f"{EVAL_DIR}/generated/qcoder/generated_baseline/{difficulty}/prompt_{i}_generated.json"
 
         generated_schema, valid = load_json_safe(
             generated_path
