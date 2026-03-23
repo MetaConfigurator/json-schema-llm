@@ -1,0 +1,1 @@
+The schema describes a collection of devices. It is an object type. The main properties of the schema are: 'deviceIds' is an array of strings that match the regex pattern '^[A-Fa-f\d]{24}$', optional. 'deviceTags' is an array of objects containing properties 'key' and 'value', both of which are strings, optional. No additional properties are allowed at the root level.

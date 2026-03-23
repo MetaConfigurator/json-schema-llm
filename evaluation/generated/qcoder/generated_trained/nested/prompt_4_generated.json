@@ -1,0 +1,92 @@
+{
+  "properties": {
+    "fileignoreconfig": {
+      "description": "List of files that should be ignored by the scanner.",
+      "items": {
+        "properties": {
+          "checksum": {
+            "type": "string"
+          },
+          "filename": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "filename"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "scopeconfig": {
+      "description": "A list of scopes which will be used when scanning.",
+      "items": {
+        "properties": {
+          "scope": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "scope"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "allowed_patterns": {
+      "description": "List of patterns that can be used in keyword matching.",
+      "items": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "type": "array"
+    },
+    "custom_patterns": {
+      "description": "List of custom regex patterns that can be used in keyword matching.",
+      "items": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "type": "array"
+    },
+    "custom_severities": {
+      "description": "List of detectors that can be used in keyword matching.",
+      "items": {
+        "properties": {
+          "detector": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        },
+        "required": [
+          "detector",
+          "severity"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "threshold": {
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "title": "TalismanRC Configuration File Schema",
+  "type": "object"
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Job Application Portal",
+  "description": "A schema to validate the json file.",
+  "type": "object",
+  "properties": {
+    "job_id": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "position_title": {
+      "type": "string"
+    },
+    "salary_range": {
+      "type": "number"
+    },
+    "experience_years": {
+      "type": "integer"
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "application_url": {
+      "type": "string"
+    },
+    "contact_email": {
+      "type": "string"
+    },
+    "contact_phone": {
+      "type": "string"
+    },
+    "contact_address": {
+      "type": "string"
+    },
+    "contact_city": {
+      "type": "string"
+    },
+    "contact_state": {
+      "type": "string"
+    },
+    "contact_zip_code": {
+      "type": "string"
+    },
+    "contact_country": {
+      "type": "string"
+    }
+  }
+}

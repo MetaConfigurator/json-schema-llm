@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Travel Booking System",
+  "type": "object",
+  "properties": {
+    "bookingId": {
+      "type": "string",
+      "description": "Unique identifier for the booking"
+    },
+    "user": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Unique identifier for the user"
+        },
+        "name": {
+          "type": "string",
+          "description": "Full name of the user"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Email address of the user"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number of the user"
+        }
+      },
+      "required": ["userId", "name", "email"]
+    },
+    "tripDetails": {
+      "type": "object",
+      "properties": {
+        "destination": {
+          "type": "string",
+          "description": "Destination of the trip"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Start date of the trip"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date",
+          "description": "End date of the trip"
+        },
+        "travelers": {
+          "type": "integer",
+          "description": "Number of travelers"
+        }
+      },
+      "required": ["destination", "startDate", "endDate", "travelers"]
+    },
+    "payment": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "Total amount for the booking"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency of the payment"
+        },
+        "paymentMethod": {
+          "type": "string",
+          "enum": ["credit_card", "debit_card", "paypal", "bank_transfer"],
+          "description": "Method of payment"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "completed", "failed"],
+          "description": "Payment status"
+        }
+      },
+      "required": ["amount", "currency", "paymentMethod", "status"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["confirmed", "canceled", "pending"],
+      "description": "Booking status"
+    }
+  },
+  "required": ["bookingId", "user", "tripDetails", "payment", "status"]
+}

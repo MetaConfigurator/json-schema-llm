@@ -1,0 +1,52 @@
+```json
+{
+  "config": {
+    "output": "moderate"
+  },
+  "requirements": [
+    {
+      "rule": "cli",
+      "binary": "solidarity-cli",
+      "semver": ">=0.5.0",
+      "version": "latest",
+      "line": "10",
+      "matchIndex": 1,
+      "platform": "darwin",
+      "error": null,
+      "ci": false
+    },
+    {
+      "rule": "dir",
+      "platform": "darwin",
+      "error": null,
+      "ci": false
+    },
+    {
+      "rule": "file",
+      "platform": "darwin",
+      "error": null,
+      "ci": false
+    },
+    {
+      "rule": "env",
+      "platform": "darwin",
+      "error": null,
+      "ci": false
+    },
+    {
+      "rule": "shell",
+      "platform": "darwin",
+      "error": null,
+      "ci": false
+    },
+    {
+      "rule": "custom",
+      "plugin": "solidarity-custom-plugin",
+      "name": "Solidarity Custom Plugin",
+      "platform": "darwin",
+      "error": null,
+      "ci": false
+    }
+  ]
+}
+```

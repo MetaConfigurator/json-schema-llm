@@ -1,0 +1,9 @@
+The schema describes an array of objects. It is an array type. The main properties of the schema are: 
+'items' is an object that contains several properties. 
+'id' is an integer and is required. 
+'display_name' is a string and is required. 
+'rating' is a number and is required. 
+'avg_place' is a number and is required. 
+'games_played' is an integer and is required. 
+'avg_score' is a number and is optional. 
+'winner_zone' is a boolean and is optional. No additional properties are allowed at the root level.

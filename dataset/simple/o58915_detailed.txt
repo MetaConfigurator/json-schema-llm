@@ -1,0 +1,1 @@
+The schema describes a notification system. It is an object type. The main properties of the schema are: 'notification' is an object that includes the properties 'person_id' and 'door_id'. Both 'person_id' and 'door_id' are required integer fields. No additional properties are allowed at the root level.

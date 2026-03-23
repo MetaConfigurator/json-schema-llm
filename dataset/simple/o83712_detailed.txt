@@ -1,0 +1,1 @@
+The schema describes server address and port number. It is an object type. The main properties of the schema are: 'server' is an object that is required and contains properties 'address' and 'port'. 'address' is a string that is required. 'port' is an integer that is required. No additional properties are allowed at the root level.

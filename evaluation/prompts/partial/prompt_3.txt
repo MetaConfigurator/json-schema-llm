@@ -1,0 +1,1 @@
+Design a JSON Schema for an order object containing the properties: orderId, customer, items, orderDate, totalAmount. The customer object should contain: customerId, email, phone. Each entry inside items should contain: productId, quantity, unitPrice.

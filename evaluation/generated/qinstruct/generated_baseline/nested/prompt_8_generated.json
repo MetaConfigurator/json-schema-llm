@@ -1,0 +1,55 @@
+```json
+{
+  "coord": {
+    "lat": 37.812259,
+    "lon": -122.419465
+  },
+  "weather": [
+    {
+      "id": 1001,
+      "main": "Clouds",
+      "description": "Partly cloudy",
+      "icon": "01"
+    }
+  ],
+  "base": "http://api.openweathermap.org/data/2.5/weather",
+  "main": {
+    "temp": 25.5,
+    "feels_like": 24.5,
+    "temp_min": 24.5,
+    "temp_max": 25.5,
+    "pressure": 1013,
+    "humidity": 55,
+    "sea_level": 0,
+    "grnd_level": 0,
+    "wind": {
+      "speed": 1.5,
+      "deg": 0
+    },
+    "clouds": {
+      "all": 0
+    },
+    "dt": 1622344000,
+    "wind": {
+      "speed": 1.5,
+      "deg": 0
+    },
+    "sys": {
+      "type": 1,
+      "id": 1001,
+      "message": "Success",
+      "country": "US",
+      "sunrise": 1622344000,
+      "sunset": 1622344000
+    },
+    "timezone": 0,
+    "id": 1001,
+    "name": "New York City",
+    "cod": 200
+  },
+  "timezone": 0,
+  "id": 1001,
+  "name": "New York City",
+  "cod": 200
+}
+```

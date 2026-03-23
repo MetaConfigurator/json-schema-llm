@@ -1,0 +1,31 @@
+{ 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Crowdin Configuration",
+    "description": "Configuration for Crowdin, a crowd-translation platform.",
+    "type": "object",
+    "properties": {
+        "project_id": {"type": "string", "optional": true},
+        "project_id_env": {"type": "string", "optional": true},
+        "api_token": {"type": "string", "optional": true},
+        "api_token_env": {"type": "string", "optional": true},
+        "base_path": {"type": "string", "optional": true},
+        "base_path_env": {"type": "string", "optional": true},
+        "base_url": {"type": "string", "optional": true},
+        "base_url_env": {"type": "string", "optional": true},
+        "preserve_hierarchy": {"type": "boolean", "optional": true},
+        "commit_message": {"type": "string", "optional": true},
+        "append_commit_message": {"type": "boolean", "optional": true},
+        "export_languages": {"type": ["array"], "items": {"type": "string"}},
+        "files": {"type": "array", "items": {"$ref": "#/definitions/file"}}
+    },
+    "required": ["project_id", "project_id_env", "api_token", "api_token_env"],
+    "additionalProperties": false,
+    "definitions": {
+        "file": {
+            "type": "object",
+            "properties": {
+                "source": {"type": "string"},
+                "translation": {"type": "string"}
+            }
+        }
+    }

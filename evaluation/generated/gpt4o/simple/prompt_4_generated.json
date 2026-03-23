@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "excludeFiles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gitignore": {
+      "type": "string",
+      "enum": ["none", "hide", "exclude"],
+      "default": "hide"
+    },
+    "hideFiles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,32 @@
+{ 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Order",
+    "type": "object",
+    "properties": {
+        "orderId": {"type": "integer", "description": "Unique identifier for the order"},
+        "customer": {
+            "type": "object",
+            "properties": {
+                "customerId": {"type": "integer", "description": "Unique identifier for the customer"},
+                "email": {"type": "string", "format": "email", "description": "Customer's email address"},
+                "phone": {"type": "string", "format": "phone", "description": "Customer's phone number"}
+            },
+            "required": ["customerId", "email", "phone"]
+        },
+        "items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "productId": {"type": "integer", "description": "Product ID"},
+                    "quantity": {"type": "integer", "minimum": 0, "description": "Quantity of the product"},
+                    "unitPrice": {"type": "number", "format": "float", "description": "Unit price of the product"}
+                },
+                "required": ["productId", "quantity", "unitPrice"]
+            }
+        },
+        "orderDate": {"type": "string", "format": "date", "description": "Date the order was placed"}
+        // Add more properties as needed
+    },
+    "required": ["orderId", "customer", "items", "orderDate"] 
+}

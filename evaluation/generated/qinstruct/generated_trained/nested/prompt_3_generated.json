@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Static Web Apps CLI Configuration File",
+  "description": "JSON Schema for the Static Web Apps CLI (SWA CLI) configuration file.",
+  "type": "object",
+  "properties": {
+    "configuration": {
+      "description": "Settings used by the CLI to run and manage a local development environment for static web applications and their APIs.",
+      "allOf": [
+        {
+          "required": [
+            "apiLocation"
+          ]
+        },
+        {
+          "required": [
+            "apiPort"
+          ]
+        },
+        {
+          "required": [
+            "apiPrefix"
+          ]
+        },
+        {
+          "required": [
+            "appArtifactLocation"
+          ]
+        },
+        {
+          "required": [
+            "appLocation"
+          ]
+        },
+        {
+          "required": [
+            "build"
+          ]
+        },
+        {
+          "required": [
+            "customUrlScheme"
+          ]
+        },
+        {
+          "required": [
+            "devserverTimeout"
+          ]
+        },
+        {
+          "required": [
+            "host"
+          ]
+        },
+        {
+          "required": [
+            "overridableErrorCode"
+          ]
+        },
+        {
+          "required": [
+            "port"
+          ]
+        },
+        {
+          "required": [
+            "run"
+          ]
+        },
+        {
+          "required": [
+            "ssl"
+          ]
+        },
+        {
+          "required": [
+            "sslCert"
+          ]
+        },
+        {
+          "required": [
+            "sslKey"
+          ]
+        },
+        {
+          "required": [
+            "swaConfigFilename"
+          ]
+        },
+        {
+          "required": [
+            "swaConfigFilenameLegacy"
+          ]
+        },
+        {
+          "required": [
+            "swaConfigLocation"
+          ]
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "additionalProperties": false,
+      "examples": [
+        {
+          "configuration": {
+            "apiLocation": "/path/to/api",
+            "apiPort": 8080,
+            "apiPrefix": "api",
+            "appArtifactLocation": "/path/to/app/source",
+            "appLocation": "/path/to/app",
+            "build": true,
+            "customUrlScheme": "",
+            "devserverTimeout": 10000,
+            "host": "localhost",
+            "overridableErrorCode": [],
+            "port": 3000,
+            "run": "node ./bin/www",
+            "ssl": true,
+            "sslCert": "/path/to/cert.pem",
+            "sslKey": "/path/to/key.pem",
+            "swaConfigFilename": "staticwebapp.config.json",
+            "swaConfigFilenameLegacy": "routes.json",
+            "swaConfigLocation": "/path/to/config",
+            "verbose": "true"
+          }
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

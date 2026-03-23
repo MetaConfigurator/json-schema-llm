@@ -1,0 +1,1 @@
+The schema describes a user identification mechanism. It is an object type. The main properties of the schema are: 'mbox_sha1sum' is a string representing the SHA-1 sum of an email address, required. 'mbox' is a null value, optional. 'openid' is a null value, optional. 'account' is a null value, optional. No additional properties are allowed at the root level.

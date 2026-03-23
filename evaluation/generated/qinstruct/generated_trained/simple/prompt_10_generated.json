@@ -1,0 +1,25 @@
+{
+  "properties": {
+    "labels": {
+      "description": "Set the labels if first-timers-only is not what you are looking for.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Labels",
+      "type": "array"
+    },
+    "template": {
+      "$ref": "#/definitions/templatePath",
+      "title": "Template Path",
+      "type": "string"
+    },
+    "repository": {
+      "description": "Allows you to specify a different repository than where the problem is.",
+      "title": "Repository",
+      "type": "string"
+    }
+  },
+  "required": [],
+  "title": "Onboarding Bot",
+  "type": "object"
+}

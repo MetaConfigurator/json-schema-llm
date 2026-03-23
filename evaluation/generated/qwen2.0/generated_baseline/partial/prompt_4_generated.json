@@ -1,0 +1,44 @@
+Create a JSON Schema for a payment transaction object with the properties: transactionId, amount, paymentMethod, cardNumber, cvv, paypalEmail, iban, createdAt.蹾
+蹾
+
+{
+  "type": "object",
+  "properties": {
+    "transactionId": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "paymentMethod": {
+      "type": "string"
+    },
+    "cardNumber": {
+      "type": "string"
+    },
+    "cvv": {
+      "type": "string"
+    },
+    "paypalEmail": {
+      "type": "string"
+    },
+    "iban": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "transactionId",
+    "amount",
+    "paymentMethod",
+    "cardNumber",
+    "cvv",
+    "paypalEmail",
+    "iban",
+    "createdAt"
+  ]
+}
+
+蹾

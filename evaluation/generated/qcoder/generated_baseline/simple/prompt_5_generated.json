@@ -1,0 +1,18 @@
+```json
+{
+  "id": "com.example.myextensionpack",
+  "name": "My Extension Pack",
+  "description": "A powerful tool for managing software projects.",
+  "version": "^2.0.0",
+  "extensions": [
+    {
+      "name": "Version Control",
+      "vsixId": "com.example.myextensionpack.versioncontrol"
+    },
+    {
+      "name": "Build Automation",
+      "vsixId": "com.example.myextensionpack.buildautomation"
+    }
+  ]
+}
+```

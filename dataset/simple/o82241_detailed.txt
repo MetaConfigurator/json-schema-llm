@@ -1,0 +1,1 @@
+The schema describes a venue. It is an object type. The main properties of the schema are: 'name' is a string and required. 'language' is a string and optional. 'feiId' is a string and optional. 'rings' is an array of objects, each containing properties: 'ringNO' which is a string and 'name' which is a string. No additional properties are allowed at the root level.

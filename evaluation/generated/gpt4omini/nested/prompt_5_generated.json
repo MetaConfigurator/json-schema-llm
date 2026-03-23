@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "object",
+      "properties": {
+        "output": {
+          "type": "string",
+          "enum": ["moderate", "verbose", "silent"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "requirements": {
+      "type": "object",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/definitions/cli"
+          },
+          {
+            "$ref": "#/definitions/dir"
+          },
+          {
+            "$ref": "#/definitions/file"
+          },
+          {
+            "$ref": "#/definitions/env"
+          },
+          {
+            "$ref": "#/definitions/shell"
+          },
+          {
+            "$ref": "#/definitions/custom"
+          }
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": ["requirements"],
+  "additionalProperties": false,
+  "definitions": {
+    "cli": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "type": "string",
+          "enum": ["cli"]
+        },
+        "binary": {
+          "type": "string"
+        },
+        "semver": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "line": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "matchIndex": {
+          "type": "integer"
+        },
+        "platform": {
+          "type": "string",
+          "enum": ["darwin", "macos", "freebsd", "linux", "sunos", "win32", "windows"]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "required": ["rule", "binary"],
+      "additionalProperties": false
+    },
+    "dir": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "type": "string",
+          "enum": ["dir", "directory"]
+        },
+        "platform": {
+          "type": "string",
+          "enum": ["darwin", "macos", "freebsd", "linux", "sunos", "win32", "windows"]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "required": ["rule"],
+      "additionalProperties": false
+    },
+    "file": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "type": "string",
+          "enum": ["file"]
+        },
+        "platform": {
+          "type": "string",
+          "enum": ["darwin", "macos", "freebsd", "linux", "sunos", "win32", "windows"]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "required": ["rule"],
+      "additionalProperties": false
+    },
+    "env": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "type": "string",
+          "enum": ["env"]
+        },
+        "platform": {
+          "type": "string",
+          "enum": ["darwin", "macos", "freebsd", "linux", "sunos", "win32", "windows"]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "required": ["rule"],
+      "additionalProperties": false
+    },
+    "shell": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "type": "string",
+          "enum": ["shell"]
+        },
+        "platform": {
+          "type": "string",
+          "enum": ["darwin", "macos", "freebsd", "linux", "sunos", "win32", "windows"]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        },
+        "match": {
+          "type": "string"
+        }
+      },
+      "required": ["rule", "match"],
+      "additionalProperties": false
+    },
+    "custom": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "type": "string",
+          "enum": ["custom"]
+        },
+        "plugin": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string",
+          "enum": ["darwin", "macos", "freebsd", "linux", "sunos", "win32", "windows"]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        },
+        "match": {
+          "type": "string"
+        }
+      },
+      "required": ["rule", "plugin", "name"],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,82 @@
+Assistant is a visual studio extension pack manifest. It is an object type. The main properties of the schema are: 'id' is a string that serves as a unique identifier for the assistant and should have a minimum length of 1. 'name' is a string that represents the name of the assistant and should have a minimum length of 1. 'description' is a string providing a short description of the assistant and should have a minimum length of 1. 'version' is a string denoting the version of the assistant, required and must match the pattern '^\\d+\\.\\d+\\.\\d+$'. 'extensions' is an array of extension objects, each object has a 'name' property which is a string with a minimum length of 1 and a 'vsixId' property which is a string with a minimum length of 1,'vsixId' is required. No additional properties are allowed at the root level.涫
+涫extension
+Extension is a visual studio extension pack manifest. It is an object type. The main properties of the schema are: 'id' is a string that serves as a unique identifier for the extension and should have a minimum length of 1. 'name' is a string that represents the name of the extension and should have a minimum length of 1. 'description' is a string providing a short description of the extension and should have a minimum length of 1. 'version' is a string denoting the version of the extension, required and must match the pattern '^\\d+\\.\\d+\\.\\d+$'. 'extensions' is an array of extension objects, each object has a 'name' property which is a string with a minimum length of 1 and a 'vsixId' property which is a string with a minimum length of 1,'vsixId' is required. No additional properties are allowed at the root level.涫
+涫package
+Package is a visual studio extension pack manifest. It is an object type. The main properties of the schema are: 'id' is a string that serves as a unique identifier for the package and should have a minimum length of 1. 'name' is a string that represents the name of the package and should have a minimum length of 1. 'description' is a string providing a short description of the package and should have a minimum length of 1. 'version' is a string denoting the version of the package, required and must match the pattern '^\\d+\\.\\d+\\.\\d+$'. 'extensions' is an array of extension objects, each object has a 'name' property which is a string with a minimum length of 1 and a 'vsixId' property which is a string with a minimum length of 1,'vsixId' is required. No additional properties are allowed at the root level.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsixId
+VSIX ID is a string that identifies the VSIX file associated with this extension pack. It is required and must be unique within the same package.涫
+涫vsix

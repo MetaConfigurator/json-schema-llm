@@ -1,0 +1,69 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "The name of the gaming profile"
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["PC", "PS4", "Xbox One", "Switch"]
+      },
+      "required": true,
+      "description": "An array of platforms supported by the gaming profile"
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "graphics": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether the gaming profile supports graphics"
+        },
+        "sound": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether the gaming profile supports sound"
+        },
+        "input": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether the gaming profile supports input"
+        }
+      },
+      "required": true,
+      "description": "A dictionary of features supported by the gaming profile"
+    },
+    "customization": {
+      "type": "object",
+      "properties": {
+        "theme": {
+          "type": "string",
+          "enum": ["dark", "light"],
+          "default": "dark",
+          "description": "The theme of the gaming profile"
+        },
+        "language": {
+          "type": "string",
+          "enum": ["en", "fr", "es"],
+          "default": "en",
+          "description": "The language of the gaming profile"
+        }
+      },
+      "required": true,
+      "description": "A dictionary of customization options for the gaming profile"
+    }
+  },
+  "required": [
+    "name",
+    "platforms",
+    "features",
+    "customization"
+  ],
+  "additionalProperties": false
+}
+```

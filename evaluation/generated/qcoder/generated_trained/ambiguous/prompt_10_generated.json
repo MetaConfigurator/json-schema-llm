@@ -1,0 +1,258 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Vehicle Registration System",
+  "description": "Schema for a Vehicle Registration System",
+  "type": "object",
+  "properties": {
+    "vehicle_registration_system": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "vehicle_registration_system_name": {
+      "type": "string"
+    },
+    "vehicle_registration_system_version": {
+      "type": "integer"
+    },
+    "vehicle_registration_system_status": {
+      "type": "string"
+    },
+    "vehicle_registration_system_last_updated_at": {
+      "type": "string"
+    },
+    "vehicle_registration_system_created_at": {
+      "type": "string"
+    },
+    "vehicle_registration_system_updated_at": {
+      "type": "string"
+    },
+    "vehicle_registration_system_id": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_id": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_name": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_email": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_password": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_role": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_is_active": {
+      "type": "boolean"
+    },
+    "vehicle_registration_system_user_is_superuser": {
+      "type": "boolean"
+    },
+    "vehicle_registration_system_user_is_staff": {
+      "type": "boolean"
+    },
+    "vehicle_registration_system_user_is_locked_out": {
+      "type": "boolean"
+    },
+    "vehicle_registration_system_user_last_login_at": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_first_name": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_last_name": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_phone_number": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_address1": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_address2": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_city": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_state": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_zip_code": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_country": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_profile_picture_url": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_id": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_name": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_version": {
+      "type": "integer"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_status": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_last_updated_at": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_created_at": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_updated_at": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_id": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_id": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_name": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_email": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_password": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_role": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_is_active": {
+      "type": "boolean"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_is_superuser": {
+      "type": "boolean"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_is_staff": {
+      "type": "boolean"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_is_locked_out": {
+      "type": "boolean"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_last_login_at": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_first_name": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_last_name": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_phone_number": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_address1": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_address2": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_city": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_state": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_zip_code": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_country": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_profile_picture_url": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_id": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_name": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_version": {
+      "type": "integer"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_status": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_last_updated_at": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_created_at": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_updated_at": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_id": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_id": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_name": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_email": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_password": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_role": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_is_active": {
+      "type": "boolean"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_is_superuser": {
+      "type": "boolean"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_is_staff": {
+      "type": "boolean"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_is_locked_out": {
+      "type": "boolean"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_last_login_at": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_first_name": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_last_name": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_phone_number": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_address1": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_address2": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_city": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_state": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_zip_code": {
+      "type": "string"
+    },
+    "vehicle_registration_system_user_default_vehicle_registration_system_user_default_vehicle_registration_system_user_country": {
+      "type": "string"
+    },

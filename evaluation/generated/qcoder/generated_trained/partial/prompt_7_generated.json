@@ -1,0 +1,51 @@
+{
+  "title": "Social Media Post",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "postId": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "integer"
+    },
+    "content": {
+      "type": "string"
+    },
+    "media": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "likes": {
+      "type": "number"
+    },
+    "comments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer"
+          },
+          "commentText": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "postId",
+    "userId",
+    "content",
+    "media",
+    "likes",
+    "comments",
+    "createdAt"
+  ]
+}

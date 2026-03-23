@@ -1,0 +1,37 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "productId": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "inStock": {
+      "type": "boolean"
+    },
+    "createdAt": {
+      "type": "date-time"
+    }
+  },
+  "required": [
+    "productId",
+    "name",
+    "description",
+    "price",
+    "currency",
+    "inStock",
+    "createdAt"
+  ]
+}
+```

@@ -1,0 +1,1 @@
+{ "asset_id": {"type": "string", "required": true}, "description": {"$ref": "#/definitions/description"}, "template_item": {"type": "string", "required": true} }

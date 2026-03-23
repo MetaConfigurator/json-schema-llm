@@ -1,0 +1,26 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "asset_id": {
+      "type": "string"
+    },
+    "description": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "color": {
+          "type": "string"
+        },
+        "translate": {
+          "type": "object",
+          "required": true
+        }
+      }
+    },
+    "template_item": {
+      "type": "string"
+    }
+  }
+}
+```

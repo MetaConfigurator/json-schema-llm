@@ -1,0 +1,24 @@
+The schema describes ParaDrop chute wireless AP configuration. It is an object type. The main properties of the schema are: 
+  'type' is a string that denotes the network type, must be 'wifi' for an AP, and is required. It must match the pattern 'wifi'. 
+  'intfName' is a string representing the name of the network interface inside the chute, and is required. It must match the pattern '[a-z][a-z0-9]*'. 
+  'mode' is a string that indicates the WiFi interface mode, required, and must match the pattern 'ap'. 
+  'dhcp' is an object for DHCP server configuration, which is optional. It contains: 
+    - 'leasetime' is a string describing the duration of client leases (e.g., 2h). 
+    - 'limit' is an integer that defines the size of the address range, starting at a minimum of 1. 
+    - 'start' is an integer indicating the starting offset for address assignment, starting at a minimum of 0. 
+    - 'relay' is a string representing the address of a DHCP server if this server will be acting as a relay agent (experimental). 
+  'ipv4_network' is a string for requesting a specific IP network in slash notation, which is optional. 
+  'ssid' is a string defining the ESSID to broadcast, with a maximum length of 32, and is optional. 
+  'key' is a string representing the password required from clients to connect, with a minimum length of 8, and is optional. 
+  'options' is an object for additional options to pass to the AP, which is optional. It includes: 
+    - 'nasid' is a string for NAS ID for RADIUS. 
+    - 'acct_server' is a string for the RADIUS accounting server. 
+    - 'acct_secret' is a string for the RADIUS accounting secret. 
+    - 'acct_interval' is an integer indicating the RADIUS accounting update interval (seconds), starting at a minimum of 1. 
+    - 'hidden' is a boolean that disables broadcasting the ESSID in beacons. 
+    - 'isolate' is a boolean that disables forwarding traffic between connected clients. 
+    - 'maxassoc' is an integer for the maximum number of associated clients. 
+  'dns' is an array of strings representing a list of DNS servers to advertise to connected clients, which is optional. 
+  'l3bridge' is a string for bridging to another network using ARP proxying (experimental), which is optional. 
+  'requests' is an object for hardware features required by the chute when assigning a physical interface, which is optional and contains: 
+    - 'hwmode' is a string for required operating mode with allowed values: '11b', '11g', '11a'. No additional properties are allowed at the root level.

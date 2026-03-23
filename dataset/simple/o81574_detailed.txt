@@ -1,0 +1,1 @@
+The schema describes a data structure requiring a specific array of tags. It is an object type. The main properties of the schema are: 'tags' is an array that must contain between 2 and 4 string items, with no additional items allowed. The 'tags' property is required. No additional properties are allowed at the root level.

@@ -1,0 +1,13 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "imports": {
+      "type": "object"
+    },
+    "scopes": {
+      "type": "object"
+    }
+  }
+}
+```

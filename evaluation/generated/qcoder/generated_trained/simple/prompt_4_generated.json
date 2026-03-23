@@ -1,0 +1,32 @@
+{
+  "properties": {
+    "excludeFiles": {
+      "description": "Indicates which files should be completely unavailable to guests when shared (e.g. secrets).",
+      "items": {
+        "type": "string"
+      },
+      "title": "Exclude Files",
+      "type": "array"
+    },
+    "gitignore": {
+      "default": "hide",
+      "enum": [
+        "none",
+        "hide",
+        "exclude"
+      ],
+      "title": "Git Ignore",
+      "type": "string"
+    },
+    "hideFiles": {
+      "description": "Indicates which files should be hidden from guest's file trees, but still accessible.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Hide Files",
+      "type": "array"
+    }
+  },
+  "title": "Visual Studio Live Share File Settings",
+  "type": "object"
+}

@@ -1,0 +1,120 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "app_id": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "A string exactly five characters long representing the application identifier."
+    },
+    "api_token": {
+      "type": "string",
+      "maxLength": 32,
+      "description": "A string exactly thirty-two characters long representing a hexadecimal API token."
+    },
+    "ndk_enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables native crash capture and documents that the default behavior is false."
+    },
+    "sdk_config": {
+      "type": "object",
+      "required": [
+        "app"
+      ],
+      "properties": {
+        "report_disk_usage": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether disk usage collection is enabled."
+        },
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Controls whether the SDK connects to the uncaught exception handler."
+        },
+        "capture_request_content_length": {
+          "type": "boolean",
+          "default": true,
+          "description": "An array of unique string items with at least one entry representing regular expression patterns used to exclude URLs from capture."
+        },
+        "enable_native_monitoring": {
+          "type": "boolean",
+          "default": true,
+          "description": "A boolean indicating whether the SDK connects to the uncaught exception handler."
+        },
+        "trace_id_header": {
+          "type": "string",
+          "default": "X-Crash-Id",
+          "description": "The header name used for trace IDs."
+        }
+      }
+    },
+    "session": {
+      "type": "object",
+      "required": [
+        "async_end",
+        "max_session_seconds"
+      ],
+      "properties": {
+        "async_end": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically ends the session."
+        },
+        "max_session_seconds": {
+          "type": "integer",
+          "minimum": 60,
+          "description": "Maximum number of seconds allowed for automatic session termination."
+        }
+      }
+    },
+    "startup_moment": {
+      "type": "boolean",
+      "default": true,
+      "description": "Automatically ends the moment."
+    },
+    "taps": {
+      "type": "object",
+      "required": [
+        "capture_coordinates",
+        "webview"
+      ],
+      "properties": {
+        "capture_coordinates": {
+          "type": "boolean",
+          "default": true,
+          "description": "Captures tap coordinates."
+        },
+        "webview": {
+          "type": "boolean",
+          "default": true,
+          "description": "Captures web view data."
+        }
+      }
+    },
+    "webView": {
+      "type": "object",
+      "required": [
+        "capture_query_params",
+        "enable"
+      ],
+      "properties": {
+        "capture_query_params": {
+          "type": "boolean",
+          "default": true,
+          "description": "Query parameter capture has no effect if web view monitoring is disabled."
+        },
+        "enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Controls web view data capture."
+        }
+      }
+    }
+  },
+  "title": "Embrace Mobile Monitoring SDK Configuration File",
+  "description": "This schema defines a configuration object for the Embrace mobile monitoring SDK.",
+  "schemaIdUrl": "https://raw.githubusercontent.com/embraceio/monitor-sdk/master/schema/v1.0.0.json"
+}
+```

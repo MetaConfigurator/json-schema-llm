@@ -1,0 +1,1 @@
+The schema describes an authentication negotiate policy binding for an authentication server. It is an object type. The main properties of the schema are: 'activepolicy' is an integer that is readonly. 'boundto' is a string that is optional. 'name' is a string that is optional. 'priority' is an integer that is readonly. No additional properties are allowed at the root level.

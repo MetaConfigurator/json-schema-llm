@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "eventId": {
+      "type": "string",
+      "description": "A unique identifier for the event."
+    },
+    "eventType": {
+      "type": "string",
+      "description": "The type of event being described."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The ISO 8601 formatted timestamp of when the event occurred."
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The unique identifier of the user related to the event."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The email address of the user."
+        },
+        "role": {
+          "type": "string",
+          "description": "The role of the user in the system."
+        },
+        "reason": {
+          "type": "string",
+          "description": "The reason for the event."
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the event."
+        }
+      },
+      "required": ["userId"]
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional metadata related to the event.",
+      "additionalProperties": true
+    }
+  },
+  "required": ["eventId", "eventType", "timestamp", "payload"]
+}

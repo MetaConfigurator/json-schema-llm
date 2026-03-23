@@ -1,0 +1,6 @@
+The schema describes a collection of game-related data as an array type. The main properties of the schema are: 
+'id' is a string and is required. 
+'scores' is an object and is required, comprising properties 'red', 'blue', and 'green', each of type number. 
+'victory_points' is an object and is required, with properties 'red', 'blue', and 'green', each of type number. 
+'skirmishes' is an array and is required, containing items that are objects. Each skirmish object has an 'id' of type number and is required, a 'scores' property which is an object (with properties 'red', 'blue', and 'green', each of type number) and is required, and a 'map_scores' property which is an array and is required. Each map_scores item is an object that contains a 'type' (a string) and 'scores' (an object with properties 'red', 'blue', and 'green', each of type number) and both are required. 
+'maps' is an array and is required, with items that are objects. Each map object has an 'id' (a number) which is required, a 'type' (a string) which is required, and 'scores' (an object with properties 'red', 'blue', and 'green', each of type number) which is also required. No additional properties are allowed at the root level.

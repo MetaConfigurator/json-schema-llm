@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "object",
+      "properties": {
+        "output": {
+          "enum": [
+            "moderate",
+            "verbose",
+            "silent"
+          ]
+        },
+        "requirements": {
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "minProperties": 1,
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "config"
+  ],
+  "additionalProperties": false,
+  "title": "Solidarity JSON Checker Configuration",
+  "description": "A configuration file for the Solidarity JSON checker.",
+  "examples": [
+    {
+      "rules": [
+        {
+          "rule": "cli",
+          "binary": "node",
+          "semver": "v0.1.0",
+          "version": "0.1.0",
+          "line": 1,
+          "matchIndex": 1,
+          "platform": "darwin",
+          "error": "Invalid version number",
+          "ci": true
+        },
+        {
+          "rule": "dir",
+          "platform": "darwin",
+          "error": "Invalid platform name",
+          "ci": true
+        },
+        {
+          "rule": "file",
+          "platform": "darwin",
+          "error": "Invalid platform name",
+          "ci": true
+        },
+        {
+          "rule": "env",
+          "platform": "darwin",
+          "error": "Invalid platform name",
+          "ci": true
+        },
+        {
+          "rule": "shell",
+          "platform": "darwin",
+          "error": "Invalid platform name",
+          "ci": true
+        },
+        {
+          "rule": "custom",
+          "plugin": "my-plugin",
+          "name": "My Plugin",
+          "platform": "darwin",
+          "error": "Invalid plugin name",
+          "ci": true
+        }
+      ]
+    }
+  ]
+}

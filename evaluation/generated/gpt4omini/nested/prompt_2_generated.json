@@ -1,0 +1,164 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "project_id": {
+      "type": "string"
+    },
+    "project_id_env": {
+      "type": "string"
+    },
+    "api_token": {
+      "type": "string"
+    },
+    "api_token_env": {
+      "type": "string"
+    },
+    "base_path": {
+      "type": "string"
+    },
+    "base_path_env": {
+      "type": "string"
+    },
+    "base_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "base_url_env": {
+      "type": "string"
+    },
+    "preserve_hierarchy": {
+      "type": "boolean"
+    },
+    "commit_message": {
+      "type": "string"
+    },
+    "append_commit_message": {
+      "type": "boolean"
+    },
+    "export_languages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "translation": {
+            "type": "string"
+          },
+          "ignore": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "translation_replace": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "excluded_target_languages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scheme": {
+            "type": "string"
+          },
+          "dest": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "update_option": {
+            "type": "string",
+            "enum": ["update_as_unapproved", "update_without_changes"]
+          },
+          "translate_content": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+          },
+          "translate_attributes": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+          },
+          "content_segmentation": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+          },
+          "translatable_elements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "skip_untranslated_strings": {
+            "type": "boolean"
+          },
+          "skip_untranslated_files": {
+            "type": "boolean"
+          },
+          "export_only_approved": {
+            "type": "boolean"
+          },
+          "escape_quotes": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 3,
+            "default": 3
+          },
+          "escape_special_characters": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+          },
+          "first_line_contains_header": {
+            "type": "boolean"
+          },
+          "languages_mapping": {
+            "type": "object",
+            "properties": {
+              "two_letters_code": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "android_code": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

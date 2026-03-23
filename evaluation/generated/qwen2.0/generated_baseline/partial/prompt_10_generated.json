@@ -1,0 +1,50 @@
+Create a JSON Schema for a portfolio object with: portfolioId, ownerId, assets (an object with properties type, symbol, quantity, currentValue), totalValue, createdAt.蹾
+蹾
+
+Assistant: {
+  "type": "object",
+  "properties": {
+    "portfolioId": {
+      "type": "string"
+    },
+    "ownerId": {
+      "type": "string"
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "currentValue": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "type",
+        "symbol",
+        "quantity",
+        "currentValue"
+      ]
+    },
+    "totalValue": {
+      "type": "number"
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "portfolioId",
+    "ownerId",
+    "assets",
+    "totalValue",
+    "createdAt"
+  ]
+}

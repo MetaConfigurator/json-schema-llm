@@ -1,0 +1,1 @@
+Create a JSON Schema for an order object with: orderId, customerId, items (productId, quantity, price), shippingAddress (street, city, zip), orderDate, status.

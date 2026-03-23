@@ -1,0 +1,8 @@
+The schema describes a Google form driven interview's answer. It is an object type. The main properties of the schema are: 
+'createdOn' is a string in date-time format. It is required. 
+'doc_type' is a string with a pattern that must match '^answer$'. It is required. 
+'interviewId' is a string that describes an answer belongs to an interview. It is required. 
+'itemType' is a string with allowed values: 'CHECKBOX', 'DATE', 'DATETIME', 'DURATION', 'LIST', 'MULTIPLE_CHOICE', 'PARAGRAPH_TEXT', 'SCALE', 'TEXT', 'TIME'. It is required. 
+'reason' is a string with allowed values: 'burial', 'suspect'. It is required. 
+'result' is a string. It is required. 
+'title' is a string. It is required. No additional properties are allowed at the root level.

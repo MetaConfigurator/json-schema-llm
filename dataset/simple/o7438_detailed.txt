@@ -1,0 +1,1 @@
+The schema describes the format for displaying boolean values. It is an object type. The main properties of the schema are: 'TrueText' is a string for the text displayed for the true value, with a default value of 'True'. 'FalseText' is a string for the text displayed for the false value, with a default value of 'False'. No additional properties are allowed at the root level.

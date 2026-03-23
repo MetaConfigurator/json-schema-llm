@@ -1,0 +1,1 @@
+The schema describes a representation of a unit of the Service. It is an object type. The main properties of the schema are: '$schema-location' is an enum that specifies allowed values as 'Service-Unit-Schema.json'. It is required. 'id' is a string that is also required. No additional properties are allowed at the root level.

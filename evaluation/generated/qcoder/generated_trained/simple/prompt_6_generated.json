@@ -1,0 +1,20 @@
+{
+  "properties": {
+    "strictSSL": {
+      "default": true,
+      "description": "Whether strict SSL should be enabled.",
+      "type": "boolean"
+    },
+    "proxy": {
+      "description": "Any standard http-proxy supported by the request package",
+      "format": "uri",
+      "type": "string"
+    },
+    "token": {
+      "description": "An OAuth token used to increase GitHub API rate limits.",
+      "type": "string"
+    }
+  },
+  "title": "tsdrc config",
+  "type": "object"
+}

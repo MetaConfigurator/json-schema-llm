@@ -1,0 +1,1 @@
+The schema describes an Object. It is an object type. The main properties of the schema are: 'link' is an object that contains properties for 'url' and 'title'. The 'url' property is required and is of type string. The 'title' property is optional and is also of type string. No additional properties are allowed at the root level.

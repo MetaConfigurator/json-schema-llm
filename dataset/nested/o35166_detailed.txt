@@ -1,0 +1,18 @@
+The schema describes an Electronic Mail Message. It is an object type. It defines several reusable components under 'definitions': 
+
+'body' is an object, which contains a required field 'text' (a string) and an optional field 'html' (a string). 
+
+'from' is an object that contains optional fields 'address' (a string, formatted as an email) and 'name' (a string). 
+
+'subject' is a string, which describes the email's subject. 
+
+'to' is an object that contains a required field 'address' (a string, formatted as an email) and an optional field 'name' (a string). 
+
+The main properties of the schema are: 
+
+'body' is a referenced object from the 'definitions/body'. 
+'from' is a referenced object from the 'definitions/from'. 
+'subject' is a referenced string from the 'definitions/subject'. 
+'to' is a referenced object from the 'definitions/to'. 
+
+The schema requires 'subject', 'body', and 'to'. No additional properties are allowed at the root level.

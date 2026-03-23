@@ -1,0 +1,51 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "vehicleRegistrationNumber": {
+      "type": "string",
+      "required": true,
+      "description": "A unique identifier for the vehicle registration system"
+    },
+    "registrationDate": {
+      "type": "date",
+      "required": true,
+      "description": "The date when the vehicle was registered"
+    },
+    "make": {
+      "type": "string",
+      "required": true,
+      "description": "The make of the vehicle"
+    },
+    "model": {
+      "type": "string",
+      "required": true,
+      "description": "The model of the vehicle"
+    },
+    "year": {
+      "type": "number",
+      "required": true,
+      "description": "The year the vehicle was registered"
+    },
+    "color": {
+      "type": "string",
+      "required": true,
+      "description": "The color of the vehicle"
+    },
+    "licensePlate": {
+      "type": "string",
+      "required": true,
+      "description": "The license plate number of the vehicle"
+    }
+  },
+  "required": [
+    "vehicleRegistrationNumber",
+    "registrationDate",
+    "make",
+    "model",
+    "year",
+    "color",
+    "licensePlate"
+  ]
+}
+```

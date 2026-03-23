@@ -1,0 +1,1 @@
+The schema describes an image object. It is an object type. The main properties of the schema are: 'h' is a number representing the Image Height. 'w' is a number representing the Image Width. 'id' is a string representing the Image ID. 'p' is a string representing the Image name. 'u' is a string representing the Image path. No additional properties are allowed at the root level.

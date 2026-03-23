@@ -1,0 +1,340 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "patient": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "dateOfBirth": {
+          "type": "string"
+        }
+      }
+    },
+    "hospital": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "phoneNumbers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "emergencyContact": {
+          "type": "string"
+        },
+        "specialist": {
+          "type": "string"
+        },
+        "diagnosis": {
+          "type": "string"
+        },
+        "symptoms": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "department": {
+          "type": "string"
+        },
+        "specialists": {
+          "type": "array",
+          "items": {}
+        },
+        "patients": {
+          "type": "array",
+          "items": {}
+        },
+        "labResults": {
+          "type": "array",
+          "items": {}
+        },
+        "radiologyResults": {
+          "type": "array",
+          "items": {}
+        },
+        "testResults": {
+          "type": "array",
+          "items": {}
+        },
+        "medicalHistory": {
+          "type": "array",
+          "items": {}
+        },
+        "history": {
+          "type": "array",
+          "items": {}
+        },
+        "currentSymptoms": {
+          "type": "array",
+          "items": {}
+        },
+        "pastSymptoms": {
+          "type": "array",
+          "items": {}
+        },
+        "previousDiagnoses": {
+          "type": "array",
+          "items": {}
+        },
+        "precautions": {
+          "type": "array",
+          "items": {}
+        },
+        "advice": {
+          "type": "array",
+          "items": {}
+        },
+        "medication": {
+          "type": "array",
+          "items": {}
+        },
+        "dietaryRestrictions": {
+          "type": "array",
+          "items": {}
+        },
+        "comorbidities": {
+          "type": "array",
+          "items": {}
+        },
+        "familyHistory": {
+          "type": "array",
+          "items": {}
+        },
+        "lifestyle": {
+          "type": "array",
+          "items": {}
+        },
+        "healthPromotionPlan": {
+          "type": "array",
+          "items": {}
+        },
+        "physicalActivityLevel": {
+          "type": "number"
+        },
+        "weight": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        },
+        "BMI": {
+          "type": "number"
+        },
+        "heartRate": {
+          "type": "number"
+        },
+        "bloodPressure": {
+          "type": "number"
+        },
+        "systolicBloodPressure": {
+          "type": "number"
+        },
+        "diastolicBloodPressure": {
+          "type": "number"
+        },
+        "hypertension": {
+          "type": "boolean"
+        },
+        "hypertensiveRiskScore": {
+          "type": "number"
+        },
+        "hypertensiveRiskCategory": {
+          "type": "string"
+        },
+        "hypertensiveRiskFactor": {
+          "type": "array",
+          "items": {}
+        },
+        "hypertensiveTreatment": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditions": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsHistory": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsPrecautions": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsAdvises": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsMedications": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsDietaryRestrictions": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsLifestyle": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsHealthPromotionPlan": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsPhysicalActivityLevel": {
+          "type": "number"
+        },
+        "chronicConditionsWeight": {
+          "type": "number"
+        },
+        "chronicConditionsHeight": {
+          "type": "number"
+        },
+        "chronicConditionsBMI": {
+          "type": "number"
+        },
+        "chronicConditionsHeartRate": {
+          "type": "number"
+        },
+        "chronicConditionsBloodPressure": {
+          "type": "number"
+        },
+        "chronicConditionsSystolicBloodPressure": {
+          "type": "number"
+        },
+        "chronicConditionsDiastolicBloodPressure": {
+          "type": "number"
+        },
+        "chronicConditionsHypertension": {
+          "type": "boolean"
+        },
+        "chronicConditionsHypertensiveRiskScore": {
+          "type": "number"
+        },
+        "chronicConditionsHypertensiveRiskCategory": {
+          "type": "string"
+        },
+        "chronicConditionsHypertensiveRiskFactor": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsHypertensiveTreatment": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditions": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsPrecautions": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsAdvises": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsMedications": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsDietaryRestrictions": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsLifestyle": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsHealthPromotionPlan": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsPhysicalActivityLevel": {
+          "type": "number"
+        },
+        "chronicConditionsChronicConditionsWeight": {
+          "type": "number"
+        },
+        "chronicConditionsChronicConditionsHeight": {
+          "type": "number"
+        },
+        "chronicConditionsChronicConditionsBMI": {
+          "type": "number"
+        },
+        "chronicConditionsChronicConditionsHeartRate": {
+          "type": "number"
+        },
+        "chronicConditionsChronicConditionsBloodPressure": {
+          "type": "number"
+        },
+        "chronicConditionsChronicConditionsSystolicBloodPressure": {
+          "type": "number"
+        },
+        "chronicConditionsChronicConditionsDiastolicBloodPressure": {
+          "type": "number"
+        },
+        "chronicConditionsHypertension": {
+          "type": "boolean"
+        },
+        "chronicConditionsHypertensiveRiskScore": {
+          "type": "number"
+        },
+        "chronicConditionsHypertensiveRiskCategory": {
+          "type": "string"
+        },
+        "chronicConditionsHypertensiveRiskFactor": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsHypertensiveTreatment": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsAdvises": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsMedications": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsDietaryRestrictions": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsLifestyle": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsHealthPromotionPlan": {
+          "type": "array",
+          "items": {}
+        },
+        "chronicConditionsChronicConditionsPhysicalActivityLevel": {
+          "type": "number"
+        },
+        "chronicConditionsChronicConditionsWeight": {
+          "type": "number"
+        },
+        "chronicConditionsChronicConditionsHeight": {
+          "type

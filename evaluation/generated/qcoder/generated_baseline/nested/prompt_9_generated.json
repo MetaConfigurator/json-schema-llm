@@ -1,0 +1,46 @@
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/django/djlint/master/schema.json",
+  "blank_line_after_tag": "always",
+  "blank_line_before_tag": "always",
+  "close_void_tags": true,
+  "css": {
+    "beautify": {
+      "indent": 4
+    }
+  },
+  "custom_blocks": "",
+  "custom_html": "",
+  "exclude": "",
+  "extend_exclude": "",
+  "extension": "",
+  "files": [],
+  "format_attribute_template_tags": false,
+  "format_css": true,
+  "format_js": true,
+  "ignore": "",
+  "ignore_blocks": "",
+  "ignore_case": false,
+  "include": "",
+  "indent": 2,
+  "js": {
+    "beautify": {
+      "indent": 4
+    }
+  },
+  "line_break_after_multiline_tag": true,
+  "linter_output_format": "json",
+  "max_attribute_length": 100,
+  "max_blank_lines": 5,
+  "max_line_length": 100,
+  "no_function_formatting": false,
+  "no_line_after_yaml": false,
+  "no_set_formatting": false,
+  "per_file_ignores": {},
+  "preserve_blank_lines": true,
+  "preserve_leading_space": true,
+  "profile": "html",
+  "require_pragma": false,
+  "use_gitignore": false
+}
+```

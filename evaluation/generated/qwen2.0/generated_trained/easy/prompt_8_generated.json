@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "minecraft-data-pack-config",
+  "type": "object",
+  "properties": {
+    "asset_id": {
+      "type": "string"
+    },
+    "description": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "object",
+          "properties": {
+            "red": {
+              "type": "number"
+            },
+            "green": {
+              "type": "number"
+            },
+            "blue": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "red",
+            "green",
+            "blue"
+          ]
+        },
+        "translate": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            },
+            "z": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "z"
+          ]
+        }
+      },
+      "required": [
+        "color",
+        "translate"
+      ]
+    },
+    "template_item": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "asset_id",
+    "description",
+    "template_item"
+  ]
+}

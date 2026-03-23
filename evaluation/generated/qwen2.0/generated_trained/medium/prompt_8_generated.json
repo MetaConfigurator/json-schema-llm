@@ -1,0 +1,460 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "OpenWeather Current Weather Data API Response",
+  "description": "Response from the OpenWeather Current Weather Data API from https://openweathermap.org/current.",
+  "type": "object",
+  "properties": {
+    "coord": {
+      "type": "object",
+      "required": [
+        "lat",
+        "lon"
+      ],
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        }
+      }
+    },
+    "weather": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "main",
+          "description",
+          "icon"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "main": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "base": {
+      "type": "string"
+    },
+    "main": {
+      "type": "object",
+      "required": [
+        "temp",
+        "feels_like",
+        "temp_min",
+        "temp_max",
+        "pressure",
+        "humidity",
+        "sea_level",
+        "grnd_level"
+      ],
+      "properties": {
+        "temp": {
+          "type": "number"
+        },
+        "feels_like": {
+          "type": "number"
+        },
+        "temp_min": {
+          "type": "number"
+        },
+        "temp_max": {
+          "type": "number"
+        },
+        "pressure": {
+          "type": "number"
+        },
+        "humidity": {
+          "type": "number"
+        },
+        "sea_level": {
+          "type": "number"
+        },
+        "grnd_level": {
+          "type": "number"
+        }
+      }
+    },
+    "base_time": {
+      "type": "number"
+    },
+    "base_date": {
+      "type": "number"
+    },
+    "base_time_zone": {
+      "type": "integer"
+    },
+    "base_visibility": {
+      "type": "integer"
+    },
+    "base_wind": {
+      "type": "object",
+      "required": [
+        "speed",
+        "deg"
+      ],
+      "properties": {
+        "speed": {
+          "type": "number"
+        },
+        "deg": {
+          "type": "number"
+        }
+      }
+    },
+    "base_clouds": {
+      "type": "object",
+      "required": [
+        "all"
+      ],
+      "properties": {
+        "all": {
+          "type": "number"
+        }
+      }
+    },
+    "base_weather": {
+      "type": "object",
+      "required": [
+        "main",
+        "weather"
+      ],
+      "properties": {
+        "main": {
+          "type": "object",
+          "required": [
+            "temp",
+            "feels_like",
+            "temp_min",
+            "temp_max",
+            "pressure",
+            "humidity",
+            "sea_level",
+            "grnd_level"
+          ],
+          "properties": {
+            "temp": {
+              "type": "number"
+            },
+            "feels_like": {
+              "type": "number"
+            },
+            "temp_min": {
+              "type": "number"
+            },
+            "temp_max": {
+              "type": "number"
+            },
+            "pressure": {
+              "type": "number"
+            },
+            "humidity": {
+              "type": "number"
+            },
+            "sea_level": {
+              "type": "number"
+            },
+            "grnd_level": {
+              "type": "number"
+            }
+          }
+        },
+        "weather": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "main",
+              "description",
+              "icon"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "main": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "cod": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",
+    "name",
+    "cod",

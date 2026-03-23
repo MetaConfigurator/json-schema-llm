@@ -1,0 +1,15 @@
+The schema describes a configuration object. It is an object type. It defines several reusable components under 'definitions': 'guid' is a string, a UUID formatted as per the pattern '^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$'. 'guid_list' is an array, consisting of unique 'guid' items.
+
+The main properties of the schema are:
+
+'bulk_publishing' is a boolean, optional.
+
+'links' is an object, optional, and no additional properties are allowed within it. It contains:
+
+'facet_values' is an array, referring to 'guid_list', optional.
+
+'parent' is an array, referring to 'guid_list', optional, with a maximum of 1 item.
+
+'previous_version' is a string, optional.
+
+No additional properties are allowed at the root level.

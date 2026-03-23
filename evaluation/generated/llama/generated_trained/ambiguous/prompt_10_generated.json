@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "VehicleRegistrationSystem",
+  "description": "A vehicle registration system.",
+  "type": [
+    "object",
+    "null"
+  ],
+  "properties": {
+    "vehicleId": {
+      "type": "string"
+    },
+    "vehicleType": {
+      "type": "string"
+    },
+    "vehicleColor": {
+      "type": "string"
+    },
+    "vehicleMake": {
+      "type": "string"
+    },
+    "vehicleModel": {
+      "type": "string"
+    },
+    "vehicleYear": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "esriDocumentation": {
+    "examples": [
+      {
+        "title": "Register a new vehicle",
+        "code": {
+          "vehicleId": "1234567890",
+          "vehicleType": "Car",
+          "vehicleColor": "Red",
+          "vehicleMake": "Toyota",
+          "vehicleModel": "Corolla",
+          "vehicleYear": 2015
+        }
+      },
+      {
+        "title": "Update an existing vehicle",
+        "code": {
+          "vehicleId": "1234567890",
+          "vehicleType": "Car",
+          "vehicleColor": "Blue",
+          "vehicleMake": "Honda",
+          "vehicleModel": "Civic",
+          "vehicleYear": 2018
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+The schema describes an action type. It is an object type. The main properties of the schema are: 'name' is a string which is required and serves as the name of the action. 'url' is a string which is required and represents the action's URL. No additional properties are allowed at the root level.

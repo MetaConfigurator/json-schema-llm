@@ -1,0 +1,1 @@
+The schema describes a configuration request. It is an object type. The main properties of the schema are: 'configId' is a string that describes the identifier of the currently applied configuration. 'observe' is a boolean that describes whether the endpoint is interested in observing its configuration. No additional properties are allowed at the root level.

@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "fileignoreconfig": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "checksum": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "filename",
+          "checksum"
+        ]
+      }
+    },
+    "scopeconfig": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scope": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "scope"
+        ]
+      }
+    },
+    "allowed_patterns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "custom_patterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "detector": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "detector",
+          "severity"
+        ]
+      }
+    },
+    "custom_severities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "detector": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "detector",
+          "severity"
+        ]
+      }
+    },
+    "threshold": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "fileignoreconfig",
+    "scopeconfig",
+    "allowed_patterns",
+    "custom_patterns",
+    "custom_severities",
+    "threshold",
+    "version"
+  ]
+}

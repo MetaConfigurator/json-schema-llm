@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "imports": {
+      "_format": "json",
+      "description": "Imports field.",
+      "examples": [
+        {
+          "value": {}
+        }
+      ],
+      "type": "object"
+    },
+    "scopes": {
+      "_format": "json",
+      "description": "Scopes field.",
+      "examples": [
+        {
+          "value": {}
+        }
+      ],
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    }
+  },
+  "title": "ImportMap",
+  "type": "object"
+}

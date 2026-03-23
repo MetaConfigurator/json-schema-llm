@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "portfolioId": {
+      "type": "string"
+    },
+    "ownerId": {
+      "type": "string"
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": [
+            "stock",
+            "bond"
+          ]
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "currentAsset": {
+          "type": "number"
+        },
+        "value": {
+          "type": "number"
+        }
+      }
+    },
+    "totalValue": {
+      "type": "number"
+    },
+    "createdAt": {
+      "type": "number"
+    }
+  }
+}

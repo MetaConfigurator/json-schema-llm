@@ -1,0 +1,45 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "sensorId": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "value": {
+      "type": "number"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        },
+        "altitude": {
+          "type": "number"
+        }
+      },
+      "required": ["latitude", "longitude", "altitude"]
+    },
+    "timestamp": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "sensorId",
+    "type",
+    "value",
+    "unit",
+    "location",
+    "timestamp"
+  ]
+}
+```

@@ -1,0 +1,413 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Solidarity JSON Checker Rule Set",
+  "description": "A rule-set and config for the Solidarity JSON checker.",
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "object",
+      "properties": {
+        "output": {
+          "enum": [
+            "moderate",
+            "verbose",
+            "silent"
+          ],
+          "type": "string"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "rule": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/cli"
+                  },
+                  {
+                    "$ref": "#/definitions/dir"
+                  },
+                  {
+                    "$ref": "#/definitions/file"
+                  },
+                  {
+                    "$ref": "#/definitions/env"
+                  },
+                  {
+                    "$ref": "#/definitions/shell"
+                  },
+                  {
+                    "$ref": "#/definitions/custom"
+                  }
+                ]
+              },
+              "error": {
+                "type": "string"
+              },
+              "ci": {
+                "type": "boolean"
+              }
+            },
+            "minItems": 1,
+            "_uniqueItems": true
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "rules": {
+      "type": "object",
+      "properties": {
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "rule": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/cli"
+                  },
+                  {
+                    "$ref": "#/definitions/dir"
+                  },
+                  {
+                    "$ref": "#/definitions/file"
+                  },
+                  {
+                    "$ref": "#/definitions/env"
+                  },
+                  {
+                    "$ref": "#/definitions/shell"
+                  },
+                  {
+                    "$ref": "#/definitions/custom"
+                  }
+                ]
+              },
+              "error": {
+                "type": "string"
+              },
+              "ci": {
+                "type": "boolean"
+              }
+            },
+            "minItems": 1,
+            "_uniqueItems": true
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "rules"
+  ],
+  "definitions": {
+    "cli": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/cli"
+            },
+            {
+              "$ref": "#/definitions/dir"
+            },
+            {
+              "$ref": "#/definitions/file"
+            },
+            {
+              "$ref": "#/definitions/env"
+            },
+            {
+              "$ref": "#/definitions/shell"
+            },
+            {
+              "$ref": "#/definitions/custom"
+            }
+          ]
+        },
+        "binary": {
+          "type": "string"
+        },
+        "semver": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "line": {
+          "type": "string"
+        },
+        "matchIndex": {
+          "type": "integer"
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "minItems": 1,
+      "_uniqueItems": true
+    },
+    "dir": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/cli"
+            },
+            {
+              "$ref": "#/definitions/dir"
+            },
+            {
+              "$ref": "#/definitions/file"
+            },
+            {
+              "$ref": "#/definitions/env"
+            },
+            {
+              "$ref": "#/definitions/shell"
+            },
+            {
+              "$ref": "#/definitions/custom"
+            }
+          ]
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "minItems": 1,
+      "_uniqueItems": true
+    },
+    "file": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/cli"
+            },
+            {
+              "$ref": "#/definitions/dir"
+            },
+            {
+              "$ref": "#/definitions/file"
+            },
+            {
+              "$ref": "#/definitions/env"
+            },
+            {
+              "$ref": "#/definitions/shell"
+            },
+            {
+              "$ref": "#/definitions/custom"
+            }
+          ]
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "minItems": 1,
+      "_uniqueItems": true
+    },
+    "env": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/cli"
+            },
+            {
+              "$ref": "#/definitions/dir"
+            },
+            {
+              "$ref": "#/definitions/file"
+            },
+            {
+              "$ref": "#/definitions/env"
+            },
+            {
+              "$ref": "#/definitions/shell"
+            },
+            {
+              "$ref": "#/definitions/custom"
+            }
+          ]
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "minItems": 1,
+      "_uniqueItems": true
+    },
+    "shell": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/cli"
+            },
+            {
+              "$ref": "#/definitions/dir"
+            },
+            {
+              "$ref": "#/definitions/file"
+            },
+            {
+              "$ref": "#/definitions/env"
+            },
+            {
+              "$ref": "#/definitions/shell"
+            },
+            {
+              "$ref": "#/definitions/custom"
+            }
+          ]
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "minItems": 1,
+      "_uniqueItems": true
+    },
+    "custom": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/cli"
+            },
+            {
+              "$ref": "#/definitions/dir"
+            },
+            {
+              "$ref": "#/definitions/file"
+            },
+            {
+              "$ref": "#/definitions/env"
+            },
+            {
+              "$ref": "#/definitions/shell"
+            },
+            {
+              "$ref": "#/definitions/custom"
+            }
+          ]
+        },
+        "plugin": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "minItems": 1,
+      "_uniqueItems": true
+    }
+  }
+}

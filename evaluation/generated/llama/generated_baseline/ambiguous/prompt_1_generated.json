@@ -1,0 +1,1 @@
+{ "type": "object", "properties": {"accountNumber": {"type": "string", "pattern": "^\\d{9}$"}, "accountType": {"type": "string", "enum": ["checking", "savings"]}, "balance": {"type": "number", "minimum": 0, "maximum": 1000000}} }

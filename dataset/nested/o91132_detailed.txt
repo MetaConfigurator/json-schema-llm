@@ -1,0 +1,12 @@
+The schema describes a structured object with various property types. It is an object type. The main properties of the schema are: 
+ 'arrayKey1' is an array containing objects with a 'stringKey' property of type string. 
+ 'arrayKey2' is an array containing objects with a 'stringKey' property of type string. 
+ 'booleanKey' is a boolean, optional property. 
+ 'numberKey' is a number, optional property. 
+ 'objectKey1' is an object with properties 'objectKey' (which itself is an object containing a 'stringKey' of type string) and 'stringKey' of type string. 
+ 'objectKey2' is an object allowing additional properties, containing a 'stringKey' property of type string with a default value of 'default objectKey2.stringKey'. 
+ 'oneOfKey1' must be either a string or a number. 
+ 'oneOfKey2' must be either a string or an array of strings. 
+ 'requiredKey' is a number and is required. 
+ 'stringKey' is a string, optional property. 
+ 'stringKeyDefault' is a string with a default value of 'defaultValue'. No additional properties are allowed at the root level.

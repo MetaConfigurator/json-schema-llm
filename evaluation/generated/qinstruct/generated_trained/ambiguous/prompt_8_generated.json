@@ -1,0 +1,46 @@
+{
+  "title": "Job Application Portal",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "jobs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "job_title": {
+            "type": "string"
+          },
+          "company_name": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "apply": {
+      "type": "object",
+      "properties": {
+        "submit": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "description": "A job application portal that allows users to apply for jobs.",
+  "examples": [
+    {
+      "jobs": [
+        {
+          "job_title": "Software Engineer",
+          "company_name": "TechCorp Inc.",
+          "location": "San Francisco, CA"
+        }
+      ],
+      "apply": {}
+    }
+  ]
+}

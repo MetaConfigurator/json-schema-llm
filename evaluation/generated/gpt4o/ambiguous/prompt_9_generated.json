@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Restaurant Ordering System",
+  "type": "object",
+  "properties": {
+    "orderId": {
+      "type": "string",
+      "description": "Unique identifier for the order"
+    },
+    "customer": {
+      "type": "object",
+      "properties": {
+        "customerId": {
+          "type": "string",
+          "description": "Unique identifier for the customer"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the customer"
+        },
+        "contact": {
+          "type": "string",
+          "description": "Contact information for the customer"
+        }
+      },
+      "required": ["customerId", "name", "contact"]
+    },
+    "orderItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "itemId": {
+            "type": "string",
+            "description": "Unique identifier for the menu item"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the menu item"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Quantity of the menu item ordered"
+          },
+          "price": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Price of a single unit of the menu item"
+          }
+        },
+        "required": ["itemId", "name", "quantity", "price"]
+      }
+    },
+    "orderStatus": {
+      "type": "string",
+      "enum": ["Pending", "Preparing", "Ready", "Completed", "Cancelled"],
+      "description": "Current status of the order"
+    },
+    "orderDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time when the order was placed"
+    },
+    "totalAmount": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Total amount for the order"
+    },
+    "paymentMethod": {
+      "type": "string",
+      "enum": ["Cash", "Credit Card", "Debit Card", "Online Payment"],
+      "description": "Method of payment for the order"
+    }
+  },
+  "required": ["orderId", "customer", "orderItems", "orderStatus", "orderDate", "totalAmount", "paymentMethod"]
+}

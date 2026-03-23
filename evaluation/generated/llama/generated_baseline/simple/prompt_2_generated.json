@@ -1,0 +1,1 @@
+{ "type": "object", "required": ["WebJobs"], "properties": {"WebJobs": {"type": "array", "items": {"$ref": "#/definitions/WebJob"}}} }

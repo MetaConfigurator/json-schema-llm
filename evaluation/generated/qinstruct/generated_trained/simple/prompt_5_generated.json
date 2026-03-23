@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Visual Studio Extension Pack Manifest",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "extensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "vsixId": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "vsixId"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "version",
+    "extensions"
+  ],
+  "additionalProperties": false,
+  "esriDocumentation": {
+    "examples": [
+      {
+        "title": "Visual Studio Extension Pack Manifest",
+        "code": {
+          "extensionPackManifest": {
+            "id": "123456789abcdef0",
+            "name": "My Extension Pack",
+            "description": "This is my extension pack.",
+            "version": "1.0.0",
+            "extensions": [
+              {
+                "name": "My Extension",
+                "vsixId": "123456789abcdef0",
+                "vsixFile": "/path/to/myextension.vsix"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

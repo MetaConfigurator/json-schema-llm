@@ -1,0 +1,16 @@
+{ 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Payment Transaction Object",
+    "type": "object",
+    "properties": {
+        "transactionId": {"type": "string", "description": "Unique identifier for the transaction"},
+        "amount": {"type": "number", "format": "decimal", "description": "Amount of the transaction in cents"},
+        "paymentMethod": {"type": "string", "enum": ["creditCard", "paypal"], "description": "Type of payment method used"},
+        "cardNumber": {"type": "string", "pattern": "^4[0-9]{12}(?:[0-9]{3})?$", "description": "Card number (13 digits)"},
+        "cvv": {"type": "integer", "minimum": 100, "maximum": 999, "description": "CVV code (2 digits)"},
+        "paypalEmail": {"type": "string", "format": "email", "description": "PayPal email address"},
+        "iban": {"type": "string", "format": "iban", "description": "International Bank Account Number"},
+        "createdAt": {"type": "date", "format": "date-time", "description": "Date and time when the transaction was created"}
+    },
+    "required": ["transactionId", "amount", "paymentMethod", "cardNumber", "cvv", "paypalEmail", "iban"]
+}

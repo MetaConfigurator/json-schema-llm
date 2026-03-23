@@ -1,0 +1,1 @@
+Create a JSON Schema for a patient record object with: patientId, name, dateOfBirth, gender, contactInfo, medicalHistory, allergies, createdAt. contactInfo is an object with properties phone, email. medicalHistory is an object with properties condition, diagnosisDate, medication.

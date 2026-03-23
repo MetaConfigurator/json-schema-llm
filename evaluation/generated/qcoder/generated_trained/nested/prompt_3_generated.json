@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "configuration": {
+      "allOf": [
+        {
+          "required": [
+            "apiLocation",
+            "apiPort",
+            "apiPrefix",
+            "appArtifactLocation",
+            "appLocation",
+            "devserverTimeout",
+            "host",
+            "port",
+            "run"
+          ]
+        },
+        {
+          "description": "Settings used by the CLI to run and manage a local development environment for static web applications and their APIs.",
+          "type": "object",
+          "patternProperties": {},
+          "minProperties": 12
+        }
+      ],
+      "description": "Configuration for the SWA CLI",
+      "type": "object"
+    }
+  },
+  "title": "Static Web Apps CLI Configuration File Schema",
+  "type": "object"
+}

@@ -1,0 +1,1 @@
+The schema describes information about class breaks associated with a Relationship renderer. It is an object type. The main properties of the schema are: 'maxValue' is a number that specifies the maximum value for a break. 'minValue' is a number that specifies the minimum value for a break. No additional properties are allowed at the root level.

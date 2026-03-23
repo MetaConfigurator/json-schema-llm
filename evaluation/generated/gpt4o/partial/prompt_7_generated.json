@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "postId": {
+      "type": "string",
+      "description": "Unique identifier for the post"
+    },
+    "userId": {
+      "type": "string",
+      "description": "Unique identifier for the user who created the post"
+    },
+    "content": {
+      "type": "string",
+      "description": "Text content of the post"
+    },
+    "media": {
+      "type": "array",
+      "description": "Array of media URLs associated with the post",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "likes": {
+      "type": "integer",
+      "description": "Number of likes the post has received",
+      "minimum": 0
+    },
+    "comments": {
+      "type": "array",
+      "description": "Array of comments on the post",
+      "items": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "description": "Unique identifier for the user who made the comment"
+          },
+          "commentText": {
+            "type": "string",
+            "description": "Text content of the comment"
+          }
+        },
+        "required": ["userId", "commentText"]
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of when the post was created"
+    }
+  },
+  "required": ["postId", "userId", "content", "createdAt"]
+}

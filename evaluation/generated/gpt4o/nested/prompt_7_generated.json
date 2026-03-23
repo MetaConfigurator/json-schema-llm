@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://example.com/embrace-sdk-config-1.0.0.json",
+  "title": "Embrace Mobile Monitoring SDK Configuration",
+  "description": "Configuration schema for the Embrace mobile monitoring SDK.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["app_id", "api_token"],
+  "properties": {
+    "app_id": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 5,
+      "description": "The application identifier, exactly five characters long."
+    },
+    "api_token": {
+      "type": "string",
+      "minLength": 32,
+      "maxLength": 32,
+      "description": "The hexadecimal API token, exactly thirty-two characters long."
+    },
+    "ndk_enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enables native crash capture. Defaults to false."
+    },
+    "sdk_config": {
+      "type": "object",
+      "additionalProperties": true,
+      "minProperties": 1,
+      "properties": {
+        "app": {
+          "type": "object",
+          "additionalProperties": true,
+          "minProperties": 1,
+          "properties": {
+            "report_disk_usage": {
+              "type": "boolean",
+              "default": true,
+              "description": "Whether disk usage collection is enabled. Defaults to true."
+            }
+          }
+        },
+        "crash_handler": {
+          "type": "object",
+          "additionalProperties": true,
+          "minProperties": 1,
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true,
+              "description": "Controls whether the SDK connects to the uncaught exception handler. Defaults to true."
+            }
+          }
+        },
+        "networking": {
+          "type": "object",
+          "additionalProperties": true,
+          "minProperties": 1,
+          "properties": {
+            "capture_request_content_length": {
+              "type": "boolean",
+              "default": true,
+              "description": "Whether to capture request content length. Defaults to true."
+            },
+            "disabled_url_patterns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true,
+              "minItems": 1,
+              "description": "Regular expression patterns used to exclude URLs from capture."
+            },
+            "enable_native_monitoring": {
+              "type": "boolean",
+              "default": true,
+              "description": "Enables native monitoring. Defaults to true."
+            },
+            "trace_id_header": {
+              "type": "string",
+              "description": "The header name used for trace IDs. Default value explained in the description."
+            }
+          }
+        },
+        "session": {
+          "type": "object",
+          "additionalProperties": true,
+          "minProperties": 1,
+          "properties": {
+            "async_end": {
+              "type": "boolean",
+              "default": false,
+              "description": "Whether session ends asynchronously. Defaults to false."
+            },
+            "max_session_seconds": {
+              "type": "integer",
+              "minimum": 60,
+              "description": "Enables automatic session termination. Must be at least sixty seconds if specified."
+            }
+          }
+        },
+        "startup_moment": {
+          "type": "object",
+          "additionalProperties": true,
+          "minProperties": 1,
+          "properties": {
+            "automatically_end": {
+              "type": "boolean",
+              "default": true,
+              "description": "Whether to automatically end the startup moment. Defaults to true."
+            },
+            "take_screenshot": {
+              "type": "boolean",
+              "default": false,
+              "description": "Whether to take a screenshot at startup. Defaults to false."
+            }
+          }
+        },
+        "taps": {
+          "type": "object",
+          "additionalProperties": true,
+          "minProperties": 1,
+          "properties": {
+            "capture_coordinates": {
+              "type": "boolean",
+              "default": true,
+              "description": "Controls whether tap coordinates are captured. Defaults to true."
+            }
+          }
+        },
+        "webview": {
+          "type": "object",
+          "additionalProperties": true,
+          "minProperties": 1,
+          "properties": {
+            "capture_query_params": {
+              "type": "boolean",
+              "default": true,
+              "description": "Controls query parameter capture. Defaults to true. Has no effect if web view monitoring is disabled."
+            },
+            "enable": {
+              "type": "boolean",
+              "default": true,
+              "description": "Controls web view data capture. Defaults to true."
+            }
+          }
+        }
+      }
+    }
+  }
+}

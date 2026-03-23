@@ -1,0 +1,168 @@
+{
+  "properties": {
+    "coord": {
+      "properties": {
+        "lat": {
+          "type": "number"
+        },
+        "lon": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "lat",
+        "lon"
+      ],
+      "type": "object"
+    },
+    "weather": {
+      "items": {
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "main": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "main",
+          "description",
+          "icon"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "base": {
+      "type": "string"
+    },
+    "main": {
+      "properties": {
+        "temp": {
+          "type": "number"
+        },
+        "feels_like": {
+          "type": "number"
+        },
+        "temp_min": {
+          "type": "number"
+        },
+        "temp_max": {
+          "type": "number"
+        },
+        "pressure": {
+          "type": "number"
+        },
+        "humidity": {
+          "type": "number"
+        },
+        "sea_level": {
+          "type": "number"
+        },
+        "grnd_level": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "visibility": {
+      "type": "integer"
+    },
+    "wind": {
+      "properties": {
+        "speed": {
+          "type": "number"
+        },
+        "deg": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "speed",
+        "deg"
+      ],
+      "type": "object"
+    },
+    "clouds": {
+      "properties": {
+        "all": {
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "all"
+      ],
+      "type": "object"
+    },
+    "dt": {
+      "type": "number"
+    },
+    "sys": {
+      "properties": {
+        "type": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "message": {
+          "type": "number"
+        },
+        "country": {
+          "type": "string"
+        },
+        "sunrise": {
+          "type": "integer"
+        },
+        "sunset": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "type",
+        "id",
+        "message",
+        "country",
+        "sunrise",
+        "sunset"
+      ],
+      "type": "object"
+    },
+    "timezone": {
+      "type": "integer"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "cod": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "coord",
+    "weather",
+    "base",
+    "main",
+    "visibility",
+    "wind",
+    "clouds",
+    "dt",
+    "sys",
+    "timezone",
+    "id",
+    "name",
+    "cod"
+  ]
+}

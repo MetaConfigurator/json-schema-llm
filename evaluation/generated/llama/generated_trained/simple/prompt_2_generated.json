@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Azure Webjobs Collection",
+  "type": "object",
+  "properties": {
+    "WebJobs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filePath": {
+            "type": "string"
+          }
+        }
+      },
+      "_uniqueItems": true
+    }
+  },
+  "required": [
+    "WebJobs"
+  ]
+}

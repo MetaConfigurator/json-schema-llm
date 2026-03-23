@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "description": "JSON Schema for the Static Web Apps CLI (SWA CLI) configuration file.",
+  "properties": {
+    "configuration": {
+      "additionalProperties": true,
+      "description": "Settings used by the CLI to run and manage a local development environment for static web applications and their APIs.",
+      "patternProperties": {
+        ".+": {
+          "oneOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "apiLocation": {
+                  "_format": "uri",
+                  "description": "API folder or Azure Functions emulator address.",
+                  "type": "string"
+                },
+                "apiPort": {
+                  "description": "API backend port.",
+                  "maximum": 65535,
+                  "minimum": 1024,
+                  "type": "number"
+                },
+                "apiPrefix": {
+                  "enum": [
+                    "api"
+                  ],
+                  "description": "API prefix.",
+                  "type": "string"
+                },
+                "appArtifactLocation": {
+                  "description": "Location of the build output directory relative to the application location.",
+                  "type": "string"
+                },
+                "appLocation": {
+                  "description": "Location of the static app source code.",
+                  "type": "string"
+                },
+                "build": {
+                  "description": "Whether the project should be built.",
+                  "type": "boolean"
+                },
+                "customUrlScheme": {
+                  "description": "Custom URL scheme.",
+                  "type": "string"
+                },
+                "devserverTimeout": {
+                  "description": "Time in milliseconds to wait for the development server to start.",
+                  "maximum": 60000,
+                  "minimum": 1000,
+                  "type": "number"
+                },
+                "host": {
+                  "description": "CLI host address.",
+                  "type": "string"
+                },
+                "overridableErrorCode": {
+                  "items": {
+                    "maximum": 255,
+                    "minimum": 0,
+                    "type": "number"
+                  },
+                  "type": "array"
+                },
+                "port": {
+                  "description": "CLI port.",
+                  "maximum": 65535,
+                  "minimum": 1024,
+                  "type": "number"
+                },
+                "run": {
+                  "description": "Command to run at startup.",
+                  "type": "string"
+                },
+                "ssl": {
+                  "description": "Whether the app and API should be served over HTTPS.",
+                  "type": "boolean"
+                },
+                "sslCert": {
+                  "description": "SSL certificate file used for HTTPS.",
+                  "type": "string"
+                },
+                "sslKey": {
+                  "description": "SSL key file used for HTTPS.",
+                  "type": "string"
+                },
+                "swaConfigFilename": {
+                  "description": "Name of the configuration file.",
+                  "pattern": "^staticwebapp\\.config\\..*",
+                  "type": "string"
+                },
+                "swaConfigFilenameLegacy": {
+                  "description": "Name of the legacy configuration file.",
+                  "pattern": "^routes\\..*$",
+                  "type": "string"
+                },
+                "swaConfigLocation": {
+                  "description": "Location of the configuration file.",
+                  "type": "string"
+                },
+                "verbose": {
+                  "description": "Verbose output.",
+                  "type": "string"
+                },
+                "context": {
+                  "description": "Configuration context.",
+                  "type": "string"
+                }
+              },
+              "required": [],
+              "title": "SWA CLI Configuration",
+              "type": "object"
+            },
+          },
+          "required": []
+        }
+      },
+      "required": []
+    },
+    "swaConfigFilename": {
+      "description": "Name of the configuration file.",
+      "pattern": "^staticwebapp\\.config\\..*$",
+      "type": "string"
+    },
+    "swaConfigFilenameLegacy": {
+      "description": "Name of the legacy configuration file.",
+      "pattern": "^routes\\..*$",
+      "type": "string"
+    },
+    "swaConfigLocation": {
+      "description": "Location of the configuration file.",
+      "type": "string"
+    },
+    "verbose": {
+      "description": "Verbose output.",
+      "type": "string"
+    }
+  },
+  "title": "Static Web App CLI Configuration",
+  "type": "object"
+}

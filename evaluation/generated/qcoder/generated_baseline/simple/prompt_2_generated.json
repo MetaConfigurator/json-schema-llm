@@ -1,0 +1,9 @@
+```json
+{
+  "WebJobs": [
+    {
+      "filePath": "path/to/your/webjob.js"
+    }
+  ]
+}
+```

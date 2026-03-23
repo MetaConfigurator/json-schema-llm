@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "excludeFiles": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "gitignore": {
+      "default": "hide",
+      "description": "Git ignore file behavior.",
+      "enum": [
+        "none",
+        "hide",
+        "exclude"
+      ],
+      "type": "string"
+    },
+    "hideFiles": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "title": "LiveShareSettings",
+  "type": "object"
+}

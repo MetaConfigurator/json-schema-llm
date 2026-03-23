@@ -1,0 +1,44 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "portfolioId": {
+      "type": "string"
+    },
+    "ownerId": {
+      "type": "string"
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "currentValue": {
+          "type": "number"
+        }
+      },
+      "required": ["type", "symbol", "quantity", "currentValue"]
+    },
+    "totalValue": {
+      "type": "number"
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "portfolioId",
+    "ownerId",
+    "assets",
+    "totalValue",
+    "createdAt"
+  ]
+}
+```

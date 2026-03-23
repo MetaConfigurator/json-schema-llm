@@ -1,0 +1,78 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "restaurantName": {
+      "type": "string",
+      "required": true,
+      "description": "The name of the restaurant"
+    },
+    "menuItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "required": true,
+            "description": "The name of the menu item"
+          },
+          "price": {
+            "type": "number",
+            "required": true,
+            "description": "The price of the menu item"
+          }
+        }
+      },
+      "required": true,
+      "description": "An array of menu items"
+    },
+    "orders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "customerID": {
+            "type": "integer",
+            "required": true,
+            "description": "The ID of the customer ordering the meal"
+          },
+          "orderDate": {
+            "type": "date",
+            "required": true,
+            "description": "The date when the order was placed"
+          },
+          "menuItems": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "itemID": {
+                  "type": "integer",
+                  "required": true,
+                  "description": "The ID of the menu item ordered"
+                },
+                "quantity": {
+                  "type": "number",
+                  "required": true,
+                  "description": "The quantity of the menu item ordered"
+                }
+              }
+            },
+            "required": true,
+            "description": "An array of menu items ordered by the customer"
+          }
+        }
+      },
+      "required": true,
+      "description": "An array of orders made by customers"
+    }
+  },
+  "required": [
+    "restaurantName",
+    "menuItems",
+    "orders"
+  ],
+  "additionalProperties": false
+}
+```

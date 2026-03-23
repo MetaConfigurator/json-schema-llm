@@ -1,0 +1,1 @@
+The schema describes a collection of commit IDs. It is an object type. The main properties of the schema are: 'commits' is an array of strings representing a list of commits to search over. It is optional. No additional properties are allowed at the root level.

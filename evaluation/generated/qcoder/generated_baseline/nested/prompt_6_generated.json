@@ -1,0 +1,79 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "options": {
+      "type": "object"
+    },
+    "definitions": {
+      "dynamic": {
+        "type": "object",
+        "properties": {
+          "expand": {
+            "type": "boolean",
+            "default": false
+          },
+          "cwd": {
+            "type": "string",
+            "required": true
+          },
+          "dest": {
+            "type": "string",
+            "required": true
+          },
+          "ext": {
+            "type": "string",
+            "enum": ["first", "last"],
+            "default": "first"
+          },
+          "extDot": {
+            "type": "enum",
+            "allowedValues": ["first", "last"],
+            "default": "first"
+          },
+          "filter": {
+            "type": "enum",
+            "allowedValues": ["isFile", "isDirectory", "isBlockDevice", "isCharacterDevice", "isSymbolicLink", "isFIFO", "isSocket", "flatten"],
+            "default": "isFile"
+          },
+          "matchBase": {
+            "type": "boolean",
+            "default": false
+          },
+          "nonull": {
+            "type": "boolean",
+            "default": false
+          },
+          "rename": {
+            "type": "string",
+            "required": true
+          },
+          "src": {
+            "type": "array",
+            "items": [
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "required": true
+          },
+          "fileFormat": {
+            "type": "object",
+            "properties": {
+              "files": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```

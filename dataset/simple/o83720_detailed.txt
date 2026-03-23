@@ -1,0 +1,1 @@
+The schema describes a list of servers to start. It is an object type. The main properties of the schema are: 'servers' is an array containing objects. Each object must contain the required fields: 'name' is a string, 'start' is a boolean, 'program' is a string, and 'port' is an integer. No additional properties are allowed at the root level.

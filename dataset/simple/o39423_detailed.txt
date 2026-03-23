@@ -1,0 +1,1 @@
+The schema describes the structure of a response containing available files. It is an object type. The main properties of the schema are: 'files' is an array of strings, optional. Each item in the array must be a string. No additional properties are allowed at the root level.

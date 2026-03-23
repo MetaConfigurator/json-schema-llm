@@ -1,0 +1,32 @@
+{
+  "properties": {
+    "asset_id": {
+      "type": "string"
+    },
+    "description": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string"
+        },
+        "translate": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "color",
+        "translate"
+      ]
+    },
+    "template_item": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "asset_id",
+    "description",
+    "template_item"
+  ],
+  "title": "Trim Pattern",
+  "type": "object"
+}

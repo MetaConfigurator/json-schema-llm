@@ -1,0 +1,42 @@
+Modify the following schema to include an additional property called "publisher" of type "string". The publisher should be optional, meaning it can either be null or empty.
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Book",
+  "description": "Represents a book in a catalog.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1
+    },
+    "publicationYear": {
+      "type": "integer",
+      "minimum": 1450
+    },
+    "price": {
+      "type": "number",
+      "minimum": 0
+    },
+    "genre": {
+      "type": "string"
+    },
+    "isbn": {
+      "type": "string",
+      "pattern": "^\\d{3}-\\d{10}$
+    },
+    "publisher": {
+      "type": "string"
+    }
+  },
+  "required": ["title", "author", "price", "isbn"]
+}
+
+Make the following changes:
+- Remove the "ISBN" property from the schema.
+eniable

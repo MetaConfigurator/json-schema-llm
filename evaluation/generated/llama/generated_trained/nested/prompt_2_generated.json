@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Crowdin Configuration",
+  "description": "Schema for Crowdin configuration.",
+  "type": "object",
+  "properties": {
+    "project_id": {
+      "description": "Identify the project ID.",
+      "type": "string"
+    },
+    "project_id_env": {
+      "description": "For the project ID environment variable.",
+      "type": "string"
+    },
+    "api_token": {
+      "description": "For the API token.",
+      "type": "string"
+    },
+    "api_token_env": {
+      "description": "For the API token environment variable.",
+      "type": "string"
+    },
+    "base_path": {
+      "description": "For the base path.",
+      "type": "string"
+    },
+    "base_path_env": {
+      "description": "For the base path environment variable.",
+      "type": "string"
+    },
+    "base_url": {
+      "description": "Format as a URI for the base URL.",
+      "type": "string"
+    },
+    "base_url_env": {
+      "description": "For the base URL environment variable.",
+      "type": "string"
+    },
+    "preserve_hierarchy": {
+      "description": "Preserve hierarchy.",
+      "type": "boolean"
+    },
+    "commit_message": {
+      "description": "Commit message.",
+      "type": "string"
+    },
+    "append_commit_message": {
+      "description": "Replace the default commit message with the one specified in `commit_message`.",
+      "type": "boolean"
+    },
+    "export_languages": {
+      "description": "List of specific languages to export.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "files": {
+      "description": "File configurations.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "translation": {
+            "type": "string"
+          },
+          "ignore": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "translation_replace": {
+            "type": "string",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "excluded_target_languages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scheme": {
+            "type": "string"
+          },
+          "dest": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "update_option": {
+            "enum": [
+              "update_as_unapproved",
+              "update_without_changes"
+            ],
+            "default": "update_as_unapproved"
+          },
+          "translate_content": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+          },
+          "translate_attributes": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+          },
+          "content_segmentation": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+          },
+          "translatable_elements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "skip_untranslated_strings": {
+            "type": "boolean"
+          },
+          "skip_untranslated_files": {
+            "type": "boolean"
+          },
+          "export_only_approved": {
+            "type": "boolean"
+          },
+          "escape_quotes": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 3,
+            "default": 3
+          },
+          "escape_special_characters": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+          },
+          "first_line_contains_header": {
+            "type": "boolean"
+          },
+          "languages_mapping": {
+            "type": "object",
+            "properties": {
+              "two_letters_code": {
+                "type": "string",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "android_code": {
+                "type": "string",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

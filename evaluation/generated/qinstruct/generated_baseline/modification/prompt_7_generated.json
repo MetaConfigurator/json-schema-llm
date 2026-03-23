@@ -1,0 +1,38 @@
+```json
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "additionalProperties": false,
+    "description": "Models a keyword used in describing a piece of content.",
+    "properties": {
+        "frequency": {
+            "description": "An optional count of the frequency of the keyword as it appears in the content it describes",
+            "type": "integer"
+        },
+        "keyword": {
+            "description": "The keyword used to describe a piece of content",
+            "type": "string"
+        },
+        "score": {
+            "description": "An arbitrary weighting to give the keyword",
+            "type": "number"
+        },
+        "tag": {
+            "enum": ["noun", "verb", "adjective", "adverb"],
+            "description": "The Part of Speech tag for this keyword.",
+            "type": "string"
+        },
+        "tagValue": {
+            "description": "A string value representing the tag's value",
+            "type": "string"
+        }
+    },
+    "required": [
+        "keyword",
+        "score"
+    ],
+    "title": "Keyword",
+    "type": "object"
+}
+```
+
+In the updated schema, I added an `enum` constraint to the `tag` property using the `enum` keyword. This ensures that only one of the allowed tags can be assigned to each keyword. The `tagValue` field is also updated to include a description value for each tag.

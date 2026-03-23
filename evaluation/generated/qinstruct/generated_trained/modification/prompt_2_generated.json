@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "description": "Trait that applies common publishing-related dates to a schema.",
+  "properties": {
+    "created_date": {
+      "_format": "date-time",
+      "description": "When the content was originally created (RFC3339-formatted).",
+      "type": "string"
+    },
+    "last_updated_date": {
+      "_format": "date-time",
+      "description": "When the content was last updated (RFC3339-formatted).",
+      "type": "string"
+    },
+    "num_updates": {
+      "description": "Number of times this trait has been applied to this schema.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 50
+    }
+  },
+  "title": "Dated trait",
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "bookingId": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "startDate",
+    "endDate",
+    "price"
+  ]
+}

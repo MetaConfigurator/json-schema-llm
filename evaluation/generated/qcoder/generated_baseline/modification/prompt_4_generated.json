@@ -1,0 +1,34 @@
+```json
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "Links to various social media",
+    "items": [
+        {
+            "owner": {
+                "name": "John Doe",
+                "email": "john.doe@example.com"
+            },
+            "site": {
+                "type": "string"
+            },
+            "url": {
+                "type": "string"
+            }
+        },
+        {
+            "owner": {
+                "name": "Jane Smith",
+                "email": "jane.smith@example.com"
+            },
+            "site": {
+                "type": "string"
+            },
+            "url": {
+                "type": "string"
+            }
+        }
+    ],
+    "title": "Social Links",
+    "type": "array"
+}
+```

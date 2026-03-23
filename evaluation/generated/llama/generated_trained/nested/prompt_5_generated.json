@@ -1,0 +1,271 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Rule Set and Config for Solidity JSON Checker",
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "object",
+      "properties": {
+        "output": {
+          "enum": [
+            "moderate",
+            "verbose",
+            "silent"
+          ],
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "minItems": 0
+    },
+    "requirements": {
+      "type": "object",
+      "description": "List of requirements to check against.",
+      "patternProperties": {
+        ".+": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/rule"
+          },
+          "_uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/config"
+    },
+    {
+      "$ref": "#/definitions/requirements"
+    }
+  ],
+  "definitions": {
+    "cli": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "enum": [
+            "cli"
+          ]
+        },
+        "binary": {
+          "type": "string"
+        },
+        "semver": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "line": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "matchIndex": {
+          "type": "integer"
+        },
+        "platform": {
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "rule",
+        "binary"
+      ],
+      "additionalProperties": false
+    },
+    "dir": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "enum": [
+            "dir",
+            "directory"
+          ]
+        },
+        "platform": {
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "rule",
+        "platform"
+      ],
+      "additionalProperties": false
+    },
+    "file": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "enum": [
+            "file"
+          ]
+        },
+        "platform": {
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "rule",
+        "platform"
+      ],
+      "additionalProperties": false
+    },
+    "env": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "enum": [
+            "env"
+          ]
+        },
+        "platform": {
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "rule",
+        "platform"
+      ],
+      "additionalProperties": false
+    },
+    "shell": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "enum": [
+            "shell"
+          ]
+        },
+        "platform": {
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        },
+        "match": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule",
+        "platform"
+      ],
+      "additionalProperties": false
+    },
+    "custom": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "enum": [
+            "custom"
+          ]
+        },
+        "plugin": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "platform": {
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ]
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        },
+        "match": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule",
+        "plugin",
+        "name"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

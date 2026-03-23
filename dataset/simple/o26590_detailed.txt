@@ -1,0 +1,1 @@
+The schema describes a data structure for representing a person's name and associated institution. It is an object type. The main properties of the schema are: 'name' is a string with a minimum length of 1 and a maximum length of 255, and is required. 'institution_id' is an integer that must be at least 1 and is optional. No additional properties are allowed at the root level.

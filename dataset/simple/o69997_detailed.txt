@@ -1,0 +1,1 @@
+The schema describes an amount object including quantity and currency code. It is an object type. The main properties of the schema are: 'amount' is a string matching the pattern '^[-]?\d*\.?\d+$', required. 'currency' is a string matching the pattern '^[a-zA-Z0-9]{3}$', with a minLength and maxLength of 3, required. No additional properties are allowed at the root level.

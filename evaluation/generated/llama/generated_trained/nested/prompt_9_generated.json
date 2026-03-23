@@ -1,0 +1,210 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "css-beautify": {
+      "description": "Beautify CSS",
+      "properties": {
+        "break_even": {
+          "default": true,
+          "description": "Whether to break even lines (e.g., `div` -> `<br>`)",
+          "type": "boolean"
+        },
+        "break_even_indentation": {
+          "default": 0,
+          "description": "Indentation for breaking even lines.",
+          "type": "number"
+        },
+        "break_even_line_spacing": {
+          "default": 1,
+          "description": "Line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines": {
+          "default": 2,
+          "description": "Number of newlines to insert after each line that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines": {
+          "default": 4,
+          "description": "Number of newlines to insert after each line that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type": "number"
+        },
+        "break_even_line_spacing_newlines_newlines_indentation": {
+          "default": 0,
+          "description": "Indentation for line spacing between two lines that should be broken even.",
+          "type":

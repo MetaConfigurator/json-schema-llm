@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Restaurant Order System",
+  "description": "A schema to validate the restaurant order system.",
+  "type": "object",
+  "properties": {
+    "restaurantId": {
+      "type": "string"
+    },
+    "orderIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "orders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "totalPrice": {
+            "type": "number"
+          },
+          "customerName": {
+            "type": "string"
+          },
+          "customerId": {
+            "type": "string"
+          },
+          "deliveryAddress": {
+            "type": "string"
+          },
+          "deliveryDate": {
+            "type": "string"
+          },
+          "deliveryTime": {
+            "type": "string"
+          },
+          "paymentMethod": {
+            "type": "string"
+          },
+          "foodItems": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "itemId": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "number"
+                },
+                "price": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

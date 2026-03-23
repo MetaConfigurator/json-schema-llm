@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GamingProfile",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "description": "Username of the gamer"
+    },
+    "password": {
+      "type": "string",
+      "description": "Password for the gamer"
+    },
+    "gamesPlayed": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of games played by the gamer"
+    },
+    "wins": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of wins by the gamer"
+    }
+  },
+  "required": ["username", "password", "gamesPlayed", "wins"]
+}

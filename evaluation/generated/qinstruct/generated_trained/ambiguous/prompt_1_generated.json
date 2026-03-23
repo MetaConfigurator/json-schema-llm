@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Bank Account",
+  "description": "Schema for Bank Account",
+  "type": "object",
+  "properties": {
+    "account_number": {
+      "type": "string"
+    },
+    "bank_name": {
+      "type": "string"
+    },
+    "balance": {
+      "type": "number"
+    }
+  }
+}

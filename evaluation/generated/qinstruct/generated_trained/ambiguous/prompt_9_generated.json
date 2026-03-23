@@ -1,0 +1,76 @@
+{
+  "title": "Restaurant Ordering System",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "order": {
+      "type": "object",
+      "properties": {
+        "restaurant": {
+          "type": "string"
+        },
+        "meal": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "restaurant",
+        "meal"
+      ]
+    },
+    "menu": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "quantity": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "name",
+          "price",
+          "quantity"
+        ]
+      }
+    },
+    "cart": {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "quantity"
+          ]
+        }
+      },
+      "required": [
+        "item"
+      ]
+    }
+  },
+  "required": [
+    "order",
+    "menu",
+    "cart"
+  ]
+}

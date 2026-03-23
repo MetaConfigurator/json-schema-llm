@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hospital Patient Record",
+  "type": "object",
+  "properties": {
+    "patientId": {
+      "type": "string",
+      "description": "A unique identifier for the patient"
+    },
+    "firstName": {
+      "type": "string",
+      "description": "The patient's first name"
+    },
+    "lastName": {
+      "type": "string",
+      "description": "The patient's last name"
+    },
+    "dateOfBirth": {
+      "type": "string",
+      "format": "date",
+      "description": "The patient's date of birth"
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female", "other"],
+      "description": "The patient's gender"
+    },
+    "contactInformation": {
+      "type": "object",
+      "properties": {
+        "phone": {
+          "type": "string",
+          "description": "The patient's phone number"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The patient's email address"
+        },
+        "address": {
+          "type": "string",
+          "description": "The patient's home address"
+        }
+      },
+      "required": ["phone"]
+    },
+    "emergencyContact": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the emergency contact person"
+        },
+        "relationship": {
+          "type": "string",
+          "description": "The relationship of the emergency contact to the patient"
+        },
+        "phone": {
+          "type": "string",
+          "description": "The phone number of the emergency contact"
+        }
+      },
+      "required": ["name", "phone"]
+    },
+    "medicalHistory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "condition": {
+            "type": "string",
+            "description": "The medical condition or diagnosis"
+          },
+          "diagnosisDate": {
+            "type": "string",
+            "format": "date",
+            "description": "The date of diagnosis"
+          },
+          "treatment": {
+            "type": "string",
+            "description": "The treatment prescribed for the condition"
+          }
+        },
+        "required": ["condition", "diagnosisDate"]
+      }
+    },
+    "allergies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "A list of known allergies"
+      }
+    },
+    "currentMedications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "medicationName": {
+            "type": "string",
+            "description": "The name of the medication"
+          },
+          "dosage": {
+            "type": "string",
+            "description": "The dosage of the medication"
+          },
+          "frequency": {
+            "type": "string",
+            "description": "How often the medication is taken"
+          }
+        },
+        "required": ["medicationName", "dosage", "frequency"]
+      }
+    },
+    "insuranceInformation": {
+      "type": "object",
+      "properties": {
+        "provider": {
+          "type": "string",
+          "description": "The name of the insurance provider"
+        },
+        "policyNumber": {
+          "type": "string",
+          "description": "The insurance policy number"
+        },
+        "groupNumber": {
+          "type": "string",
+          "description": "The insurance group number"
+        }
+      },
+      "required": ["provider", "policyNumber"]
+    }
+  },
+  "required": ["patientId", "firstName", "lastName", "dateOfBirth", "gender", "contactInformation"]
+}

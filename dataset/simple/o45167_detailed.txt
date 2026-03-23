@@ -1,0 +1,1 @@
+The schema describes an array of objects. It is an array type. The main properties of the schema are: Each object in the array must include 'id' as a string and 'paths' as an array of objects. Each object in 'paths' is required to have 'id' and 'type', both of which are strings. No additional properties are allowed at the root level.

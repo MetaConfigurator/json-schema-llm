@@ -1,0 +1,139 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "fileignoreconfig": [
+      {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "checksum": {
+            "type": "string"
+          },
+          "ignore_detectors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      {
+        "type": "object",
+        "properties": {
+          "scopeconfig": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allowed_patterns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      {
+        "type": "object",
+        "properties": {
+          "custom_patterns": [
+            {
+              "type": "object",
+              "properties": {
+                "detector": {
+                  "type": "string"
+                },
+                "severity": {
+                  "type": "string"
+                }
+              },
+              "required": ["detector", "severity"]
+            }
+          ],
+          "custom_severities": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "object",
+        "properties": {
+          "threshold": {
+            "type": "string"
+          }
+        }
+      },
+      {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string"
+          }
+        }
+      }
+    ],
+    "scopeconfig": [
+      {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    ],
+    "allowed_patterns": [
+      {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    ],
+    "custom_patterns": [
+      {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    ],
+    "custom_severities": [
+      {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    ],
+    "threshold": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "fileignoreconfig",
+    "scopeconfig",
+    "allowed_patterns",
+    "custom_patterns",
+    "custom_severities",
+    "threshold",
+    "version"
+  ]
+}
+```

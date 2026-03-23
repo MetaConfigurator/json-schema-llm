@@ -1,0 +1,286 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "definitions": {
+    "css-beautify": {
+      "properties": {
+        "brace_style": {
+          "description": "Brace style to use.",
+          "enum": [
+            "all",
+            "single"
+          ],
+          "type": "string"
+        },
+        "end_with_newline": {
+          "description": "Should the code be terminated with a newline?",
+          "enum": [
+            true,
+            false
+          ],
+          "type": "boolean"
+        },
+        "indent_size": {
+          "description": "Indent size to use.",
+          "type": "number"
+        },
+        "insert_final_newline": {
+          "description": "Insert final newline after the last statement in a block.",
+          "enum": [
+            true,
+            false
+          ],
+          "type": "boolean"
+        },
+        "keep_trailing_comma": {
+          "description": "Keep trailing comma when formatting.",
+          "enum": [
+            true,
+            false
+          ],
+          "type": "boolean"
+        },
+        "newlines_between_statements": {
+          "description": "Newlines between statements should be added or not?",
+          "enum": [
+            true,
+            false
+          ],
+          "type": "boolean"
+        },
+        "space_in_parentheses": {
+          "description": "Space in parentheses.",
+          "enum": [
+            true,
+            false
+          ],
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "brace_style",
+        "indent_size"
+      ],
+      "type": "object"
+    },
+    "js-beautify": {
+      "properties": {
+        "brace_style": {
+          "description": "Brace style to use.",
+          "enum": [
+            "all",
+            "single"
+          ],
+          "type": "string"
+        },
+        "end_with_newline": {
+          "description": "Should the code be terminated with a newline?",
+          "enum": [
+            true,
+            false
+          ],
+          "type": "boolean"
+        },
+        "indent_size": {
+          "description": "Indent size to use.",
+          "type": "number"
+        },
+        "insert_final_newline": {
+          "description": "Insert final newline after the last statement in a block.",
+          "enum": [
+            true,
+            false
+          ],
+          "type": "boolean"
+        },
+        "keep_trailing_comma": {
+          "description": "Keep trailing comma when formatting.",
+          "enum": [
+            true,
+            false
+          ],
+          "type": "boolean"
+        },
+        "newlines_between_statements": {
+          "description": "Newlines between statements should be added or not?",
+          "enum": [
+            true,
+            false
+          ],
+          "type": "boolean"
+        },
+        "space_in_parentheses": {
+          "description": "Space in parentheses.",
+          "enum": [
+            true,
+            false
+          ],
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "brace_style",
+        "indent_size"
+      ],
+      "type": "object"
+    }
+  },
+  "properties": {
+    "$schema": {
+      "default": "http://json-schema.org/draft-04/schema#",
+      "type": "string"
+    },
+    "blank_line_after_tag": {
+      "description": "Add blank line after tag name.",
+      "type": "string"
+    },
+    "blank_line_before_tag": {
+      "description": "Add blank line before tag name.",
+      "type": "string"
+    },
+    "close_void_tags": {
+      "description": "Close void tags like <script> and </script>",
+      "type": "boolean"
+    },
+    "css": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/css-beautify"
+        }
+      ]
+    },
+    "custom_blocks": {
+      "description": "Custom blocks to format.",
+      "type": "string"
+    },
+    "custom_html": {
+      "description": "Custom HTML tags to format.",
+      "type": "string"
+    },
+    "exclude": {
+      "description": "Exclude files from being processed.",
+      "type": "string"
+    },
+    "extend_exclude": {
+      "description": "Extend exclude pattern.",
+      "type": "string"
+    },
+    "extension": {
+      "description": "File extension to ignore.",
+      "type": "string"
+    },
+    "files": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "format_attribute_template_tags": {
+      "description": "Format attribute template tags.",
+      "type": "boolean"
+    },
+    "format_css": {
+      "description": "Format CSS.",
+      "type": "boolean"
+    },
+    "format_js": {
+      "description": "Format JS.",
+      "type": "boolean"
+    },
+    "ignore": {
+      "description": "Ignore certain files.",
+      "type": "string"
+    },
+    "ignore_blocks": {
+      "description": "Ignore certain blocks.",
+      "type": "string"
+    },
+    "ignore_case": {
+      "description": "Case insensitive.",
+      "type": "boolean"
+    },
+    "include": {
+      "description": "Include certain files.",
+      "type": "string"
+    },
+    "indent": {
+      "description": "Number of spaces per indentation level.",
+      "type": "number"
+    },
+    "js": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/js-beautify"
+        }
+      ]
+    },
+    "line_break_after_multiline_tag": {
+      "description": "Line break after multiline tag.",
+      "type": "boolean"
+    },
+    "linter_output_format": {
+      "description": "Output format for linter output.",
+      "type": "string"
+    },
+    "max_attribute_length": {
+      "description": "Maximum length of attributes.",
+      "type": "number"
+    },
+    "max_blank_lines": {
+      "description": "Maximum number of blank lines.",
+      "type": "number"
+    },
+    "max_line_length": {
+      "description": "Maximum length of a single line.",
+      "type": "number"
+    },
+    "no_function_formatting": {
+      "description": "Do not format function calls.",
+      "type": "boolean"
+    },
+    "no_line_after_yaml": {
+      "description": "Do not add newlines after YAML keys.",
+      "type": "boolean"
+    },
+    "no_set_formatting": {
+      "description": "Do not set formatter options.",
+      "type": "boolean"
+    },
+    "per_file_ignores": {
+      "description": "Per file ignores.",
+      "type": "object"
+    },
+    "preserve_blank_lines": {
+      "description": "Preserve blank lines.",
+      "type": "boolean"
+    },
+    "preserve_leading_space": {
+      "description": "Preserve leading space.",
+      "type": "boolean"
+    },
+    "profile": {
+      "description": "Profile to use.",
+      "enum": [
+        "html",
+        "django",
+        "jinja",
+        "nunjucks",
+        "handlebars",
+        "golang",
+        "angular"
+      ],
+      "type": "string"
+    },
+    "require_pragma": {
+      "description": "Require pragma directive."
+    },
+    "use_gitignore": {
+      "description": "Use gitignore patterns."
+    }
+  },
+  "required": [
+    "profile"
+  ],
+  "title": "djlint config schema",
+  "type": "object"
+}

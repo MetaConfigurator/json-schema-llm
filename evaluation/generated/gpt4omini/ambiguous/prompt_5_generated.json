@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hospital Patient Record",
+  "type": "object",
+  "properties": {
+    "patientId": {
+      "type": "string",
+      "description": "Unique identifier for the patient"
+    },
+    "firstName": {
+      "type": "string",
+      "description": "First name of the patient"
+    },
+    "lastName": {
+      "type": "string",
+      "description": "Last name of the patient"
+    },
+    "dateOfBirth": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of birth of the patient"
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["Male", "Female", "Other"],
+      "description": "Gender of the patient"
+    },
+    "contactInformation": {
+      "type": "object",
+      "properties": {
+        "phone": {
+          "type": "string",
+          "description": "Phone number of the patient"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Email address of the patient"
+        },
+        "address": {
+          "type": "string",
+          "description": "Home address of the patient"
+        }
+      },
+      "required": ["phone", "email", "address"]
+    },
+    "medicalHistory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "condition": {
+            "type": "string",
+            "description": "Medical condition diagnosed"
+          },
+          "dateDiagnosed": {
+            "type": "string",
+            "format": "date",
+            "description": "Date when the condition was diagnosed"
+          },
+          "treatment": {
+            "type": "string",
+            "description": "Treatment received for the condition"
+          }
+        },
+        "required": ["condition", "dateDiagnosed"]
+      }
+    },
+    "allergies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Allergies the patient has"
+      }
+    },
+    "emergencyContact": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the emergency contact"
+        },
+        "relationship": {
+          "type": "string",
+          "description": "Relationship to the patient"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number of the emergency contact"
+        }
+      },
+      "required": ["name", "relationship", "phone"]
+    }
+  },
+  "required": ["patientId", "firstName", "lastName", "dateOfBirth", "gender", "contactInformation", "medicalHistory", "emergencyContact"]
+}

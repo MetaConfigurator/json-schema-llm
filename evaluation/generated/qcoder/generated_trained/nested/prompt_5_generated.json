@@ -1,0 +1,297 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Solidarity JSON Checker",
+  "description": "A rule-set and config for the Solidarity JSON checker.",
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "object",
+      "properties": {
+        "output": {
+          "type": "string",
+          "enum": [
+            "moderate",
+            "verbose",
+            "silent"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "output"
+      ]
+    },
+    "requirements": {
+      "type": "object",
+      "description": "List of requirement rules.",
+      "patternProperties": {
+        "^([a-z]+)$": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/cli"
+            },
+            {
+              "$ref": "#/definitions/dir"
+            },
+            {
+              "$ref": "#/definitions/file"
+            },
+            {
+              "$ref": "#/definitions/env"
+            },
+            {
+              "$ref": "#/definitions/shell"
+            },
+            {
+              "$ref": "#/definitions/custom"
+            }
+          ]
+        }
+      },
+      "minItems": 1,
+      "_uniqueItems": true,
+      "additionalProperties": false
+    }
+  },
+  "definitions": {
+    "cli": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "enum": [
+            "cli"
+          ]
+        },
+        "binary": {
+          "type": "string"
+        },
+        "semver": {
+          "type": "string"
+        },
+        "version": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "line": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "matchIndex": {
+          "type": "integer"
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ],
+          "default": ""
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "rule",
+        "binary"
+      ]
+    },
+    "dir": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "enum": [
+            "dir",
+            "directory"
+          ]
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ],
+          "default": ""
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "rule",
+        "platform"
+      ]
+    },
+    "file": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "enum": [
+            "file"
+          ]
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ],
+          "default": ""
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "rule",
+        "platform"
+      ]
+    },
+    "env": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "enum": [
+            "env"
+          ]
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ],
+          "default": ""
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "rule",
+        "platform"
+      ]
+    },
+    "shell": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "enum": [
+            "shell"
+          ]
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ],
+          "default": ""
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        },
+        "match": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "rule",
+        "platform"
+      ]
+    },
+    "custom": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "enum": [
+            "custom"
+          ]
+        },
+        "plugin": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string",
+          "enum": [
+            "darwin",
+            "macos",
+            "freebsd",
+            "linux",
+            "sunos",
+            "win32",
+            "windows"
+          ],
+          "default": ""
+        },
+        "error": {
+          "type": "string"
+        },
+        "ci": {
+          "type": "boolean"
+        },
+        "match": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "rule",
+        "plugin",
+        "name"
+      ]
+    }
+  }
+}

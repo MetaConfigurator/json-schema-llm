@@ -1,0 +1,23 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "strictSSL": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether strict SSL is enabled."
+    },
+    "proxy": {
+      "type": "string",
+      "default": "",
+      "description": "Specifies any standard http-proxy supported by the request package."
+    },
+    "token": {
+      "type": "string",
+      "default": "",
+      "description": "An OAuth token used to increase GitHub API rate limits."
+    }
+  },
+  "required": ["strictSSL", "proxy", "token"]
+}
+```

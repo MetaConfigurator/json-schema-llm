@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "template": {
+      "type": "string",
+      "description": "Path to your template, relative from the repository root."
+    },
+    "repository": {
+      "type": "string",
+      "description": "Specify a different repository than where the problem is."
+    }
+  },
+  "required": [
+    "repository"
+  ]
+}

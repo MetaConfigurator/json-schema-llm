@@ -1,0 +1,1 @@
+The schema describes validation for CSVDDF dialect structures. It is an object type. The main properties of the schema are: 'delimiter' is a string, required; 'doublequote' is a boolean, required; 'lineterminator' is a string, required; 'quotechar' is a string, required; 'skipinitialspace' is a boolean, required. No additional properties are allowed at the root level.

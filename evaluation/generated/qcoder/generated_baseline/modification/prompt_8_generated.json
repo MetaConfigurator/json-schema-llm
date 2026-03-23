@@ -1,0 +1,27 @@
+```json
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "Coordinates representing the position of an object.",
+    "properties": {
+        "x": {
+            "description": "The coordinate point on the x axis",
+            "type": "number"
+        },
+        "y": {
+            "description": "The coordinate point on the y axis",
+            "type": "number"
+        },
+        "z": {
+            "description": "The coordinate point on the z axis",
+            "type": "number"
+        }
+    },
+    "required": [
+        "x",
+        "y",
+        "z"
+    ],
+    "title": "Object Position",
+    "type": "object"
+}
+```

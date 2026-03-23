@@ -1,0 +1,31 @@
+{ 
+    "type": "object",
+    "properties": {
+        "definitions": {
+            "type": "object",
+            "properties": {
+                "dynamic": {
+                    "type": "object",
+                    "properties": {
+                        "expand": {"type": "boolean", "default": false},
+                        "cwd": {"type": "string"},
+                        "dest": {"type": "string"},
+                        "ext": {"type": "string", "enum": ["first", "last"]},
+                        "extDot": {"type": "string", "enum": ["first", "last"], "default": "first"},
+                        "filter": {"type": "string", "enum": ["isFile", "isDirectory", "isBlockDevice", "isCharacterDevice", "isSymbolicLink", "isFIFO", "isSocket", "flatten"]},
+                        "matchBase": {"type": "boolean", "default": false},
+                        "nonull": {"type": "boolean", "default": false},
+                        "rename": {"type": "string"}
+                    },
+                    "required": ["expand", "cwd", "dest", "ext", "extDot", "filter", "matchBase", "nonull"]
+                }
+            },
+            "optional": ["fileFormat"],
+            "additionalProperties": true
+        },
+        "options": {
+            "type": "object"
+        }
+    },
+    "required": ["definitions", "options"]
+}

@@ -1,0 +1,1 @@
+The schema describes an image representation. It is an object type. The main properties of the schema are: 'id' is a string optional field. 'name' is a string required field. 'width' is an integer optional field. 'height' is an integer optional field. No additional properties are allowed at the root level.

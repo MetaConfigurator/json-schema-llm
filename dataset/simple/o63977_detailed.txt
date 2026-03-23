@@ -1,0 +1,1 @@
+The schema describes a configuration object. It is an object type. The main properties of the schema are: 'string' is a string with a default value of an empty string. 'array' is an array of string items. No additional properties are allowed at the root level.

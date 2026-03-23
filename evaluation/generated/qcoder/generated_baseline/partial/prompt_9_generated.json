@@ -1,0 +1,47 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "patientId": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "contactInfo": {
+      "type": "object",
+      "properties": {
+        "phone": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "medicalHistory": {
+      "type": "object",
+      "properties": {
+        "condition": {
+          "type": "string"
+        },
+        "diagnosisDate": {
+          "type": "string"
+        },
+        "medication": {
+          "type": "array"
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  }
+}
+```

@@ -1,0 +1,35 @@
+```json
+{
+  "project_id": "your_project_id",
+  "project_id_env": "your_project_id_env",
+  "api_token": "your_api_token",
+  "api_token_env": "your_api_token_env",
+  "base_path": "your_base_path",
+  "base_path_env": "your_base_path_env",
+  "base_url": "https://your_base_url",
+  "base_url_env": "your_base_url_env",
+  "preserve_hierarchy": true,
+  "commit_message": "Your Commit Message",
+  "append_commit_message": false,
+  "export_languages": ["en"],
+  "files": [
+    {
+      "source": "path/to/source/file.txt",
+      "translation": "Translated content here",
+      "ignore": [],
+      "translation_replace": {},
+      "excluded_target_languages": [],
+      "scheme": "custom_scheme",
+      "dest": "path/to/destination/file.txt",
+      "type": "text",
+      "update_option": "update_as_unapproved"
+    }
+  ],
+  "files_env": "your_files_env",
+  "language_mappings": {
+    "two_letters_code": "two_letters_code_value",
+    "android_code": "android_code_value"
+  },
+  "labels": ["label1", "label2"]
+}
+```

@@ -1,0 +1,1 @@
+The schema describes container cleanup input. It is an object type. The main properties of the schema are: 'container_name' is a string that is required. 'fabric_fq_name' is an array of strings that is required. No additional properties are allowed at the root level.

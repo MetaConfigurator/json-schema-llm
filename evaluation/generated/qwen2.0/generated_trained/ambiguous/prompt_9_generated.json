@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "restaurantId": {
+      "type": "string"
+    },
+    "orderDate": {
+      "type": "string"
+    },
+    "totalPrice": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "restaurantId",
+    "orderDate",
+    "totalPrice"
+  ]
+}

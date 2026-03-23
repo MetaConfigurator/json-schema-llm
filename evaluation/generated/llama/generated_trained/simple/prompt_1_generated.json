@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Visual Studio Components Configuration Format",
+  "type": "object",
+  "properties": {
+    "version": {
+      "description": "The version of the component configuration file format.",
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+\\.\\d+$"
+    },
+    "components": {
+      "description": "Names of Visual Studio components.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "version",
+    "components"
+  ]
+}

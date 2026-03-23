@@ -1,0 +1,35 @@
+```json
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Book",
+  "description": "Represents a book in a catalog.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1
+    },
+    "publicationYear": {
+      "type": "integer",
+      "minimum": 1450
+    },
+    "price": {
+      "type": "number",
+      "minimum": 0
+    },
+    "ISBN": {
+      "type": "string",
+      "pattern": "^\\d{3}-\\d{10}$"
+    },
+    "genre": {
+      "type": "string"
+    }
+  },
+  "required": ["title", "author", "price"]
+}
+```

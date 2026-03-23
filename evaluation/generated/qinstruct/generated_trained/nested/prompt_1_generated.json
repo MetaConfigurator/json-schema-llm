@@ -1,0 +1,98 @@
+{
+  "definitions": {
+    "bool": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {
+        "default": {
+          "type": [
+            "boolean"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "int": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "integer",
+      "minimum": 0,
+      "description": "Integer with a minimum value of 0."
+    },
+    "string": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "string",
+      "description": "String."
+    },
+    "string-array": {
+      "oneOf": [
+        {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "array",
+          "items": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "string"
+          }
+        },
+        {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "type": "string"
+        }
+      ],
+      "description": "Array of strings."
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/bool"
+    },
+    {
+      "$ref": "#/definitions/int"
+    },
+    {
+      "$ref": "#/definitions/string"
+    },
+    {
+      "$ref": "#/definitions/string-array"
+    }
+  ],
+  "required": [
+    "allow-uncaught",
+    "async-only",
+    "bail",
+    "check-leaks",
+    "delay",
+    "exit",
+    "forbid-only",
+    "forbid-pending",
+    "global",
+    "jobs",
+    "parallel",
+    "retries",
+    "slow",
+    "timeout",
+    "ui",
+    "color",
+    "diff",
+    "full-trace",
+    "growl",
+    "inline-diffs",
+    "reporter",
+    "reporter-option",
+    "config",
+    "package",
+    "extension",
+    "file",
+    "ignore",
+    "recursive",
+    "require",
+    "sort",
+    "watch",
+    "watch-files",
+    "watch-ignore",
+    "fgrep",
+    "grep",
+    "invert",
+    "spec",
+    "enable-source-maps"
+  ]
+}

@@ -1,0 +1,6 @@
+```json
+{
+  "version": "^2023-04",
+  "components": ["Visual Studio", "Component"]
+}
+```

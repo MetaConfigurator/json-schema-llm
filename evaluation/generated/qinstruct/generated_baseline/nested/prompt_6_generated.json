@@ -1,0 +1,104 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "options": {
+      "type": "object",
+      "required": ["config"],
+      "description": "Additional options for the Grunt task."
+    },
+    "definitions": {
+      "dynamic": {
+        "type": "object",
+        "properties": {
+          "expand": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether to expand the dynamic definitions."
+          },
+          "cwd": {
+            "type": "string",
+            "default": "",
+            "description": "Working directory path."
+          },
+          "dest": {
+            "type": "string",
+            "default": "",
+            "description": "Destination path."
+          },
+          "ext": {
+            "type": "string",
+            "enum": [
+              "first",
+              "last"
+            ],
+            "default": "first",
+            "description": "Extension used in the destination path."
+          },
+          "extDot": {
+            "type": "enum",
+            "items": ["first", "last"],
+            "default": "first",
+            "description": "Extension used in the destination path."
+          },
+          "filter": {
+            "type": "enum",
+            "items": ["isFile", "isDirectory", "isBlockDevice", "isCharacterDevice", "isSymbolicLink", "isFIFO", "isSocket", "isFIFO"],
+            "default": "isFile",
+            "description": "Filter criteria for the destination path."
+          },
+          "flatten": {
+            "type": "boolean",
+            "default": false,
+            "description": "Flatten the destination path if it contains multiple files."
+          },
+          "matchBase": {
+            "type": "boolean",
+            "default": false,
+            "description": "Match the base name of the destination path."
+          },
+          "nonull": {
+            "type": "boolean",
+            "default": false,
+            "description": "Ensure non-empty paths in the destination path."
+          },
+          "rename": {
+            "type": "string",
+            "default": "",
+            "description": "Path to rename the destination path."
+          },
+          "src": {
+            "type": "array",
+            "description": "Array of source paths.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fileFormat": {
+            "type": "object",
+            "properties": {
+              "files": {
+                "type": "array",
+                "description": "An array of objects containing additional properties of type array or string.",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Configuration for the file format."
+          },
+          "dest": {
+            "type": "string",
+            "default": "",
+            "description": "Destination path."
+          }
+        },
+        "additionalProperties": true,
+        "required": ["files"]
+      }
+    }
+  },
+  "required": ["config"],
+  "additionalProperties": true
+}
+```

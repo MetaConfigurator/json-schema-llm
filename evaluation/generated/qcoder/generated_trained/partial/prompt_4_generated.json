@@ -1,0 +1,31 @@
+{
+  "properties": {
+    "transactionId": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "paymentMethod": {
+      "type": "string"
+    },
+    "cardNumber": {
+      "type": "string"
+    },
+    "cvv": {
+      "type": "string"
+    },
+    "paypalEmail": {
+      "type": "string"
+    },
+    "iban": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false
+}

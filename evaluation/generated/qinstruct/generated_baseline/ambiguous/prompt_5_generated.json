@@ -1,0 +1,55 @@
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hospital Patient Record",
+  "type": "object",
+  "properties": {
+    "patientId": {
+      "type": "integer"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "diagnosis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "medication": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prescription": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["patientId", "firstName", "lastName", "age", "gender", "address", "phoneNumber", "diagnosis", "medication", "prescription", "notes"]
+}
+```

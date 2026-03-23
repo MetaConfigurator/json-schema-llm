@@ -1,0 +1,1 @@
+{ "type": "object", "properties": {"excludeFiles": ["string"], "gitignore": "string", "hideFiles": ["string"] } }

@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": true,
+  "type": "object",
+  "properties": {
+    "options": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/fileFormat"
+        },
+        {
+          "$ref": "#/definitions/dynamic"
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "dynamic": {
+      "properties": {
+        "expand": {
+          "default": false,
+          "description": "Expand variables in paths.",
+          "type": "boolean"
+        },
+        "cwd": {
+          "description": "Current working directory.",
+          "type": "string"
+        },
+        "dest": {
+          "description": "Destination path.",
+          "type": "string"
+        },
+        "ext": {
+          "default": "first",
+          "enum": [
+            "first",
+            "last"
+          ],
+          "description": "Extension to use when expanding paths.",
+          "type": "string"
+        },
+        "extDot": {
+          "default": "first",
+          "enum": [
+            "first",
+            "last"
+          ],
+          "description": "Default extension to use if no extension is specified.",
+          "type": "string"
+        },
+        "filter": {
+          "default": "isFile",
+          "enum": [
+            "isFile",
+            "isDirectory",
+            "isBlockDevice",
+            "isCharacterDevice",
+            "isSymbolicLink",
+            "isFIFO",
+            "isSocket"
+          ],
+          "description": "Filter used to determine whether a path should be expanded.",
+          "type": "string"
+        },
+        "flatten": {
+          "default": false,
+          "description": "Flatten paths.",
+          "type": "boolean"
+        },
+        "matchBase": {
+          "default": false,
+          "description": "Match base names only.",
+          "type": "boolean"
+        },
+        "nonull": {
+          "default": false,
+          "description": "Do not expand null paths.",
+          "type": "boolean"
+        },
+        "rename": {
+          "description": "Rename files and directories.",
+          "type": "string"
+        },
+        "src": {
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "_uniqueItems": true
+              }
+            ]
+          },
+          "minItems": 1,
+          "type": "array",
+          "_uniqueItems": true
+        }
+      }
+    },
+    "fileFormat": {
+      "properties": {
+        "files": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "minItems": 1
+              }
+            },
+            {
+              "type": "array",
+              "_uniqueItems": true
+            }
+          ]
+        },
+        "include": {
+          "type": "array",
+          "_uniqueItems": true
+        },
+        "exclude": {
+          "type": "array",
+          "_uniqueItems": true
+        }
+      }
+    }
+  }
+}

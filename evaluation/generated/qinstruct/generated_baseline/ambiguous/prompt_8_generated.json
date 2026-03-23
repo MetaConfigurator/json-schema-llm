@@ -1,0 +1,95 @@
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "job_title": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "url",
+    "email",
+    "phone",
+    "job_title",
+    "company_name",
+    "position"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "job_title": {
+            "type": "string"
+          },
+          "company_name": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "description",
+          "url",
+          "email",
+          "phone",
+          "job_title",
+          "company_name",
+          "position"
+        ]
+      },
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "enum": ["application"]
+        }
+      ]
+    }
+  ]
+}
+```

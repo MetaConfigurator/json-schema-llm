@@ -1,0 +1,1 @@
+The schema describes an OpenContainer Image Layout. It is an object type. The main properties of the schema are: 'imageLayoutVersion' is a string that specifies the version of the OCI Image Layout (in the oci-layout file). It is required and its allowed value is '1.0.0'. No additional properties are allowed at the root level.

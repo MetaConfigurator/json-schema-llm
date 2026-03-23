@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "configuration": {
+      "type": "object",
+      "additionalProperties": true,
+      "allOf": [
+        {
+          "properties": {
+            "apiLocation": {
+              "type": "string"
+            },
+            "apiPort": {
+              "type": "number"
+            },
+            "apiPrefix": {
+              "type": "string",
+              "enum": ["api"]
+            },
+            "appArtifactLocation": {
+              "type": "string"
+            },
+            "appLocation": {
+              "type": "string"
+            },
+            "build": {
+              "type": "boolean"
+            },
+            "customUrlScheme": {
+              "type": "string"
+            },
+            "devserverTimeout": {
+              "type": "number"
+            },
+            "host": {
+              "type": "string"
+            },
+            "overridableErrorCode": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            "port": {
+              "type": "number"
+            },
+            "run": {
+              "type": "string"
+            },
+            "ssl": {
+              "type": "boolean"
+            },
+            "sslCert": {
+              "type": "string"
+            },
+            "sslKey": {
+              "type": "string"
+            },
+            "swaConfigFilename": {
+              "type": "string",
+              "enum": ["staticwebapp.config.json"]
+            },
+            "swaConfigFilenameLegacy": {
+              "type": "string",
+              "enum": ["routes.json"]
+            },
+            "swaConfigLocation": {
+              "type": "string"
+            },
+            "verbose": {
+              "type": "string"
+            },
+            "context": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "apiLocation",
+            "apiPort",
+            "apiPrefix",
+            "appArtifactLocation",
+            "appLocation",
+            "build",
+            "customUrlScheme",
+            "devserverTimeout",
+            "host",
+            "overridableErrorCode",
+            "port",
+            "run",
+            "ssl",
+            "sslCert",
+            "sslKey",
+            "swaConfigFilename",
+            "swaConfigFilenameLegacy",
+            "swaConfigLocation",
+            "verbose"
+          ]
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

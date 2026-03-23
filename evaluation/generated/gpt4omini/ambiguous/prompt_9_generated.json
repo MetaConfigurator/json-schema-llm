@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Restaurant Ordering System",
+  "type": "object",
+  "properties": {
+    "restaurant": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "cuisine": {
+          "type": "string"
+        },
+        "menu": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/menuItem"
+          }
+        }
+      },
+      "required": ["name", "location", "cuisine", "menu"]
+    },
+    "order": {
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "type": "string"
+        },
+        "customer": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "contact": {
+              "type": "string"
+            }
+          },
+          "required": ["name", "contact"]
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "menuItemId": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": ["menuItemId", "quantity"]
+          }
+        },
+        "totalPrice": {
+          "type": "number",
+          "minimum": 0
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "preparing", "delivered", "canceled"]
+        }
+      },
+      "required": ["orderId", "customer", "items", "totalPrice", "status"]
+    }
+  },
+  "definitions": {
+    "menuItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number",
+          "minimum": 0
+        },
+        "available": {
+          "type": "boolean"
+        }
+      },
+      "required": ["id", "name", "price", "available"]
+    }
+  },
+  "required": ["restaurant", "order"]
+}

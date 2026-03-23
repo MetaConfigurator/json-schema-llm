@@ -1,0 +1,44 @@
+```json
+{
+  "fileignoreconfig": [
+    {
+      "filename": "example.txt",
+      "checksum": "abc1234567890",
+      "ignore_detectors": ["filecontent"]
+    },
+    {
+      "filename": "anotherfile.txt",
+      "checksum": "def4567890123",
+      "ignore_detectors": ["filename"]
+    }
+  ],
+  "scopeconfig": [
+    {
+      "scope": "global"
+    },
+    {
+      "scope": "project"
+    }
+  ],
+  "allowed_patterns": [
+    ".*\\d+\\.txt$",
+    ".*\\.(jpg|jpeg|png)$"
+  ],
+  "custom_patterns": [
+    "^[a-zA-Z]+[a-zA-Z]*$",
+    "^\\d+$"
+  ],
+  "custom_severities": [
+    {
+      "detector": "filecontent",
+      "severity": "high"
+    },
+    {
+      "detector": "filename",
+      "severity": "medium"
+    }
+  ],
+  "threshold": "medium",
+  "version": "1.0.0"
+}
+```

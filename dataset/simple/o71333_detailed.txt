@@ -1,0 +1,1 @@
+The schema describes the authenticated User for a request. It is an object type. The main properties of the schema are: 'id' is a string, number, or null with a maximum length of 1024. 'email' is a string or null with a maximum length of 1024. 'username' is a string or null with a maximum length of 1024. No additional properties are allowed at the root level.

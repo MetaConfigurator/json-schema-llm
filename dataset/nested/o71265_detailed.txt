@@ -1,0 +1,20 @@
+The schema describes structured JSON responses for applications extending the JSend format, specifically for 'fail' and 'error' cases. It is an object type. It defines several reusable components under 'definitions': 'success', 'fail', 'error', 'data-fail-error', 'data-fail-error-item', 'data', 'message', and 'code'.
+
+'success' is an object, indicating that all went well, requiring 'status' (with a pattern of '^success$') and 'data'. 'data' references 'data'.
+
+'fail' is an object, indicating there was a problem with the submitted data, requiring 'status' (with a pattern of '^fail$') and 'data'. 'data' references 'data-fail-error'.
+
+'error' is an object, indicating an error occurred in processing the request, requiring 'status' (with a pattern of '^error$') and 'data'. 'data' references 'data-fail-error'.
+
+'code' is a string or integer, providing information about a failure or error, if applicable.
+
+data-fail-error is an array, containing a minimum of 0 items, each referencing 'data-fail-error-item'.
+
+data-fail-error-item is an object, requiring 'message' (which references 'message'), and it can have optional fields 'code' (which references 'code') and 'field' (a string).
+
+data is a generic container that can be a string, null, array, object, integer, or boolean.
+
+message is a string, providing a readable description of the failure or error. 
+
+The main properties of the schema are:
+No additional properties are allowed at the root level.

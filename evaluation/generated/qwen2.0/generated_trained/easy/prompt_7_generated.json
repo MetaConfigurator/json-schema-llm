@@ -1,0 +1,45 @@
+{
+  "properties": {
+    "identifiers": {
+      "default": false,
+      "description": "Whether to limit the search to nodes with matching identifiers",
+      "type": "boolean"
+    },
+    "ignore": {
+      "default": "",
+      "description": "A regular expression used for matching paths to ignore",
+      "type": "string"
+    },
+    "jsx": {
+      "default": false,
+      "description": "Process JSX files",
+      "type": "boolean"
+    },
+    "reporter": {
+      "default": "default",
+      "description": "Name of the reporter to be used",
+      "type": "string"
+    },
+    "suppress": {
+      "default": 100,
+      "description": "The number of lines at which diffs should be suppressed",
+      "minimum": 0,
+      "type": "integer"
+    },
+    "threshold": {
+      "default": 15,
+      "description": "Smallest subset of nodes to analyze",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "identifiers",
+    "ignore",
+    "jsx",
+    "reporter",
+    "suppress",
+    "threshold"
+  ],
+  "title": "JSInspect",
+  "type": "object"
+}

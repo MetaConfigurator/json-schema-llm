@@ -1,0 +1,27 @@
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "restaurantName": {
+      "type": "string"
+    },
+    "menuItems": [
+      {
+        "name": "Pizza",
+        "price": 15,
+        "quantity": 2
+      },
+      {
+        "name": "Salad",
+        "price": 8,
+        "quantity": 3
+      }
+    ],
+    "orderDate": {
+      "type": "string"
+    }
+  },
+  "required": ["restaurantName", "menuItems", "orderDate"]
+}
+```

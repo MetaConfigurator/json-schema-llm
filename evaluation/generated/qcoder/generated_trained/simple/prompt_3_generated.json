@@ -1,0 +1,27 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "imports": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Imports",
+      "type": "object"
+    },
+    "scopes": {
+      "additionalProperties": {
+        "additionalProperties": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Scope",
+          "type": "object"
+        }
+      },
+      "title": "Scopes",
+      "type": "object"
+    }
+  },
+  "title": "Import Map",
+  "type": "object"
+}

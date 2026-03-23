@@ -1,0 +1,73 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "jobTitle": {
+      "type": "string",
+      "required": true,
+      "description": "The title of the job"
+    },
+    "companyName": {
+      "type": "string",
+      "required": true,
+      "description": "The name of the company"
+    },
+    "location": {
+      "type": "string",
+      "required": true,
+      "description": "The location of the job"
+    },
+    "salaryRange": {
+      "type": "number",
+      "required": true,
+      "description": "The minimum salary required for the job"
+    },
+    "applicationDeadline": {
+      "type": "date",
+      "required": true,
+      "description": "The date by which the applicant must submit their application"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "required": true,
+        "description": "A list of skills required for the job"
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "required": true,
+        "description": "A list of years of experience required for the job"
+      }
+    },
+    "contactInfo": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "required": true,
+          "description": "The email address of the applicant"
+        },
+        "phone": {
+          "type": "string",
+          "required": true,
+          "description": "The phone number of the applicant"
+        }
+      }
+    }
+  },
+  "required": [
+    "jobTitle",
+    "companyName",
+    "location",
+    "salaryRange",
+    "applicationDeadline",
+    "skills",
+    "experience",
+    "contactInfo"
+  ]
+}
+```

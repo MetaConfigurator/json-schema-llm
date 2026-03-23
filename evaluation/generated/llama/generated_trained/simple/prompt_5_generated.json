@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Visual Studio Extension Pack Manifest",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "A unique identifier for the extension pack"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Name of the extension pack"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Short description of the extension pack"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Version of the extension pack"
+    },
+    "extensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Name of the extension"
+          },
+          "vsixId": {
+            "type": "string",
+            "minLength": 1,
+            "description": "VSIX ID of the extension"
+          }
+        },
+        "required": [
+          "name",
+          "vsixId"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

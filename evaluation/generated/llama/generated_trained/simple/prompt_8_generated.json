@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "id": "https://raw.githubusercontent.com/minecraft-mcpi/minecraft-data-packs/master/schemas/trim.json",
+  "properties": {
+    "asset_id": {
+      "type": "string"
+    },
+    "description": {
+      "properties": {
+        "color": {
+          "type": "string"
+        },
+        "translate": {
+          "required": true,
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "template_item": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "asset_id",
+    "description",
+    "template_item"
+  ],
+  "title": "Trim",
+  "type": "object"
+}

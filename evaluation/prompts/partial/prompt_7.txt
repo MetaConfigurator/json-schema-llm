@@ -1,0 +1,1 @@
+Create a JSON Schema for a social media post object with: postId, userId, content, media, likes, comments, createdAt. Comments is an array with items userId, commentText.

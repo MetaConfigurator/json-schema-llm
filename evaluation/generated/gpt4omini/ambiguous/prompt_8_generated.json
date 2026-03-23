@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Job Application Portal",
+  "type": "object",
+  "properties": {
+    "applicant": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "phone": {
+          "type": "string",
+          "pattern": "^[0-9]{10}$"
+        },
+        "resume": {
+          "type": "string",
+          "format": "uri"
+        },
+        "coverLetter": {
+          "type": "string",
+          "maxLength": 2000
+        }
+      },
+      "required": ["firstName", "lastName", "email", "resume"]
+    },
+    "job": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string"
+        },
+        "jobTitle": {
+          "type": "string"
+        },
+        "company": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["jobId", "jobTitle", "company", "location", "description"]
+    },
+    "applicationDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["applied", "under_review", "interview", "offered", "rejected"]
+    }
+  },
+  "required": ["applicant", "job", "applicationDate", "status"]
+}

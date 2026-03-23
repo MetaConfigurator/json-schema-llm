@@ -1,0 +1,1 @@
+The schema describes a configuration for Single Sign-On (SSO). It is an object type. The main properties of the schema are: 'ssoType' is a string and is required. It must be one of the following values: 'SAML'. 'ssoRequest' is a string and is required. It has a maximum length of 32767 characters. No additional properties are allowed at the root level.

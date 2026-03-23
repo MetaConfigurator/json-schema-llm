@@ -1,0 +1,1 @@
+The schema describes a Volume Request. It is an object type. The main properties of the schema are: 'path' is a string required field. 'delete_on_stop' is a boolean optional field, described as 'delete the volume when the job stops'. No additional properties are allowed at the root level.

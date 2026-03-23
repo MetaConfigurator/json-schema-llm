@@ -1,0 +1,83 @@
+{ 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Static Web Apps CLI Configuration",
+    "type": "object",
+    "properties": {
+        "configuration": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["apiLocation", "apiPort", "apiPrefix", "appArtifactLocation", "appLocation"],
+            "allOf": [
+                {"$ref": "#/definitions/apiLocation"},
+                {"$ref": "#/definitions/apiPort"},
+                {"$ref": "#/definitions/apiPrefix"},
+                {"$ref": "#/definitions/appArtifactLocation"},
+                {"$ref": "#/definitions/appLocation"}
+            ]
+        },
+        "apiLocation": {
+            "type": "string"
+        },
+        "apiPort": {
+            "type": "number"
+        },
+        "apiPrefix": {
+            "type": "string",
+            "pattern": "^api$"
+        },
+        "appArtifactLocation": {
+            "type": "string"
+        },
+        "appLocation": {
+            "type": "string"
+        },
+        "build": {
+            "type": "boolean"
+        },
+        "customUrlScheme": {
+            "type": "string"
+        },
+        "devserverTimeout": {
+            "type": "number"
+        },
+        "host": {
+            "type": "string"
+        },
+        "overridableErrorCode": {
+            "type": "array",
+            "items": {"type": "number"}
+        },
+        "port": {
+            "type": "number"
+        },
+        "run": {
+            "type": "string"
+        },
+        "ssl": {
+            "type": "boolean"
+        },
+        "sslCert": {
+            "type": "string"
+        },
+        "sslKey": {
+            "type": "string"
+        },
+        "swaConfigFilename": {
+            "type": "string",
+            "pattern": "^staticwebapp\.config\.json$"
+        },
+        "swaConfigFilenameLegacy": {
+            "type": "string",
+            "pattern": "^routes\.json$"
+        },
+        "swaConfigLocation": {
+            "type": "string"
+        },
+        "verbose": {
+            "type": "string"
+        },
+        "context": {
+            "type": "string"
+        }
+    }
+}

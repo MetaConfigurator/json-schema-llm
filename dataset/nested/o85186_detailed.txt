@@ -1,0 +1,14 @@
+The schema describes an MWF drawer component's schema definition. It is an object type. The main properties of the schema are: 
+
+'config' is an object containing configuration options. It is required and must include the 'id' field. The available properties are: 
+ - 'content-type' is a string, optional. 
+ - 'expanded' is a boolean, optional. 
+ - 'header' is a boolean, optional. 
+ - 'id' is a string, required. 
+ - 'nav' is a boolean, optional. 
+ - 'radiogroup' is a boolean, optional. 
+ - 'responsive' is a boolean, optional.
+
+'content' is an object that defines the content structure. It is required and must include the 'heading' field. The available properties are: 
+ - 'heading' is a string, required. 
+ - 'refine-items' is an array of objects; each object is required to have 'config' and 'content' properties. The 'config' property is an object that must include the 'selected' field, and it has an optional 'radio' boolean. The 'content' property is an object required to have a 'text' string. No additional properties are allowed at the root level.

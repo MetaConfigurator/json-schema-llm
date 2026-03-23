@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Gaming Profile",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "description": "The unique username of the gamer."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "The email address associated with the gaming profile."
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "The age of the gamer."
+    },
+    "games": {
+      "type": "array",
+      "description": "A list of games the user plays.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the game."
+          },
+          "platform": {
+            "type": "string",
+            "description": "The platform on which the game is played."
+          },
+          "hoursPlayed": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "The number of hours the user has played the game."
+          }
+        },
+        "required": ["title", "platform"]
+      }
+    },
+    "friends": {
+      "type": "array",
+      "description": "A list of friends associated with the gaming profile.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "The username of the friend."
+          },
+          "status": {
+            "type": "string",
+            "enum": ["online", "offline", "busy"],
+            "description": "The current status of the friend."
+          }
+        },
+        "required": ["username", "status"]
+      }
+    },
+    "achievements": {
+      "type": "array",
+      "description": "A list of achievements unlocked by the gamer.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the achievement."
+          },
+          "dateUnlocked": {
+            "type": "string",
+            "format": "date",
+            "description": "The date when the achievement was unlocked."
+          }
+        },
+        "required": ["name", "dateUnlocked"]
+      }
+    }
+  },
+  "required": ["username", "email", "age"]
+}

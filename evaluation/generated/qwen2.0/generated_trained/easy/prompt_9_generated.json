@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "identifiers": {
+      "type": "boolean",
+      "default": false
+    },
+    "ignore": {
+      "type": "string",
+      "default": ""
+    },
+    "jsx": {
+      "type": "boolean",
+      "default": false
+    },
+    "reporter": {
+      "type": "string",
+      "enum": [
+        "default",
+        "json",
+        "pmd"
+      ]
+    },
+    "suppress": {
+      "type": "integer",
+      "default": 100,
+      "minimum": 0
+    },
+    "threshold": {
+      "type": "integer",
+      "default": 15,
+      "minimum": 0
+    }
+  },
+  "required": [
+    "identifiers",
+    "ignore",
+    "jsx",
+    "reporter",
+    "suppress",
+    "threshold"
+  ],
+  "additionalProperties": false
+}

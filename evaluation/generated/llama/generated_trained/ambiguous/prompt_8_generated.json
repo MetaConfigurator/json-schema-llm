@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Job Application Portal",
+  "description": "A sample job application portal",
+  "type": "object",
+  "properties": {
+    "job_id": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "application_date": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "esriDocumentation": {
+    "examples": [
+      {
+        "title": "Job Application Portal",
+        "code": {
+          "job_id": "12345",
+          "company_name": "ABC Corporation",
+          "application_date": "2018-01-01T12:00:00Z"
+        }
+      }
+    ]
+  }
+}

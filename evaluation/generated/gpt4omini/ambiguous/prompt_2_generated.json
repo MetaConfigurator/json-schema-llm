@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Film",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "director": {
+      "type": "string"
+    },
+    "releaseYear": {
+      "type": "integer",
+      "minimum": 1888
+    },
+    "genre": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "duration": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "rating": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "synopsis": {
+      "type": "string"
+    }
+  },
+  "required": ["title", "director", "releaseYear", "genre", "duration"],
+  "additionalProperties": false
+}

@@ -1,0 +1,283 @@
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of recommended methods for rendering stories in different environments.",
+    "properties": {
+        "recommended_methods": {
+            "description": "A list of recommended methods for rendering stories in different environments. Each item should have a description and an enum value.",
+            "items": {
+                "anyOf": [
+                    {
+                        "description": "Well-known values that describe the most common values. 'website' describes a traditional browser experience. 'native' describes a device specific application.",
+                        "enum": [
+                            "website",
+                            "native"
+                        ]
+                    },
+                    {
+                        "description": "Other than the well-known values are allowed, and can be ignored if not recognized",
+                        "type": "string"
+                    }
+                ]
+            },
+            "type": "array"
+        }
+    },
+    "title": "Rendering Guides",
+    "type": "object"
+}
+
+Make the following changes:
+- Remove the "description" property from the "recommended_methods" array
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of recommended methods for rendering stories in different environments.",
+    "properties": {
+        "recommended_methods": {
+            "description": "A list of recommended methods for rendering stories in different environments. Each item should have a description and an enum value.",
+            "items": {
+                "anyOf": [
+                    {
+                        "description": "Well-known values that describe the most common values. 'website' describes a traditional browser experience. 'native' describes a device specific application.",
+                        "enum": [
+                            "website",
+                            "native"
+                        ]
+                    },
+                    {
+                        "description": "Other than the well-known values are allowed, and can be ignored if not recognized",
+                        "type": "string"
+                    }
+                ]
+            },
+            "type": "array"
+        }
+    },
+    "title": "Rendering Guides",
+    "type": "object"
+}
+
+Make the following changes:
+- Add a new property called "example" to the "recommended_methods" array
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of recommended methods for rendering stories in different environments.",
+    "properties": {
+        "recommended_methods": {
+            "description": "A list of recommended methods for rendering stories in different environments. Each item should have a description and an enum value.",
+            "items": {
+                "anyOf": [
+                    {
+                        "description": "Well-known values that describe the most common values. 'website' describes a traditional browser experience. 'native' describes a device specific application.",
+                        "enum": [
+                            "website",
+                            "native"
+                        ]
+                    },
+                    {
+                        "description": "Other than the well-known values are allowed, and can be ignored if not recognized",
+                        "type": "string"
+                    }
+                ]
+            },
+            "type": "array"
+        }
+    },
+    "title": "Rendering Guides",
+    "type": "object"
+}
+
+Make the following changes:
+- Add a new property called "example" to the "recommended_methods" array
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of recommended methods for rendering stories in different environments.",
+    "properties": {
+        "recommended_methods": {
+            "description": "A list of recommended methods for rendering stories in different environments. Each item should have a description and an enum value.",
+            "items": {
+                "anyOf": [
+                    {
+                        "description": "Well-known values that describe the most common values. 'website' describes a traditional browser experience. 'native' describes a device specific application.",
+                        "enum": [
+                            "website",
+                            "native"
+                        ]
+                    },
+                    {
+                        "description": "Other than the well-known values are allowed, and can be ignored if not recognized",
+                        "type": "string"
+                    }
+                ]
+            },
+            "type": "array"
+        }
+    },
+    "title": "Rendering Guides",
+    "type": "object"
+}
+
+Make the following changes:
+- Add a new property called "example" to the "recommended_methods" array
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of recommended methods for rendering stories in different environments.",
+    "properties": {
+        "recommended_methods": {
+            "description": "A list of recommended methods for rendering stories in different environments. Each item should have a description and an enum value.",
+            "items": {
+                "anyOf": [
+                    {
+                        "description": "Well-known values that describe the most common values. 'website' describes a traditional browser experience. 'native' describes a device specific application.",
+                        "enum": [
+                            "website",
+                            "native"
+                        ]
+                    },
+                    {
+                        "description": "Other than the well-known values are allowed, and can be ignored if not recognized",
+                        "type": "string"
+                    }
+                ]
+            },
+            "type": "array"
+        }
+    },
+    "title": "Rendering Guides",
+    "type": "object"
+}
+
+Make the following changes:
+- Add a new property called "example" to the "recommended_methods" array
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of recommended methods for rendering stories in different environments.",
+    "properties": {
+        "recommended_methods": {
+            "description": "A list of recommended methods for rendering stories in different environments. Each item should have a description and an enum value.",
+            "items": {
+                "anyOf": [
+                    {
+                        "description": "Well-known values that describe the most common values. 'website' describes a traditional browser experience. 'native' describes a device specific application.",
+                        "enum": [
+                            "website",
+                            "native"
+                        ]
+                    },
+                    {
+                        "description": "Other than the well-known values are allowed, and can be ignored if not recognized",
+                        "type": "string"
+                    }
+                ]
+            },
+            "type": "array"
+        }
+    },
+    "title": "Rendering Guides",
+    "type": "object"
+}
+
+Make the following changes:
+- Add a new property called "example" to the "recommended_methods" array
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of recommended methods for rendering stories in different environments.",
+    "properties": {
+        "recommended_methods": {
+            "description": "A list of recommended methods for rendering stories in different environments. Each item should have a description and an enum value.",
+            "items": {
+                "anyOf": [
+                    {
+                        "description": "Well-known values that describe the most common values. 'website' describes a traditional browser experience. 'native' describes a device specific application.",
+                        "enum": [
+                            "website",
+                            "native"
+                        ]
+                    },
+                    {
+                        "description": "Other than the well-known values are allowed, and can be ignored if not recognized",
+                        "type": "string"
+                    }
+                ]
+            },
+            "type": "array"
+        }
+    },
+    "title": "Rendering Guides",
+    "type": "object"
+}
+
+Make the following changes:
+- Add a new property called "example" to the "recommended_methods" array
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of recommended methods for rendering stories in different environments.",
+    "properties": {
+        "recommended_methods": {
+            "description": "A list of recommended methods for rendering stories in different environments. Each item should have a description and an enum value.",
+            "items": {
+                "anyOf": [
+                    {
+                        "description": "Well-known values that describe the most common values. 'website' describes a traditional browser experience. 'native' describes a device specific application.",
+                        "enum": [
+                            "website",
+                            "native"
+                        ]
+                    },
+                    {
+                        "description": "Other than the well-known values are allowed, and can be ignored if not recognized",
+                        "type": "string"
+                    }
+                ]
+            },
+            "type": "array"
+        }
+    },
+    "title": "Rendering Guides",
+    "type": "object"
+}
+
+Make the following changes:
+- Add a new property called "example" to the "recommended_methods" array
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of recommended methods for rendering stories in different environments.",
+    "properties": {
+        "recommended_methods": {
+            "description": "A list of recommended methods for rendering stories in different environments. Each item should have a description and an enum value.",
+            "items": {
+                "anyOf": [
+                    {
+                        "description": "Well-known values that describe the most common values. 'website' describes a traditional browser experience. 'native' describes a device specific application.",
+                        "enum": [
+                            "website",
+                            "native"
+                        ]
+                    },
+                    {
+                        "description": "Other than the well-known values are allowed, and can be ignored

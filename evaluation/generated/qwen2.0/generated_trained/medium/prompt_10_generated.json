@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "sourcePrefixes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sectionPrefix": {
+      "type": "string"
+    },
+    "sectionNames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "startImportBlockSign": {
+      "default": "",
+      "type": "string"
+    },
+    "endImportBlockSign": {
+      "default": "",
+      "type": "string"
+    },
+    "statementTerminator": {
+      "default": ";",
+      "type": "string"
+    },
+    "preCommands": {
+      "type": [
+        "string",
+        "object"
+      ],
+      "description": "The commands to run before sorting.",
+      "additionalProperties": false,
+      "required": [
+        "command"
+      ]
+    }
+  },
+  "required": [
+    "sourcePrefixes",
+    "sectionPrefix",
+    "sectionNames",
+    "startImportBlockSign",
+    "endImportBlockSign",
+    "statementTerminator",
+    "preCommands"
+  ]
+}

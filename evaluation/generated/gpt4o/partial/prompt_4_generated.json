@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PaymentTransaction",
+  "type": "object",
+  "properties": {
+    "transactionId": {
+      "type": "string",
+      "description": "Unique identifier for the transaction"
+    },
+    "amount": {
+      "type": "number",
+      "description": "The amount of the transaction",
+      "minimum": 0
+    },
+    "paymentMethod": {
+      "type": "string",
+      "description": "The method of payment used",
+      "enum": ["credit_card", "paypal", "bank_transfer"]
+    },
+    "cardNumber": {
+      "type": "string",
+      "description": "Credit card number used for the transaction",
+      "pattern": "^[0-9]{13,19}$"
+    },
+    "cvv": {
+      "type": "string",
+      "description": "CVV code for the credit card",
+      "pattern": "^[0-9]{3,4}$"
+    },
+    "paypalEmail": {
+      "type": "string",
+      "description": "PayPal email address used for the transaction",
+      "format": "email"
+    },
+    "iban": {
+      "type": "string",
+      "description": "IBAN used for bank transfer",
+      "pattern": "^[A-Z0-9]{15,34}$"
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "Timestamp of when the transaction was created",
+      "format": "date-time"
+    }
+  },
+  "required": ["transactionId", "amount", "paymentMethod", "createdAt"],
+  "oneOf": [
+    {
+      "required": ["cardNumber", "cvv"],
+      "properties": {
+        "paymentMethod": {
+          "enum": ["credit_card"]
+        }
+      }
+    },
+    {
+      "required": ["paypalEmail"],
+      "properties": {
+        "paymentMethod": {
+          "enum": ["paypal"]
+        }
+      }
+    },
+    {
+      "required": ["iban"],
+      "properties": {
+        "paymentMethod": {
+          "enum": ["bank_transfer"]
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

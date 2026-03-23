@@ -1,0 +1,1 @@
+Create a JSON Schema for a sensor reading object with: sensorId, type, value, unit, location, timestamp. Location is an object with properties latitude, longitude, altitude.

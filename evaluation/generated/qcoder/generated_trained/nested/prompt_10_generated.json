@@ -1,0 +1,69 @@
+{
+  "properties": {
+    "sourcePrefixes": {
+      "description": "The prefixes of your source imports.",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "sectionPrefix": {
+      "description": "The prefix of your section title",
+      "type": "string"
+    },
+    "sectionNames": {
+      "description": "The names following `sectionPrefix` of your section title.",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "startImportBlockSign": {
+      "default": "",
+      "description": "The sign to mark the start of the import block.",
+      "type": "string"
+    },
+    "endImportBlockSign": {
+      "default": "",
+      "description": "The sign to mark the end of the import block.",
+      "type": "string"
+    },
+    "statementTerminator": {
+      "default": ";",
+      "description": "The sign to mark the end of an import statement.",
+      "type": "string"
+    },
+    "preCommands": {
+      "description": "Precommands to run before sorting.",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "string"
+              },
+              "system": {
+                "enum": [
+                  "terminal",
+                  "vscode"
+                ]
+              }
+            },
+            "required": [
+              "command"
+            ],
+            "additionalProperties": false,
+            "type": "object"
+          }
+        ]
+      },
+      "type": "array"
+    }
+  },
+  "title": "ES6 Import Sorter Configuration",
+  "type": "object"
+}

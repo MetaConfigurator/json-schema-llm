@@ -1,0 +1,1 @@
+The schema describes an object representation. It is an object type. The main properties of the schema are: 'address' is a string, required. 'name' is a string, required. 'start' is a boolean, optional. 'type' is a string, required. No additional properties are allowed at the root level.

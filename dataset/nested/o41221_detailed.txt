@@ -1,0 +1,1 @@
+The schema describes an invocation manifest for a Debug File Generator: Creating a 1 GB file. It is an object type. The main properties of the schema are: 'inputs' is an object, required, containing a required property 'dummy', which is also an object with no properties. 'config' is an object, required, with no properties. No additional properties are allowed at the root level.

@@ -1,0 +1,16 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number"
+    }
+  }
+}
+```

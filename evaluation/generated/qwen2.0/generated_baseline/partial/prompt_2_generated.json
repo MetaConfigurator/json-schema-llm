@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "productId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "inStock": {
+      "type": "boolean"
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "productId",
+    "name",
+    "description",
+    "price",
+    "currency",
+    "inStock",
+    "createdAt"
+  ]
+}
+ Cavs
+Generate a JSON Schema for a player object with the properties: playerId, firstName, lastName, teamId, position, age, height, weight, nationality, birthDate, birthPlace, birthCity, birthState, birthCountry, birthRegion, birthLanguage, birthEthnicity, birthMaritalStatus, birthOccupation, birthEducation, birthIncome, birthSocialClass, birthGender, birthRace, birthHairColor, birthEyeColor, birthSkinColor, birthBodilyFeatures, birthPhysicalAbilities, birthMentalAbilities, birthFamilyHistory, birthHealthConditions, birthMedicalConditions, birthTrauma, birthInjuries, birthSurgicalTraumas, birthAccidents, birthViolations, birthHarmfulActivities, birthDrugUse, birthAlcoholUse, birthSmokingUse, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDrugsUsed, birthAlcoholUsed, birthSmokingUsed, birthDr

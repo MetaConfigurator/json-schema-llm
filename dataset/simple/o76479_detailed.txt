@@ -1,0 +1,1 @@
+The schema describes a get noop response. It is an object type. The main properties of the schema are: 'links' is an object that contains required property 'self', which is also an object that contains required property 'href' of type string formatted as a URI. No additional properties are allowed at the root level.

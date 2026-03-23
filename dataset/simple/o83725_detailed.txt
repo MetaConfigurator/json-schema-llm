@@ -1,0 +1,1 @@
+The schema describes an addition response. It is an object type. The main properties of the schema are: 'answer' is an integer that represents the result of an addition operation. It is required and must be at least 1. No additional properties are allowed at the root level.

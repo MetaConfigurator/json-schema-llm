@@ -1,0 +1,1 @@
+The schema describes a Pokemon Type. It is an object type. The main properties of the schema are: 'slot' is an integer optional property. 'type' is an object optional property. It contains 'name', which is a string optional property, and 'url', which is a string in URL format optional property. No additional properties are allowed at the root level.

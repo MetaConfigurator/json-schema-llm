@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Embrace Mobile Monitoring SDK Configuration File",
+  "description": "A JSON Schema for the Embrace mobile monitoring SDK configuration file.",
+  "type": "object",
+  "properties": {
+    "title": {
+      "description": "Title of this configuration.",
+      "type": "string"
+    },
+    "description": {
+      "description": "Description of this configuration.",
+      "type": "string"
+    },
+    "schema_id_url": {
+      "description": "URL corresponding to version 1.0.0 of the configuration specification.",
+      "type": "string",
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "app_id": {
+      "description": "Application Identifier (ID). Exactly 5 characters long.",
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 5
+    },
+    "api_token": {
+      "description": "Hexadecimal API Token.",
+      "type": "string",
+      "minLength": 32,
+      "maxLength": 32
+    },
+    "ndk_enabled": {
+      "description": "Enable Native Crash Capture. Default is false.",
+      "type": "boolean"
+    },
+    "sdk_config": {
+      "description": "Additional properties for advanced SDK configuration sections. Grouped by section name within this object.",
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "app_id",
+    "api_token"
+  ],
+  "additionalProperties": true
+}

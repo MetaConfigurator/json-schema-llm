@@ -1,0 +1,1 @@
+The schema describes chargeback messages for Example Inc. It is an object type. The main properties of the schema are: 'functionCode' is a string and is required. 'usageUnits' is an integer and is required. 'division' is an integer and is required, with a minimum value of 10 and a maximum value of 30. No additional properties are allowed at the root level.

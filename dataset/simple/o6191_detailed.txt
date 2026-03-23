@@ -1,0 +1,1 @@
+The schema describes an array of objects. It is an array type. The main properties of the schema are: Each item in the array is an object with the following properties: 'time' is a string in date-time format, optional. 'name' is a string, required. 'payload' is an object, optional. No additional properties are allowed at the root level.

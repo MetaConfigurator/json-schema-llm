@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "strictSSL": {
+      "type": "boolean",
+      "default": true
+    },
+    "proxy": {
+      "type": "string",
+      "format": "uri"
+    },
+    "token": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

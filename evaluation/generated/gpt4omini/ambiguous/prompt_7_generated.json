@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Gaming Profile",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 20
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 13
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["PC", "PlayStation", "Xbox", "Nintendo", "Mobile"]
+      }
+    },
+    "favoriteGames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "onlineStatus": {
+      "type": "string",
+      "enum": ["Online", "Offline", "Away", "Do Not Disturb"]
+    },
+    "bio": {
+      "type": "string",
+      "maxLength": 250
+    },
+    "achievements": {
+      "type": "object",
+      "properties": {
+        "totalAchievements": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "completedGames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["totalAchievements", "completedGames"]
+    }
+  },
+  "required": ["username", "age", "platforms", "favoriteGames", "onlineStatus", "achievements"]
+}

@@ -1,0 +1,1 @@
+{ "type": "object", "properties": {"postId": {"type": "integer"}, "userId": {"type": "integer"}, "content": {"type": "string"}, "media": {"type": "array", "items": {"type": "object", "properties": {"type": {"type": "string"}, "url": {"type": "string"}}}}, "likes": {"type": "integer"}, "comments": {"type": "array", "items": {"$ref": "#/definitions/Comment"}} } }

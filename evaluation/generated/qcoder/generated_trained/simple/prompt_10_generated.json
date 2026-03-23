@@ -1,0 +1,21 @@
+{
+  "description": "A bot that helps onboarding new open-source contributors.",
+  "properties": {
+    "labels": {
+      "description": "Sets the labels if 'first-timers-only' is not what you are looking for.",
+      "type": "array",
+      "x-prompt": "What do you want to do?"
+    },
+    "template": {
+      "description": "Path to your template, relative from the repository root.",
+      "type": "string"
+    },
+    "repository": {
+      "description": "Specify a different repository than where the problem is.",
+      "type": "string"
+    }
+  },
+  "required": [],
+  "title": "Onboarding Bot",
+  "url": "/api/v1/bots"
+}

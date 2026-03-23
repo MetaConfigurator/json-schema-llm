@@ -1,0 +1,158 @@
+```json
+{
+  "definitions": {
+    "cli": {
+      "rule": "cli",
+      "binary": "cli_binary",
+      "semver": "cli_semver",
+      "version": "cli_version",
+      "line": "cli_line",
+      "matchIndex": "cli_match_index",
+      "platform": "cli_platform",
+      "error": "cli_error",
+      "ci": true,
+      "rules": [
+        {
+          "rule": "cli_binary",
+          "binary": "cli_binary",
+          "semver": "cli_semver",
+          "version": "cli_version",
+          "line": "cli_line",
+          "matchIndex": "cli_match_index",
+          "platform": "cli_platform",
+          "error": "cli_error",
+          "ci": true
+        },
+        {
+          "rule": "dir",
+          "platform": "dir",
+          "error": "dir_error",
+          "ci": false
+        },
+        {
+          "rule": "file",
+          "platform": "file",
+          "error": "file_error",
+          "ci": false
+        },
+        {
+          "rule": "env",
+          "platform": "env",
+          "error": "env_error",
+          "ci": false
+        },
+        {
+          "rule": "shell",
+          "platform": "shell",
+          "error": "shell_error",
+          "ci": false
+        },
+        {
+          "rule": "custom",
+          "plugin": "custom_plugin",
+          "name": "custom_name",
+          "platform": "custom_platform",
+          "error": "custom_error",
+          "ci": false
+        }
+      ]
+    },
+    "dir": {
+      "rule": "dir",
+      "platform": "dir",
+      "error": "dir_error",
+      "ci": false
+    },
+    "file": {
+      "rule": "file",
+      "platform": "file",
+      "error": "file_error",
+      "ci": false
+    },
+    "env": {
+      "rule": "env",
+      "platform": "env",
+      "error": "env_error",
+      "ci": false
+    },
+    "shell": {
+      "rule": "shell",
+      "platform": "shell",
+      "error": "shell_error",
+      "ci": false
+    },
+    "custom": {
+      "rule": "custom",
+      "plugin": "custom_plugin",
+      "name": "custom_name",
+      "platform": "custom_platform",
+      "error": "custom_error",
+      "ci": false
+    }
+  },
+  "properties": {
+    "config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["output"],
+      "properties": {
+        "output": {
+          "type": "string"
+        }
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule": {
+            "type": "string",
+            "enum": ["cli", "dir", "file", "env", "shell", "custom"]
+          },
+          "binary": {
+            "type": "string"
+          },
+          "semver": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "line": {
+            "type": "integer"
+          },
+          "matchIndex": {
+            "type": "integer"
+          },
+          "platform": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          },
+          "ci": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "binary",
+          "semver",
+          "version",
+          "line",
+          "matchIndex",
+          "platform",
+          "error",
+          "ci"
+        ]
+      }
+    }
+  }
+}
+```

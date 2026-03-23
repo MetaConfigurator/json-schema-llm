@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "GitHub Bot",
+  "description": "A GitHub bot that helps onboarding new open-source contributors.",
+  "type": "object",
+  "properties": {
+    "labels": {
+      "description": "Set the labels if `first-timers-only` is not what you are looking for.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "template": {
+      "description": "Path to your template, relative from the repository root.",
+      "type": "string"
+    },
+    "repository": {
+      "description": "Allow you to specify a different repository than where the problem is.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "esriDocumentation": {
+    "examples": [
+      {
+        "title": "onboarding-bot",
+        "code": {
+          "onboardingBot": {
+            "labels": [],
+            "template": "./templates/template.json",
+            "repository": "https://github.com/your-repo-name"
+          }
+        }
+      }
+    ]
+  }
+}

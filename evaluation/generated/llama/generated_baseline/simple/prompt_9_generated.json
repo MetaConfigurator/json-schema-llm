@@ -1,0 +1,1 @@
+{ "type": "object", "properties": {"identifiers": {"type": "boolean"}, "ignore": {"type": "string"}, "jsx": {"type": "boolean"}, "reporter": {"type": "string", "enum": ["default", "json", "pmd"]}, "suppress": {"type": "integer", "minimum": 0, "maximum": 100}, "threshold": {"type": "integer", "minimum": 15} } }

@@ -1,0 +1,1 @@
+The schema describes a person's name, with semantic components. It is an object type. The main properties of the schema are: 'additional' is an array any additional name components, which must contain string items. 'family' is a string the family name. 'given' is a string the given name. No additional properties are allowed at the root level.

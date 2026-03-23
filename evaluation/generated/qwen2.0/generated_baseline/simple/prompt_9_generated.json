@@ -1,0 +1,2 @@
+Assistant is a function that takes in a JSON Schema as input and returns a list of errors found during validation. The function uses the jsonschema library to validate the JSON Schema against the given JSON data. If any errors are found, it returns them as a list of dictionaries containing the error message and line number where the error occurred.	endif
+	endif

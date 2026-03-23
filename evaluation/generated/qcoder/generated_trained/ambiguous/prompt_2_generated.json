@@ -1,0 +1,252 @@
+{
+  "title": "Films",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "genre": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "director": {
+      "type": "string"
+    },
+    "actors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "plot": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "trailer_url": {
+      "type": "string"
+    },
+    "release_date": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "runtime": {
+      "type": "integer"
+    },
+    "budget": {
+      "type": "integer"
+    },
+    "directors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "writers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stars": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "genres": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "actor_list": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "awards": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "critics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "imdb_id": {
+      "type": "string"
+    },
+    "tmdb_id": {
+      "type": "string"
+    },
+    "torrents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "backdrops": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "videos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "credits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "similar_films": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_films": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_directors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_writers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_stars": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_genres": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_directors_genres": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_writers_genres": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_stars_genres": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_genres_directors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_genres_writers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_genres_stars": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_genres_directors_genres": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_genres_writers_genres": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_genres_stars_genres": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_genres_directors_genres_writers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_genres_directors_genres_writers_stars": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "best_genres_directors_genres_writers_stars_genres": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "year"
+  ]
+}

@@ -1,0 +1,12 @@
+```json
+{
+  "excludeFiles": ["secret"],
+  "gitignore": ".gitignore",
+  "exclude": [
+    "hidden",
+    "files",
+    "hiddenFiles"
+  ],
+  "hideFiles": []
+}
+```

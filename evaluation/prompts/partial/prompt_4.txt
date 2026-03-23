@@ -1,0 +1,1 @@
+Create a JSON Schema for a payment transaction object with the properties: transactionId, amount, paymentMethod, cardNumber, cvv, paypalEmail, iban, createdAt.

@@ -1,0 +1,42 @@
+{
+  "properties": {
+    "productId": {
+      "_id": "/product/0",
+      "type": "string"
+    },
+    "name": {
+      "_id": "/product/1",
+      "type": "string"
+    },
+    "description": {
+      "_id": "/product/2",
+      "type": "string"
+    },
+    "price": {
+      "_id": "/product/3",
+      "type": "number"
+    },
+    "currency": {
+      "_id": "/product/4",
+      "type": "string"
+    },
+    "inStock": {
+      "_id": "/product/5",
+      "type": "boolean"
+    },
+    "createdAt": {
+      "_id": "/product/6",
+      "type": "string"
+    }
+  },
+  "required": [
+    "productId",
+    "name",
+    "description",
+    "price",
+    "currency",
+    "inStock"
+  ],
+  "title": "Product",
+  "type": "object"
+}

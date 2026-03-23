@@ -1,0 +1,1 @@
+The schema describes arguments for a remote procedure call message. It is an object type. The main properties of the schema are: 'message' is a string required parameter representing the message parameter. 'icon_type' is an integer or null optional parameter with a minimum value of 1 and a maximum value of 3. No additional properties are allowed at the root level.

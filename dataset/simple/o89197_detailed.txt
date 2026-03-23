@@ -1,0 +1,1 @@
+The schema describes a person from the miniapp. It is an object type. The main properties of the schema are: 'id' is an integer unique person ID. 'first_name' is a string. 'last_name' is a string. 'login' is a string. No additional properties are allowed at the root level.

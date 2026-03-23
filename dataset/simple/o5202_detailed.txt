@@ -1,0 +1,1 @@
+The schema describes the result of the datasource.SetUpdateCallback procedure. It is an object type. The main properties of the schema are: 'result' is a boolean indicating the result. It is required. No additional properties are allowed at the root level.

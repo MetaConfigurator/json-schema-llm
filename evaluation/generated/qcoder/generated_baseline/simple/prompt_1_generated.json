@@ -1,0 +1,6 @@
+```json
+{
+  "version": "^\\d+\\.\\d+\\.\\d+\\.\\d+$",
+  "components": ["Visual Studio", "PowerShell", "C#"]
+}
+```

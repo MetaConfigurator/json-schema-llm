@@ -1,0 +1,38 @@
+{
+  "id": "https://raw.githubusercontent.com/alexandru-mihailovski/Portfolio-App/master/schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Portfolio schema",
+  "description": "Schema for Portfolio object",
+  "type": "object",
+  "properties": {
+    "portfolioId": {
+      "type": "string"
+    },
+    "ownerId": {
+      "type": "string"
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "currentValue": {
+          "type": "number"
+        }
+      }
+    },
+    "totalValue": {
+      "type": "number"
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  }
+}

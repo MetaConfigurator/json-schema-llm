@@ -1,0 +1,24 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "employees": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "department": {
+            "type": "string"
+          },
+          "salary": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}
+```

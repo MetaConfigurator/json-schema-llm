@@ -1,0 +1,7 @@
+```json
+{
+  "excludeFiles": ["secret.txt", "config.json"],
+  "gitignore": "bin/*,.gitignore",
+  "hiddenFiles": ["node_modules"]
+}
+```

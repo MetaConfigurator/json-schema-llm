@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "gruntTaskConfig",
+  "description": "Configuration for a Grunt task.",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "options": {
+      "type": "object"
+    },
+    "rollupOptions": {
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "dynamic": {
+      "type": "object",
+      "properties": {
+        "expand": {
+          "default": false,
+          "type": "boolean"
+        },
+        "cwd": {
+          "type": "string"
+        },
+        "dest": {
+          "type": "string"
+        },
+        "ext": {
+          "type": "string"
+        },
+        "extDot": {
+          "enum": [
+            "first",
+            "last"
+          ],
+          "default": "first"
+        },
+        "filter": {
+          "enum": [
+            "isFile",
+            "isDirectory",
+            "isBlockDevice",
+            "isCharacterDevice",
+            "isSymbolicLink",
+            "isFIFO",
+            "isSocket"
+          ]
+        },
+        "flatten": {
+          "default": false,
+          "type": "boolean"
+        },
+        "matchBase": {
+          "default": false,
+          "type": "boolean"
+        },
+        "nonull": {
+          "default": false,
+          "type": "boolean"
+        },
+        "rename": {
+          "type": "string"
+        },
+        "src": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "_uniqueItems": true
+        }
+      }
+    },
+    "fileFormat": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "_uniqueItems": true
+          }
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/dynamic"
+          }
+        }
+      ]
+    }
+  }
+}

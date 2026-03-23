@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "Links to various social media",
+    "items": {
+        "additionalProperties": {},
+        "properties": {
+            "owner": {
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "site": {
+                "type": "string"
+            },
+            "url": {
+                "type": "string"
+            }
+        },
+        "type": "object"
+    },
+    "title": "Social Links",
+    "type": "array"
+}

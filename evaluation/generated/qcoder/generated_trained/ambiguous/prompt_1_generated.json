@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Bank Account",
+  "description": "Schema for BankAccount",
+  "type": "object",
+  "properties": {
+    "accountNumber": {
+      "type": "string"
+    },
+    "bankName": {
+      "type": "string"
+    },
+    "branchCode": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "postalCode": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    }
+  }
+}

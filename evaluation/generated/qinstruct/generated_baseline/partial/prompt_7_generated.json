@@ -1,0 +1,50 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "postId": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "media": [
+      {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "url"]
+      }
+    ],
+    "likes": [],
+    "comments": [
+      {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "string"
+            },
+            "commentText": {
+              "type": "string"
+            }
+          },
+          "required": ["userId", "commentText"]
+        }
+      }
+    ]
+  },
+  "required": ["postId", "userId", "content", "media", "likes", "comments"],
+  "additionalProperties": false
+}
+```

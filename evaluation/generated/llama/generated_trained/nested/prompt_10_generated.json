@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ES6 Import Sorter Config",
+  "type": "object",
+  "properties": {
+    "sourcePrefixes": {
+      "description": "The prefixes of your source imports.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sectionPrefix": {
+      "description": "The prefix of your section title.",
+      "type": "string"
+    },
+    "sectionNames": {
+      "description": "The names following `sectionPrefix` of your section title.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "startImportBlockSign": {
+      "description": "The sign to mark the start of the import block.",
+      "type": "string",
+      "default": ""
+    },
+    "endImportBlockSign": {
+      "description": "The sign to mark the end of the import block.",
+      "type": "string",
+      "default": ""
+    },
+    "statementTerminator": {
+      "description": "The sign to mark the end of an import statement.",
+      "type": "string",
+      "default": ";"
+    },
+    "preCommands": {
+      "description": "A list of commands run before sorting.",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "command"
+            ],
+            "properties": {
+              "command": {
+                "type": "string",
+                "format": "html-selector"
+              },
+              "system": {
+                "type": "string",
+                "enum": [
+                  "vscode",
+                  "terminal"
+                ],
+                "default": "terminal"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

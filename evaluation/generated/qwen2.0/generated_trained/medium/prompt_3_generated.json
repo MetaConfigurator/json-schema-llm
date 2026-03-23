@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "configuration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "apiLocation",
+        "apiPort",
+        "apiPrefix",
+        "appArtifactLocation",
+        "build",
+        "customUrlScheme",
+        "devserverTimeout",
+        "host",
+        "overridableErrorCode",
+        "port",
+        "run",
+        "ssl",
+        "sslCert",
+        "sslKey",
+        "swaConfigFilename",
+        "swaConfigFilenameLegacy",
+        "swaConfigLocation"
+      ],
+      "additionalSchema": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "configuration"
+  ]
+}

@@ -1,0 +1,1 @@
+The schema describes a UI Module description. It is an object type. The main properties of the schema are: 'npm' is a string or null, describing the NPM module. 'url' is a string or null, describing the URL. 'local' is a string or null, describing the local path. 'args' is a string or null, describing the arguments. No additional properties are allowed at the root level.

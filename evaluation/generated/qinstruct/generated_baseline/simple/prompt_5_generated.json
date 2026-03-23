@@ -1,0 +1,18 @@
+```json
+{
+  "id": "extensionPackManifest",
+  "name": "Visual Studio Extension Pack",
+  "description": "A Visual Studio extension pack for enhancing productivity.",
+  "version": "^1.0.0",
+  "extensions": [
+    {
+      "name": "VSCode",
+      "vsixId": "VSCode"
+    },
+    {
+      "name": "GitLab CI/CD",
+      "vsixId": "GitLabCI"
+    }
+  ]
+}
+```

@@ -1,0 +1,1 @@
+The schema describes a representation of money. It is an object type. The main properties of the schema are: 'amount' is a number required field. 'currency' is a string optional field with a default value of 'USD'. No additional properties are allowed at the root level.

@@ -1,0 +1,1 @@
+The schema describes a user profile and associated attributes. It is an object type. The main properties of the schema are: 'guid' is a string and required. 'identifiers' is a string and required. No additional properties are allowed at the root level.

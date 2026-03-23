@@ -1,0 +1,40 @@
+{ 
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "config": {
+            "type": "object",
+            "properties": {
+                "output": {"type": "string", "enum": ["moderate", "verbose", "silent"]},
+                "requirements": {
+                    "type": "object",
+                    "properties": {
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/custom"
+                            }
+                        },
+                        "minItems": 1,
+                        "uniqueItems": true
+                    }
+                }
+            },
+            "required": ["output"]
+        },
+        "definitions": {
+            "custom": {
+                "type": "object",
+                "properties": {
+                    "rule": {"type": "string", "enum": ["custom"]},
+                    "plugin": {"type": "string"},
+                    "name": {"type": "string"},
+                    "platform": {"type": "string", "enum": ["darwin", "macos", "freebsd", "linux", "sunos", "win32", "windows"]},
+                    "error": {"type": "string"},
+                    "ci": {"type": "boolean"}
+                },
+                "required": ["rule", "plugin", "name", "platform", "error", "ci"]
+            }
+        }
+    }
+}

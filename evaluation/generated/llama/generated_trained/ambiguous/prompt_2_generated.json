@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Film",
+  "description": "A film is an object containing information about the movie.",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "director": {
+      "type": "string"
+    },
+    "genre": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "year": {
+      "type": "integer"
+    },
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "esriDocumentation": {
+    "examples": [
+      {
+        "title": "Film",
+        "code": {
+          "title": "Film",
+          "director": "Christopher Nolan",
+          "genre": [
+            "Action",
+            "Thriller"
+          ],
+          "year": 2012,
+          "cast": [
+            "Leonardo DiCaprio",
+            "Tom Hardy",
+            "Cillian Murphy"
+          ],
+          "tags": [
+            "Action",
+            "Thriller",
+            "Sci-Fi"
+          ]
+        }
+      }
+    ]
+  }
+}

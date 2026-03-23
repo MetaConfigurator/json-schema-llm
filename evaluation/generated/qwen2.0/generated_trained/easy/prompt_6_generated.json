@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "strictSSL": {
+      "default": true,
+      "description": "Whether strict SSL should be enabled.",
+      "type": "boolean"
+    },
+    "proxy": {
+      "type": "string",
+      "format": "uri"
+    },
+    "token": {
+      "type": "string",
+      "description": "An OAuth token used to increase GitHub API rate limits."
+    }
+  },
+  "required": [
+    "proxy",
+    "token"
+  ]
+}

@@ -1,0 +1,25 @@
+```json
+{
+  "imports": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "required": ["name", "description"]
+  },
+  "scopes": {
+    "type": "object",
+    "properties": {
+      "scope": {
+        "type": "string"
+      }
+    },
+    "required": ["scope"]
+  }
+}
+```

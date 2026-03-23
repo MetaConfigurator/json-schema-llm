@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Patient Record",
+  "description": "A Patient Record",
+  "type": "object",
+  "properties": {
+    "patientId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "string"
+    },
+    "gender": {
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "contactInfo": {
+      "type": "object",
+      "properties": {
+        "phone": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "medicalHistory": {
+      "type": "object",
+      "properties": {
+        "condition": {
+          "type": "string"
+        },
+        "diagnosisDate": {
+          "type": "string"
+        },
+        "medication": {
+          "type": "string"
+        }
+      }
+    },
+    "allergies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "patientId",
+    "name",
+    "dateOfBirth",
+    "gender",
+    "contactInfo",
+    "medicalHistory",
+    "allergies",
+    "createdAt"
+  ],
+  "additionalProperties": false
+}

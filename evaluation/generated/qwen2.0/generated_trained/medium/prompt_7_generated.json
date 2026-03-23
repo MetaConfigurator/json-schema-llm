@@ -1,0 +1,291 @@
+{
+  "title": "Embrace Mobile Monitoring SDK Configuration",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "app_id": {
+      "description": "Application Identifier",
+      "maxLength": 5,
+      "minLength": 5
+    },
+    "api_token": {
+      "description": "API Token",
+      "maxLength": 32,
+      "minLength": 32
+    },
+    "sdk_config": {
+      "description": "SDK configuration",
+      "type": "object",
+      "properties": {
+        "report_disk_usage": {
+          "description": "Disk Usage Collection",
+          "enum": [
+            "true"
+          ],
+          "default": true
+        },
+        "async_end": {
+          "description": "Automatically end the session when the SDK is stopped.",
+          "default": true
+        },
+        "capture_request_content_length": {
+          "description": "Capture request content length",
+          "default": true
+        },
+        "capture_coordinates": {
+          "description": "Capture coordinates",
+          "default": true
+        },
+        "capture_query_params": {
+          "description": "Capture query parameters",
+          "default": true
+        },
+        "enable": {
+          "description": "Enable Crash Capture",
+          "default": true
+        },
+        "enable_native_monitoring": {
+          "description": "Enable Native Crash Capture",
+          "default": true
+        },
+        "enforce": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native_monitoring": {
+          "description": "Enforce the default behavior",
+          "default": false
+        },
+        "enforce_native

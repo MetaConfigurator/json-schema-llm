@@ -1,0 +1,48 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "eventId": {
+      "type": "integer"
+    },
+    "eventType": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "integer"
+        },
+        "email": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": ["userId", "email", "role", "reason", "status"]
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  "required": [
+    "eventId",
+    "eventType",
+    "timestamp",
+    "payload",
+    "metadata"
+  ]
+}
+```

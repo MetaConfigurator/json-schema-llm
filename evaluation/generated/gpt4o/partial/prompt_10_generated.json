@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "portfolioId": {
+      "type": "string",
+      "description": "A unique identifier for the portfolio"
+    },
+    "ownerId": {
+      "type": "string",
+      "description": "A unique identifier for the owner of the portfolio"
+    },
+    "assets": {
+      "type": "array",
+      "description": "A list of assets in the portfolio",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of asset (e.g., stock, bond)"
+          },
+          "symbol": {
+            "type": "string",
+            "description": "The symbol representing the asset"
+          },
+          "quantity": {
+            "type": "number",
+            "description": "The quantity of the asset owned"
+          },
+          "currentValue": {
+            "type": "number",
+            "description": "The current value of the asset"
+          }
+        },
+        "required": ["type", "symbol", "quantity", "currentValue"]
+      }
+    },
+    "totalValue": {
+      "type": "number",
+      "description": "The total value of the portfolio"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date and time when the portfolio was created"
+    }
+  },
+  "required": ["portfolioId", "ownerId", "assets", "totalValue", "createdAt"]
+}

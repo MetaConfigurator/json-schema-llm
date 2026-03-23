@@ -1,0 +1,18 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "sourcePrefixes": [
+      "import",
+      "import"
+    ],
+    "sectionPrefix": "",
+    "sectionNames": [],
+    "startImportBlockSign": "",
+    "endImportBlockSign": "",
+    "statementTerminator": ";",
+    "preCommands": []
+  },
+  "required": ["sourcePrefixes", "sectionPrefix", "sectionNames", "startImportBlockSign", "endImportBlockSign", "statementTerminator", "preCommands"]
+}
+```

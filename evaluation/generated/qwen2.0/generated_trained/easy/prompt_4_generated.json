@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Visual Studio Live Share",
+  "description": "Configuration settings for Visual Studio Live Share files.",
+  "type": "object",
+  "properties": {
+    "excludeFiles": {
+      "items": [
+        "secret"
+      ],
+      "default": "hide",
+      "enum": [
+        "none",
+        "hide",
+        "exclude"
+      ]
+    },
+    "gitignore": {
+      "type": "string",
+      "default": "hide",
+      "enum": [
+        "hide",
+        "exclude"
+      ]
+    },
+    "hideFiles": {
+      "items": [
+        "file"
+      ],
+      "default": "hide",
+      "enum": [
+        "none",
+        "hide",
+        "exclude"
+      ]
+    }
+  },
+  "required": [
+    "excludeFiles",
+    "gitignore",
+    "hideFiles"
+  ]
+}

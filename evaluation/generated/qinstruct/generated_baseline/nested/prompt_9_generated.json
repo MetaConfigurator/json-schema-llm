@@ -1,0 +1,131 @@
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "css": {
+      "type": "string",
+      "description": "CSS Beautifier Settings"
+    },
+    "js": {
+      "type": "string",
+      "description": "JavaScript Beautifier Settings"
+    },
+    "default": {
+      "type": "boolean",
+      "description": "Default value for 'css'"
+    },
+    "extensions": {
+      "type": "array",
+      "description": "Extensions to apply to the output"
+    },
+    "files": {
+      "type": "array",
+      "description": "Files to include in the output"
+    },
+    "format_css": {
+      "type": "boolean",
+      "description": "Format CSS"
+    },
+    "format_js": {
+      "type": "boolean",
+      "description": "Format JavaScript"
+    },
+    "ignore": {
+      "type": "string",
+      "description": "Ignore files"
+    },
+    "ignore_blocks": {
+      "type": "string",
+      "description": "Ignore blocks"
+    },
+    "include": {
+      "type": "string",
+      "description": "Include files"
+    },
+    "indent": {
+      "type": "number",
+      "description": "Indentation for the output"
+    },
+    "js_beautify": {
+      "type": "boolean",
+      "description": "Use JavaScript Beautifier"
+    },
+    "max_attribute_length": {
+      "type": "number",
+      "description": "Maximum length of attributes"
+    },
+    "max_blank_lines": {
+      "type": "number",
+      "description": "Maximum blank lines"
+    },
+    "max_line_length": {
+      "type": "number",
+      "description": "Maximum line length"
+    },
+    "no_function_formatting": {
+      "type": "boolean",
+      "description": "Do not format function definitions"
+    },
+    "no_line_after_yaml": {
+      "type": "boolean",
+      "description": "Do not add trailing YAML lines"
+    },
+    "no_set_formatting": {
+      "type": "boolean",
+      "description": "Do not format set definitions"
+    },
+    "per_file_ignores": {
+      "type": "object",
+      "description": "Per-file ignores"
+    },
+    "preserve_blank_lines": {
+      "type": "boolean",
+      "description": "Preserve blank lines"
+    },
+    "preserve_leading_space": {
+      "type": "boolean",
+      "description": "Preserve leading spaces"
+    },
+    "profile": {
+      "type": "string",
+      "enum": ["html", "django", "jinja", "nunjucks", "handlebars", "golang", "angular"]
+    },
+    "require_pragma": {
+      "type": "boolean",
+      "description": "Require Python pragmas"
+    },
+    "use_gitignore": {
+      "type": "boolean",
+      "description": "Use Git ignore patterns"
+    }
+  },
+  "required": [
+    "css",
+    "js",
+    "default",
+    "extensions",
+    "files",
+    "format_css",
+    "format_js",
+    "ignore",
+    "ignore_blocks",
+    "include",
+    "indent",
+    "js_beautify",
+    "max_attribute_length",
+    "max_blank_lines",
+    "max_line_length",
+    "no_function_formatting",
+    "no_line_after_yaml",
+    "no_set_formatting",
+    "per_file_ignores",
+    "preserve_blank_lines",
+    "preserve_leading_space",
+    "profile",
+    "require_pragma",
+    "use_gitignore"
+  ],
+  "additionalProperties": false
+}
+```

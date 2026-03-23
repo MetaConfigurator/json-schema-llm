@@ -1,0 +1,1 @@
+{ "type": "object", "properties": {"name": {"type": "string"}, "email": {"type": "string", "format": "email"}, "department": {"type": "string"}, "role": {"type": "string"}, "salary": {"type": "number"}} }

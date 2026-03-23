@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BankAccount",
+  "type": "object",
+  "properties": {
+    "accountNumber": {
+      "type": "string",
+      "description": "The unique identifier for the bank account.",
+      "pattern": "^[0-9]{10,12}$"
+    },
+    "accountHolderName": {
+      "type": "string",
+      "description": "The name of the person who holds the account.",
+      "minLength": 1
+    },
+    "accountType": {
+      "type": "string",
+      "description": "The type of bank account.",
+      "enum": ["savings", "checking", "business", "joint"]
+    },
+    "balance": {
+      "type": "number",
+      "description": "The current balance of the bank account.",
+      "minimum": 0
+    },
+    "currency": {
+      "type": "string",
+      "description": "The currency in which the account is held.",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "branchCode": {
+      "type": "string",
+      "description": "The code of the branch where the account is held.",
+      "pattern": "^[0-9]{5}$"
+    },
+    "createdDate": {
+      "type": "string",
+      "description": "The date when the account was created.",
+      "format": "date"
+    },
+    "isActive": {
+      "type": "boolean",
+      "description": "Indicates whether the account is active."
+    }
+  },
+  "required": ["accountNumber", "accountHolderName", "accountType", "balance", "currency", "isActive"],
+  "additionalProperties": false
+}

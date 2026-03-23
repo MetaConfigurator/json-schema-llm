@@ -1,0 +1,14 @@
+The schema describes an fstab entry. It is an object type. It defines several reusable components under 'definitions': 'entry' is an object, schema for an fstab entry. It has required fields 'storage' and may contain properties 'fstype', 'options', and 'readonly'. The 'fstype' can only be one of the values: 'ext3', 'ext4', 'btrfs'. The 'options' is an array of strings with a minimum of 1 unique item. The 'readonly' is a boolean. The 'storage' property must be one of: 'diskDevice', 'diskUUID', 'nfs', or 'tmpfs', all of which are objects with their respective required fields.
+
+'diskDevice' is an object, which requires 'type' (with value 'disk') and 'device' (matching the pattern '^/dev/[^/]+(/[^/]+)*$').
+
+diskUUID' is an object, which requires 'type' (with value 'disk') and 'label' (matching the pattern '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$').
+
+'nfs' is an object, which requires 'type' (with value 'nfs'), 'server' (validating as hostname, ipv4, or ipv6), and 'remotePath' (matching the pattern '^(/[^/]+)+$').
+
+tmpfs' is an object, which requires 'type' (with value 'tmpfs') and 'sizeInMB' (a minimum of 16 and a maximum of 512).
+
+The main properties of the schema are:
+'/' is an object referencing the definition of 'entry'.
+
+No additional properties are allowed at the root level.

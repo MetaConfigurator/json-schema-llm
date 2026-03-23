@@ -1,0 +1,148 @@
+{
+  "properties": {
+    "options": {},
+    "definition": {
+      "properties": {
+        "expand": {
+          "default": false,
+          "type": "boolean"
+        },
+        "cwd": {
+          "description": "Path to current working directory.",
+          "type": "string"
+        },
+        "dest": {
+          "description": "Destination path.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "_uniqueItems": true
+        },
+        "ext": {
+          "enum": [
+            "first",
+            "last"
+          ],
+          "default": "first"
+        },
+        "extDot": {
+          "enum": [
+            "first",
+            "last"
+          ],
+          "default": "first"
+        },
+        "filter": {
+          "enum": [
+            "isFile",
+            "isDirectory",
+            "isBlockDevice",
+            "isCharacterDevice",
+            "isSymbolicLink",
+            "isFIFO",
+            "isSocket"
+          ]
+        },
+        "flatten": {
+          "default": false,
+          "type": "boolean"
+        },
+        "matchBase": {
+          "default": false,
+          "type": "boolean"
+        },
+        "nonull": {
+          "default": false,
+          "type": "boolean"
+        },
+        "rename": {
+          "type": "string"
+        },
+        "src": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "_uniqueItems": true
+        }
+      },
+      "required": [],
+      "type": "object"
+    },
+    "dynamic": {
+      "properties": {
+        "expand": {
+          "default": false,
+          "type": "boolean"
+        },
+        "cwd": {
+          "description": "Path to current working directory.",
+          "type": "string"
+        },
+        "dest": {
+          "description": "Destination path.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "_uniqueItems": true
+        },
+        "ext": {
+          "enum": [
+            "first",
+            "last"
+          ],
+          "default": "first"
+        },
+        "extDot": {
+          "enum": [
+            "first",
+            "last"
+          ],
+          "default": "first"
+        },
+        "filter": {
+          "enum": [
+            "isFile",
+            "isDirectory",
+            "isBlockDevice",
+            "isCharacterDevice",
+            "isSymbolicLink",
+            "isFIFO",
+            "isSocket"
+          ]
+        },
+        "flatten": {
+          "default": false,
+          "type": "boolean"
+        },
+        "matchBase": {
+          "default": false,
+          "type": "boolean"
+        },
+        "nonull": {
+          "default": false,
+          "type": "boolean"
+        },
+        "rename": {
+          "type": "string"
+        },
+        "src": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "_uniqueItems": true
+        }
+      },
+      "type": "object"
+    }
+  },
+  "title": "GruntTaskConfig",
+  "type": "object"
+}

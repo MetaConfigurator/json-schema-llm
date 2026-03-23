@@ -1,0 +1,1 @@
+The schema describes evaluating expressions with JSON paths. It is an object type. The main properties of the schema are: 'expression' is a string that describes what to evaluate; JSON paths are allowed, wrapped in {{this.is.a.path}}. It is required and must have a minimum length of 1. No additional properties are allowed at the root level.

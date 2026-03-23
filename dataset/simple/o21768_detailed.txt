@@ -1,0 +1,1 @@
+The schema describes the structure of a temperature event in degrees Fahrenheit. It is an object type. The main properties of the schema are: 'temp' is a number representing the temperature in degrees Fahrenheit. It is required and has a default value of 75.0, with a minimum value of -459.67. No additional properties are allowed at the root level.

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "UserRegistration",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "description": "Unique identifier of the user.",
+      "type": "string"
+    },
+    "email": {
+      "description": "Email address of the user.",
+      "type": "string"
+    },
+    "age": {
+      "description": "Age of the user in years.",
+      "type": "number"
+    }
+  }
+}

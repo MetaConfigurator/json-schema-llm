@@ -1,0 +1,1 @@
+Generate a JSON Schema for a product object with the properties: productId, name, description, price, currency, inStock, createdAt.

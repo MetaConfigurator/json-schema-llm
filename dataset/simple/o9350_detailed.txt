@@ -1,0 +1,1 @@
+The schema describes an object representing build information. It is an object type. The main properties of the schema are: 'title' is a string optional description. 'status' is an object that is required and must include the property 'url'. 'url' is a string that describes the URL to poll for build status updates. No additional properties are allowed at the root level.

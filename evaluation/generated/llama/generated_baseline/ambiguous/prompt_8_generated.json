@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Job Application Portal",
+  "type": "object",
+  "properties": {
+    "jobTitle": {
+      "type": "string",
+      "description": "The title of the job"
+    },
+    "jobDescription": {
+      "type": "string",
+      "description": "A brief description of the job"
+    },
+    "experienceRequired": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "The minimum number of years of experience required for the job"
+    },
+    "skillsRequired": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "The skills required for the job"
+    },
+    "salaryRange": {
+      "type": "array",
+      "items": {"type": "number"},
+      "description": "The salary range for the job"
+    },
+    "applicationStatus": {
+      "type": "string",
+      "enum": ["pending", "approved", "rejected"],
+      "description": "The current status of the application"
+    }
+  },
+  "required": [
+    "jobTitle",
+    "jobDescription",
+    "experienceRequired",
+    "skillsRequired",
+    "salaryRange",
+    "applicationStatus"
+  ]
+}

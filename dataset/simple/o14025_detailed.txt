@@ -1,0 +1,1 @@
+The schema describes an Artist. It is an object type. The main properties of the schema are: 'id' is a string required field. 'name' is a string required field. 'description' is a string optional field. 'tracks' is an object optional field. 'events' is an object optional field. No additional properties are allowed at the root level.

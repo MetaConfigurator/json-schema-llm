@@ -1,0 +1,18 @@
+{
+  "title": "Vehicle Registration System",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "vehicle": {
+      "type": "string"
+    },
+    "registration_number": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "vehicle",
+    "registration_number"
+  ]
+}

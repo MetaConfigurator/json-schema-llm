@@ -1,0 +1,16 @@
+{
+  "id": "https://visualstudio.microsoft.com/vs2017/extensionPack.json",
+  "name": "Visual Studio Extension Pack",
+  "description": "A Visual Studio extension pack manifest.",
+  "version": "^\\d{1}\\.\\d{1}\\.\\d$",
+  "extensions": [
+    {
+      "name": "Microsoft.VisualStudio.LanguageServices",
+      "vsixId": "Microsoft.VisualStudio.LanguageServices"
+    },
+    {
+      "name": "Microsoft.VisualStudio.Shell",
+      "vsixId": "Microsoft.VisualStudio.Shell"
+    }
+  ]
+}

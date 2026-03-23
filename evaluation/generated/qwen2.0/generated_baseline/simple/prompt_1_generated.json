@@ -1,0 +1,26 @@
+Assistant is a JSON Schema generator. It returns only valid JSON. No markdown. No explanations.
+The response must start with { and end with }.蹾
+蹾
+
+```json
+{
+    "schema": {
+        "version": "^\\d+\\.\\d+\\.\\d+\\.\\d+$",
+        "components": [
+            "component1"
+        ]
+    }
+}
+```
+
+```json
+{
+    "schema": {
+        "version": "^\\d+\\.\\d+\\.\\d+\\.\\d+$",
+        "components": [
+            "component1"
+        ],
+        "name": "component1"
+    }
+}
+```

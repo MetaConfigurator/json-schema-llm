@@ -1,0 +1,42 @@
+{
+  "properties": {
+    "identifiers": {
+      "default": false,
+      "description": "Limit the search to nodes with matching identifiers.",
+      "type": "boolean",
+      "x-prompt": "Do you want to limit the search to nodes with matching identifiers?"
+    },
+    "ignore": {
+      "description": "A regular expression used for matching paths to ignore.",
+      "type": "string"
+    },
+    "jsx": {
+      "default": false,
+      "description": "Process JSX files.",
+      "type": "boolean"
+    },
+    "reporter": {
+      "default": "default",
+      "description": "Name of the reporter to be used.",
+      "enum": [
+        "default",
+        "json",
+        "pmd"
+      ],
+      "type": "string"
+    },
+    "suppress": {
+      "default": 100,
+      "description": "Number of lines at which diffs should be suppressed.",
+      "minimum": 0,
+      "type": "integer"
+    },
+    "threshold": {
+      "default": 15,
+      "description": "Smallest subset of nodes to analyze.",
+      "type": "integer"
+    }
+  },
+  "title": "jsinspect",
+  "type": "object"
+}

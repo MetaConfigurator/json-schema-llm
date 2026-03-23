@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vehicle Registration System",
+  "type": "object",
+  "properties": {
+    "registrationNumber": {
+      "type": "string",
+      "pattern": "^[A-Z0-9-]+$",
+      "description": "Unique identifier for the vehicle registration."
+    },
+    "owner": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "minLength": 1,
+          "description": "First name of the vehicle owner."
+        },
+        "lastName": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Last name of the vehicle owner."
+        },
+        "address": {
+          "type": "string",
+          "description": "Residential address of the vehicle owner."
+        },
+        "contactNumber": {
+          "type": "string",
+          "pattern": "^\\+?[0-9]{7,15}$",
+          "description": "Contact number of the vehicle owner."
+        }
+      },
+      "required": ["firstName", "lastName", "address", "contactNumber"]
+    },
+    "vehicle": {
+      "type": "object",
+      "properties": {
+        "make": {
+          "type": "string",
+          "description": "Manufacturer of the vehicle."
+        },
+        "model": {
+          "type": "string",
+          "description": "Model of the vehicle."
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1886,
+          "maximum": 2100,
+          "description": "Year the vehicle was manufactured."
+        },
+        "vin": {
+          "type": "string",
+          "pattern": "^[A-HJ-NPR-Z0-9]{17}$",
+          "description": "Vehicle Identification Number."
+        },
+        "color": {
+          "type": "string",
+          "description": "Color of the vehicle."
+        }
+      },
+      "required": ["make", "model", "year", "vin", "color"]
+    },
+    "registrationDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the vehicle was registered."
+    },
+    "expiryDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the vehicle registration expires."
+    }
+  },
+  "required": ["registrationNumber", "owner", "vehicle", "registrationDate", "expiryDate"]
+}

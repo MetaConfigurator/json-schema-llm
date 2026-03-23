@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Social Media Post",
+  "type": "object",
+  "properties": {
+    "postId": {
+      "description": "Post ID",
+      "type": "string"
+    },
+    "userId": {
+      "description": "User ID",
+      "type": "string"
+    },
+    "content": {
+      "description": "Content of the post",
+      "type": "string"
+    },
+    "media": {
+      "description": "Media to be uploaded",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "likes": {
+      "description": "Number of likes",
+      "type": "number"
+    },
+    "comments": {
+      "description": "Comments on the post",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "description": "User ID",
+            "type": "string"
+          },
+          "commentText": {
+            "description": "Comment text",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "createdAt": {
+      "description": "Date and time when the post was created",
+      "type": "string"
+    }
+  }
+}

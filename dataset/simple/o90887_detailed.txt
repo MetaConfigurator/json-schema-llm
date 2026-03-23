@@ -1,0 +1,1 @@
+The schema describes a schema for data that needs the pointer escaped. It is an object type. The main properties of the schema are: '/path' is an object containing properties. It is optional. This object has a property '~prop' which is a number that must be at least 0. No additional properties are allowed at the root level.

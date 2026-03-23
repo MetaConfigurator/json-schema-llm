@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Embrace Mobile Monitoring SDK Configuration File",
+  "description": "A configuration file for the Embrace mobile monitoring SDK.",
+  "type": "object",
+  "additionalProperties": {
+    "type": "string"
+  },
+  "title": "Version 1.0.0",
+  "description": "Schema for the Embrace mobile monitoring SDK configuration file.",
+  "version": "1.0.0",
+  "url": "https://github.com/EmbraceMobile/embrace-sdk-json-schema/blob/master/config.json",
+  "properties": {
+    "app_id": {
+      "type": "string",
+      "description": "Application Identifier."
+    },
+    "api_token": {
+      "type": "string",
+      "description": "Hexadecimal API Token."
+    }
+  },
+  "required": [
+    "app_id",
+    "api_token"
+  ],
+  "options": {
+    "ndk_enabled": {
+      "type": "boolean",
+      "description": "Enable native crash capture. Default is false."
+    }
+  },
+  "options": {
+    "sdk_config": {
+      "type": "object",
+      "description": "Advanced SDK configuration options.",
+      "properties": {
+        "report_disk_usage": {
+          "type": "boolean",
+          "description": "Whether or not to collect disk usage information. Defaults to true."
+        }
+      },
+      "required": [
+        "enabled"
+      ]
+    }
+  },
+  "options": {
+    "networking": {
+      "type": "object",
+      "description": "Network configuration options.",
+      "properties": {
+        "capture_request_content_length": {
+          "type": "boolean",
+          "description": "Capture request content length. Default is true."
+        },
+        "disabled_url_patterns": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Unique string item representing regular expression pattern used to exclude URLs from capture."
+          },
+          "minItems": 1,
+          "_uniqueItems": true
+        },
+        "enable_native_monitoring": {
+          "type": "boolean",
+          "description": "Enable native crash capture. Default is true."
+        },
+        "trace_id_header": {
+          "type": "string",
+          "description": "Header name used for trace IDs. Default is explained in the documentation."
+        }
+      },
+      "required": [
+        "enabled"
+      ]
+    },
+    "session": {
+      "type": "object",
+      "description": "Session management options.",
+      "properties": {
+        "async_end": {
+          "type": "boolean",
+          "description": "Automatically terminate sessions after a certain amount of time. Default is false."
+        },
+        "max_session_seconds": {
+          "type": "integer",
+          "description": "Maximum number of seconds before terminating a session. Default is 60 seconds."
+        }
+      },
+      "required": [
+        "async_end",
+        "max_session_seconds"
+      ]
+    },
+    "startup_moment": {
+      "type": "object",
+      "description": "Startup moment options.",
+      "properties": {
+        "auto_end": {
+          "type": "boolean",
+          "description": "Automatically end sessions when they reach this amount of time. Default is true."
+        },
+        "take_screenshot": {
+          "type": "boolean",
+          "description": "Take screenshot of screen during session termination. Default is false."
+        }
+      },
+      "required": [
+        "auto_end",
+        "take_screenshot"
+      ]
+    },
+    "taps": {
+      "type": "object",
+      "description": "Tap management options.",
+      "properties": {
+        "capture_coordinates": {
+          "type": "boolean",
+          "description": "Capture tap coordinates. Default is true."
+        }
+      },
+      "required": [
+        "capture_coordinates"
+      ]
+    },
+    "webview": {
+      "type": "object",
+      "description": "Web view data capture options.",
+      "properties": {
+        "capture_query_params": {
+          "type": "boolean",
+          "description": "Capture query parameters. Default is true."
+        },
+        "enable": {
+          "type": "boolean",
+          "description": "Enable web view data capture. Default is true."
+        }
+      },
+      "required": [
+        "enable",
+        "capture_query_params"
+      ]
+    }
+  }
+}

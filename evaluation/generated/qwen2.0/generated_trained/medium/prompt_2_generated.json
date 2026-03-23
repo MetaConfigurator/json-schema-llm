@@ -1,0 +1,360 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Crowdin Configuration",
+  "description": "Configuration for Crowdin, a crowd-translation platform.",
+  "type": "object",
+  "properties": {
+    "project_id": {
+      "description": "The project ID",
+      "type": "string"
+    },
+    "project_id_env": {
+      "description": "The project ID environment variable",
+      "type": "string"
+    },
+    "api_token": {
+      "description": "The API token",
+      "type": "string"
+    },
+    "api_token_env": {
+      "description": "The API token environment variable",
+      "type": "string"
+    },
+    "base_path": {
+      "description": "The base path",
+      "type": "string"
+    },
+    "base_path_env": {
+      "description": "The base path environment variable",
+      "type": "string"
+    },
+    "base_url": {
+      "description": "The base URL",
+      "format": "uri",
+      "type": "string"
+    },
+    "base_url_env": {
+      "description": "The base URL environment variable",
+      "type": "string"
+    },
+    "preserve_hierarchy": {
+      "description": "Preserve hierarchy",
+      "type": "boolean"
+    },
+    "commit_message": {
+      "description": "Commit message",
+      "type": "string"
+    },
+    "append_commit_message": {
+      "description": "Append commit message",
+      "type": "boolean"
+    },
+    "export_languages": {
+      "description": "List of specific languages to export",
+      "items": {
+        "type": "string"
+      }
+    },
+    "files": {
+      "description": "Array of files configurations",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "description": "Source language code",
+            "type": "string"
+          },
+          "translation": {
+            "description": "Translation code",
+            "type": "string"
+          },
+          "ignore": {
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 1
+            },
+            "type": "array"
+          },
+          "translation_replace": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "excluded_target_languages": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "scheme": {
+            "description": "Scheme",
+            "type": "string"
+          },
+          "dest": {
+            "description": "Destination language code",
+            "type": "string"
+          },
+          "type": {
+            "description": "Type",
+            "enum": [
+              "unapproved",
+              "unapproved_with_changes",
+              "approved",
+              "approved_with_changes"
+            ]
+          },
+          "update_option": {
+            "enum": [
+              "update_as_unapproved",
+              "update_without_changes",
+              "translate_content",
+              "translate_attributes",
+              "content_segmentation"
+            ],
+            "default": "update_as_unapproved"
+          },
+          "translate_content": {
+            "description": "Translate content",
+            "minimum": 0,
+            "maximum": 1,
+            "type": "number"
+          },
+          "translate_attributes": {
+            "description": "Translate attributes",
+            "minimum": 0,
+            "maximum": 1,
+            "type": "number"
+          },
+          "content_segmentation": {
+            "description": "Segmentation",
+            "minimum": 0,
+            "maximum": 1,
+            "type": "number"
+          },
+          "translatable_elements": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "skip_untranslated_strings": {
+            "description": "Skip untranslated strings",
+            "type": "boolean"
+          },
+          "skip_untranslated_files": {
+            "description": "Skip untranslated files",
+            "type": "boolean"
+          },
+          "export_only_approved": {
+            "description": "Export only approved",
+            "type": "boolean"
+          },
+          "escape_quotes": {
+            "description": "Escape quotes",
+            "minimum": 0,
+            "maximum": 3,
+            "type": "number"
+          },
+          "escape_special_characters": {
+            "description": "Escape special characters",
+            "minimum": 0,
+            "maximum": 1,
+            "type": "number"
+          },
+          "first_line_contains_header": {
+            "description": "First line contains header",
+            "type": "boolean"
+          },
+          "languages_mapping": {
+            "items": {
+              "type": "object",
+              "properties": {
+                "two_letters_code": {
+                  "description": "Two letter code",
+                  "type": "string"
+                },
+                "android_code": {
+                  "description": "Android code",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "two_letters_code",
+                "android_code"
+              ]
+            },
+            "type": "object"
+          }
+        },
+        "required": [
+          "source",
+          "translation",
+          "ignore",
+          "translation_replace",
+          "excluded_target_languages",
+          "scheme",
+          "dest",
+          "type",
+          "update_option",
+          "translate_content",
+          "translate_attributes",
+          "content_segmentation",
+          "translatable_elements",
+          "skip_untranslated_strings",
+          "skip_untranslated_files",
+          "export_only_approved",
+          "escape_quotes",
+          "escape_special_characters",
+          "first_line_contains_header"
+        ]
+      },
+      "type": "array"
+    },
+    "root": {
+      "description": "Root",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "project_id",
+    "project_id_env",
+    "api_token",
+    "api_token_env",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "files",
+    "base_path",
+    "base_path_env",
+    "base_url",
+    "base_url_env",
+    "preserve_hierarchy",
+    "commit_message",
+    "append_commit_message",
+    "export_languages",
+    "

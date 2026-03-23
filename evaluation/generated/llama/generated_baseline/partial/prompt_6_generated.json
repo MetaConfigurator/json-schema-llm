@@ -1,0 +1,32 @@
+{ 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Order",
+    "type": "object",
+    "properties": {
+        "orderId": {"type": "integer", "description": "Unique identifier for the order"},
+        "customerId": {"type": "integer", "description": "Customer ID"},
+        "items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "productId": {"type": "integer", "description": "Product ID"},
+                    "quantity": {"type": "integer", "description": "Quantity of the product"},
+                    "price": {"type": "number", "description": "Price of the product"}
+                },
+                "required": ["productId", "quantity", "price"]
+            }
+        },
+        "shippingAddress": {
+            "type": "object",
+            "properties": {
+                "street": {"type": "string", "description": "Street address"},
+                "city": {"type": "string", "description": "City"},
+                "zip": {"type": "string", "description": "Zip code"}
+            },
+            "required": ["street", "city", "zip"]
+        },
+        "orderDate": {"type": "string", "format": "date-time", "description": "Date and time the order was placed"},
+        "status": {"type": "string", "enum": ["pending", "shipped", "delivered", "cancelled"], "description": "Status of the order"}
+    },
+    "required": ["orderId", "customerId", "items", "shippingAddress", "orderDate", "status"]

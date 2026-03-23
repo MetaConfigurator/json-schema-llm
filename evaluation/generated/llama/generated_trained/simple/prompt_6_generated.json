@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "tsdrc",
+  "type": "object",
+  "properties": {
+    "strictSSL": {
+      "description": "Whether strict SSL is enabled.",
+      "type": "boolean",
+      "default": true
+    },
+    "proxy": {
+      "description": "Any standard http-proxy supported by the request package.",
+      "type": "string",
+      "format": "uri"
+    },
+    "token": {
+      "description": "An OAuth token used to increase GitHub API rate limits.",
+      "type": "string"
+    }
+  }
+}

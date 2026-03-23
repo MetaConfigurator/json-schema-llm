@@ -1,0 +1,1 @@
+{ "type": "object", "properties": {"imports": {"type": "object", "additionalProperties": "false"}, "scopes": {"type": "object", "additionalProperties": "false"}} }

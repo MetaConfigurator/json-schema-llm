@@ -1,0 +1,1 @@
+The schema describes an expense. It is an object type. The main properties of the schema are: 'amount' is a number that represents expenses associated with the running of the business. It is required, must be a multiple of 0.01, and has a minimum value of 0. No additional properties are allowed at the root level.

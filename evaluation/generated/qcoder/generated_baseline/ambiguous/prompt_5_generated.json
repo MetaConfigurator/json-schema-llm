@@ -1,0 +1,37 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "diagnosis": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "patient_id",
+    "name",
+    "age",
+    "gender",
+    "address",
+    "phone_number",
+    "diagnosis"
+  ]
+}
+```

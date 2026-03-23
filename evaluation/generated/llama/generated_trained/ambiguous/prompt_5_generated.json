@@ -1,0 +1,224 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Hospital Patient Record",
+  "description": "A Hospital Patient Record is a document containing information about the patient's medical history, current condition, treatment plan, and other relevant details.",
+  "type": [
+    "object",
+    "null"
+  ],
+  "properties": {
+    "patient_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "date_of_birth": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number"
+    },
+    "sex": {
+      "enum": [
+        "male",
+        "female",
+        "other"
+      ]
+    },
+    "height": {
+      "type": "number"
+    },
+    "weight": {
+      "type": "number"
+    },
+    "blood_pressure": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "heart_rate": {
+      "type": "number"
+    },
+    "respiratory_rate": {
+      "type": "number"
+    },
+    "systolic_blood_pressure": {
+      "type": "number"
+    },
+    "diastolic_blood_pressure": {
+      "type": "number"
+    },
+    "pulse": {
+      "type": "number"
+    },
+    "temperature": {
+      "type": "number"
+    },
+    "fever": {
+      "type": "number"
+    },
+    "hypertension": {
+      "type": "boolean"
+    },
+    "pulmonary_condition": {
+      "type": "string"
+    },
+    "renal_problem": {
+      "type": "boolean"
+    },
+    "cardiovascular_problem": {
+      "type": "boolean"
+    },
+    "neurological_problem": {
+      "type": "boolean"
+    },
+    "eye_problem": {
+      "type": "boolean"
+    },
+    "skin_problem": {
+      "type": "boolean"
+    },
+    "musculoskeletal_problem": {
+      "type": "boolean"
+    },
+    "cognitive_problem": {
+      "type": "boolean"
+    },
+    "psychological_problem": {
+      "type": "boolean"
+    },
+    "allergy": {
+      "type": "boolean"
+    },
+    "medication": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "treatment_plan": {
+      "type": "string"
+    },
+    "admission_date": {
+      "type": "string"
+    },
+    "discharge_date": {
+      "type": "string"
+    },
+    "discharge_time": {
+      "type": "string"
+    },
+    "reason_for_admission": {
+      "type": "string"
+    },
+    "reason_for_discharge": {
+      "type": "string"
+    },
+    "reason_for_treatment": {
+      "type": "string"
+    },
+    "reason_for_rehabilitation": {
+      "type": "string"
+    },
+    "reason_for_surgery": {
+      "type": "string"
+    },
+    "reason_for_urgent_care": {
+      "type": "string"
+    },
+    "reason_for_emergency_care": {
+      "type": "string"
+    },
+    "reason_for_medical_procedure": {
+      "type": "string"
+    },
+    "reason_for_radiology": {
+      "type": "string"
+    },
+    "reason_for_chest_xray": {
+      "type": "string"
+    },
+    "reason_for_mri": {
+      "type": "string"
+    },
+    "reason_for_ct_scan": {
+      "type": "string"
+    },
+    "reason_for_ultrasound": {
+      "type": "string"
+    },
+    "reason_for_fiberoptic": {
+      "type": "string"
+    },
+    "reason_for_endoscopy": {
+      "type": "string"
+    },
+    "reason_for_colonoscopy": {
+      "type": "string"
+    },
+    "reason_for_psi": {
+      "type": "string"
+    },
+    "reason_for_hysteroscopy": {
+      "type": "string"
+    },
+    "reason_for_laparoscopy": {
+      "type": "string"
+    },
+    "reason_for_hysterectomy": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_injury": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_strain": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress_and_subfertility": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress_and_subfertility_and_obstructive_syndrome": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress_and_subfertility_and_obstructive_syndrome_and_perimenopause": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress_and_subfertility_and_obstructive_syndrome_and_perimenopause_and_hormonal_imbalance": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress_and_subfertility_and_obstructive_syndrome_and_perimenopause_and_hormonal_imbalance_and_risk_of_pregnancy": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress_and_subfertility_and_obstructive_syndrome_and_perimenopause_and_hormonal_imbalance_and_risk_of_pregnancy_and_early_return_to_work": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress_and_subfertility_and_obstructive_syndrome_and_perimenopause_and_hormonal_imbalance_and_risk_of_pregnancy_and_early_return_to_work_and_employment": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress_and_subfertility_and_obstructive_syndrome_and_perimenopause_and_hormonal_imbalance_and_risk_of_pregnancy_and_early_return_to_work_and_employment_and_healthcare_costs": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress_and_subfertility_and_obstructive_syndrome_and_perimenopause_and_hormonal_imbalance_and_risk_of_pregnancy_and_early_return_to_work_and_employment_and_healthcare_costs_and_unemployment": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress_and_subfertility_and_obstructive_syndrome_and_perimenopause_and_hormonal_imbalance_and_risk_of_pregnancy_and_early_return_to_work_and_employment_and_healthcare_costs_and_unemployment_and_relocation": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress_and_subfertility_and_obstructive_syndrome_and_perimenopause_and_hormonal_imbalance_and_risk_of_pregnancy_and_early_return_to_work_and_employment_and_healthcare_costs_and_unemployment_and_relocation_and_cost_of_implementation": {
+      "type": "string"
+    },
+    "reason_for_vaginal_pelvic_piriformis_protrusion_with_dyspareunia_and_anxiety_and_distress_and_subfertility_and_obstructive_syndrome_and_perimenopause_and_hormonal_imbalance_and_risk_of_pregnancy_and_

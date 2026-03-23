@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Employee",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique identifier for the employee"
+    },
+    "firstName": {
+      "type": "string",
+      "description": "First name of the employee"
+    },
+    "lastName": {
+      "type": "string",
+      "description": "Last name of the employee"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Email address of the employee"
+    },
+    "position": {
+      "type": "string",
+      "description": "Job position of the employee"
+    },
+    "department": {
+      "type": "string",
+      "description": "Department where the employee works"
+    },
+    "hireDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the employee was hired"
+    },
+    "salary": {
+      "type": "number",
+      "description": "Annual salary of the employee"
+    },
+    "isActive": {
+      "type": "boolean",
+      "description": "Indicates if the employee is currently active"
+    }
+  },
+  "required": ["id", "firstName", "lastName", "email", "position", "department", "hireDate", "salary", "isActive"],
+  "additionalProperties": false
+}

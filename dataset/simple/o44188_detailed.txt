@@ -1,0 +1,1 @@
+The schema describes a schema for type argument. It is an object type. The main properties of the schema are: 'Z1K1' is an enum which must be one of the following values: 'Z18'. 'Z18K1' is a string matching the pattern '^([ZB][1-9][0-9]*)?K[1-9][0-9]*$'. Both properties are required. No additional properties are allowed at the root level.

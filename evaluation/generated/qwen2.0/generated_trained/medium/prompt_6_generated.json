@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "options": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "fileFormat": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "files": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "dynamic": {
+              "type": "boolean"
+            }
+          }
+        },
+        "dynamic": {
+          "type": "boolean"
+        }
+      }
+    },
+    "dest": {
+      "type": "string"
+    },
+    "ext": {
+      "enum": [
+        "first",
+        "last"
+      ]
+    },
+    "filter": {
+      "enum": [
+        "isFile",
+        "isDirectory",
+        "isBlockDevice",
+        "isCharacterDevice",
+        "isSymbolicLink",
+        "isFIFO",
+        "isSocket",
+        "flatten"
+      ]
+    },
+    "flatten": {
+      "type": "boolean"
+    },
+    "nonull": {
+      "type": "boolean"
+    },
+    "src": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cwd": {
+      "type": "string"
+    },
+    "destDot": {
+      "type": "string"
+    },
+    "extDot": {
+      "enum": [
+        "first",
+        "last"
+      ]
+    }
+  },
+  "required": [
+    "dest",
+    "extDot",
+    "ext",
+    "destDot",
+    "extDot",
+    "cwd",
+    "dest",
+    "filter",
+    "filterDot",
+    "filterDotDot",
+    "filterDotDotDot",
+    "filterDotDotDotDot",
+    "filterDotDotDotDotDot",
+    "filterDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDotDot",
+    "filterDotDotDotDotDotDotDotDotDotDotDotDot

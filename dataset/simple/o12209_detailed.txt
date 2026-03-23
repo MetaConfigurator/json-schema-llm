@@ -1,0 +1,1 @@
+The schema describes an object structure. It is an object type. The main properties of the schema are: 'group' is a string that is required and must have a minimum length of 1. 'name' is a string that is optional. 'status' is a string that is optional and can be either 'offline' or 'online'. No additional properties are allowed at the root level.

@@ -1,0 +1,329 @@
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of objects that can be used to represent a user's preferences.",
+    "items": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the preference",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "The value associated with the preference",
+                    "type": "string"
+                }
+            },
+            "required": ["name", "value"]
+        }
+    },
+    "maxItems": 5,
+    "additionalProperties": false,
+    "title": "User Preferences",
+    "type": "object"
+}
+
+Make the following changes:
+- Remove the title from the schema
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of objects that can be used to represent a user's preferences.",
+    "items": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the preference",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "The value associated with the preference",
+                    "type": "string"
+                }
+            },
+            "required": ["name", "value"]
+        }
+    },
+    "maxItems": 5,
+    "additionalProperties": false,
+    "title": "User Preferences",
+    "type": "object"
+}
+
+Make the following changes:
+- Remove the additional properties from the schema
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of objects that can be used to represent a user's preferences.",
+    "items": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the preference",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "The value associated with the preference",
+                    "type": "string"
+                }
+            },
+            "required": ["name", "value"]
+        }
+    },
+    "maxItems": 5,
+    "additionalProperties": false,
+    "title": "User Preferences",
+    "type": "object"
+}
+
+Make the following changes:
+- Remove the additional properties from the schema
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of objects that can be used to represent a user's preferences.",
+    "items": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the preference",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "The value associated with the preference",
+                    "type": "string"
+                }
+            },
+            "required": ["name", "value"]
+        }
+    },
+    "maxItems": 5,
+    "additionalProperties": false,
+    "title": "User Preferences",
+    "type": "object"
+}
+
+Make the following changes:
+- Remove the additional properties from the schema
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of objects that can be used to represent a user's preferences.",
+    "items": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the preference",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "The value associated with the preference",
+                    "type": "string"
+                }
+            },
+            "required": ["name", "value"]
+        }
+    },
+    "maxItems": 5,
+    "additionalProperties": false,
+    "title": "User Preferences",
+    "type": "object"
+}
+
+Make the following changes:
+- Remove the additional properties from the schema
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of objects that can be used to represent a user's preferences.",
+    "items": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the preference",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "The value associated with the preference",
+                    "type": "string"
+                }
+            },
+            "required": ["name", "value"]
+        }
+    },
+    "maxItems": 5,
+    "additionalProperties": false,
+    "title": "User Preferences",
+    "type": "object"
+}
+
+Make the following changes:
+- Remove the additional properties from the schema
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of objects that can be used to represent a user's preferences.",
+    "items": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the preference",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "The value associated with the preference",
+                    "type": "string"
+                }
+            },
+            "required": ["name", "value"]
+        }
+    },
+    "maxItems": 5,
+    "additionalProperties": false,
+    "title": "User Preferences",
+    "type": "object"
+}
+
+Make the following changes:
+- Remove the additional properties from the schema
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of objects that can be used to represent a user's preferences.",
+    "items": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the preference",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "The value associated with the preference",
+                    "type": "string"
+                }
+            },
+            "required": ["name", "value"]
+        }
+    },
+    "maxItems": 5,
+    "additionalProperties": false,
+    "title": "User Preferences",
+    "type": "object"
+}
+
+Make the following changes:
+- Remove the additional properties from the schema
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of objects that can be used to represent a user's preferences.",
+    "items": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the preference",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "The value associated with the preference",
+                    "type": "string"
+                }
+            },
+            "required": ["name", "value"]
+        }
+    },
+    "maxItems": 5,
+    "additionalProperties": false,
+    "title": "User Preferences",
+    "type": "object"
+}
+
+Make the following changes:
+- Remove the additional properties from the schema
+eniable
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A list of objects that can be used to represent a user's preferences.",
+    "items": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the preference",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "The value associated with the preference",
+                    "type": "string"
+                }
+            },
+            "required": ["name", "value"]
+        }
+    },
+    "maxItems": 5,
+    "additionalProperties": false,
+    "title": "User Preferences",
+    "type": "object"
+}
+
+Make the following changes:
+- Remove

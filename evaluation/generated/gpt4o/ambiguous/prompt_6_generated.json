@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Travel Booking System",
+  "type": "object",
+  "properties": {
+    "bookingId": {
+      "type": "string",
+      "description": "Unique identifier for the booking"
+    },
+    "customer": {
+      "type": "object",
+      "properties": {
+        "customerId": {
+          "type": "string",
+          "description": "Unique identifier for the customer"
+        },
+        "name": {
+          "type": "string",
+          "description": "Full name of the customer"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Email address of the customer"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Contact phone number of the customer"
+        }
+      },
+      "required": ["customerId", "name", "email"]
+    },
+    "tripDetails": {
+      "type": "object",
+      "properties": {
+        "destination": {
+          "type": "string",
+          "description": "Destination of the trip"
+        },
+        "departureDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of departure"
+        },
+        "returnDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of return"
+        },
+        "travelers": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Number of travelers"
+        }
+      },
+      "required": ["destination", "departureDate", "travelers"]
+    },
+    "accommodation": {
+      "type": "object",
+      "properties": {
+        "hotelName": {
+          "type": "string",
+          "description": "Name of the hotel"
+        },
+        "checkInDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Check-in date"
+        },
+        "checkOutDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Check-out date"
+        },
+        "roomType": {
+          "type": "string",
+          "description": "Type of room booked"
+        }
+      },
+      "required": ["hotelName", "checkInDate", "checkOutDate"]
+    },
+    "payment": {
+      "type": "object",
+      "properties": {
+        "paymentId": {
+          "type": "string",
+          "description": "Unique identifier for the payment"
+        },
+        "amount": {
+          "type": "number",
+          "description": "Total amount paid"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency of the payment"
+        },
+        "paymentMethod": {
+          "type": "string",
+          "description": "Method of payment"
+        },
+        "paymentDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time of payment"
+        }
+      },
+      "required": ["paymentId", "amount", "currency", "paymentMethod"]
+    }
+  },
+  "required": ["bookingId", "customer", "tripDetails", "payment"]
+}

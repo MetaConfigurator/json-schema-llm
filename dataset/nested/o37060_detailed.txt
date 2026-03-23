@@ -1,0 +1,11 @@
+The schema describes an activity document. It is an object type. It defines several reusable components under 'definitions': 'BookableItem', 'Activity.ForAllDoc', 'Activity.ForProvidersDoc', 'User', 'User.Doc', and 'User.Login'.
+
+'BookableItem' is an object, representing a bookable item with required fields 'name', 'price', and 'quantity'. Each field must be a string or a number according to its type.
+
+The main properties of the schema are:
+
+'bookableItems' is an array of BookableItem, required. Each item must conform to the BookableItem definition.
+
+desc is a string, required. 
+
+No additional properties are allowed at the root level.

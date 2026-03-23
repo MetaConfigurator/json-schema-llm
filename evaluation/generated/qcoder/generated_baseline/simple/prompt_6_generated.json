@@ -1,0 +1,7 @@
+```json
+{
+  "strictSSL": true,
+  "proxy": "http://example.com",
+  "token": "your_token_here"
+}
+```

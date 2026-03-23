@@ -1,0 +1,22 @@
+{ 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Event Message",
+    "type": "object",
+    "properties": {
+        "eventId": {"type": "string", "description": "Unique identifier of the event"},
+        "eventType": {"type": "string", "enum": ["event", "notification"]},
+        "timestamp": {"type": "integer", "format": "date-time"},
+        "payload": {
+            "type": "object",
+            "properties": {
+                "userId": {"type": "string", "format": "id"},
+                "email": {"type": "string", "format": "email"},
+                "role": {"type": "string", "enum": ["admin", "user"]},
+                "reason": {"type": "string", "format": "string"},
+                "status": {"type": "string", "enum": ["pending", "approved", "rejected"]}
+            },
+            "required": ["userId", "email", "role", "reason", "status"]
+        },
+        "metadata": {"type": "object"}
+    }
+}

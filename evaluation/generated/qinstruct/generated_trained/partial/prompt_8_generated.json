@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "sensorId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "temperature",
+        "humidity",
+        "pressure",
+        "light",
+        "color"
+      ]
+    },
+    "value": {
+      "type": "number"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        },
+        "altitude": {
+          "type": "number"
+        }
+      }
+    },
+    "timestamp": {
+      "type": "number"
+    }
+  }
+}

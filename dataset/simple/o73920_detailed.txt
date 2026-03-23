@@ -1,0 +1,1 @@
+The schema describes the ASP.NET global configuration files. It is an object type. The main properties of the schema are: 'sources' is an array A list of source folders relative to this file. It is required. The array items must be of type string. No additional properties are allowed at the root level.

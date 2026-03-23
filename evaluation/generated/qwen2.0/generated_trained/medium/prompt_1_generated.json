@@ -1,0 +1,159 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Mocharc [json|yml|yaml]",
+  "description": "A JSON schema for a .mocharc.[json|yml|yaml] file.",
+  "properties": {
+    "allow-uncaught": {
+      "type": "boolean"
+    },
+    "async-only": {
+      "type": "boolean"
+    },
+    "bail": {
+      "type": "boolean"
+    },
+    "check-leaks": {
+      "type": "boolean"
+    },
+    "delay": {
+      "type": "boolean"
+    },
+    "exit": {
+      "type": "boolean"
+    },
+    "forbid-only": {
+      "type": "boolean"
+    },
+    "forbid-pending": {
+      "type": "boolean"
+    },
+    "global": {
+      "type": "string-array"
+    },
+    "jobs": {
+      "type": "integer"
+    },
+    "parallel": {
+      "type": "boolean"
+    },
+    "retries": {
+      "type": "integer"
+    },
+    "slow": {
+      "type": "integer"
+    },
+    "timeout": {
+      "type": "integer"
+    },
+    "ui": {
+      "type": "string"
+    },
+    "color": {
+      "type": "boolean"
+    },
+    "diff": {
+      "type": "boolean"
+    },
+    "full-trace": {
+      "type": "boolean"
+    },
+    "growl": {
+      "type": "boolean"
+    },
+    "inline-diffs": {
+      "type": "boolean"
+    },
+    "reporter": {
+      "type": "string"
+    },
+    "reporter-option": {
+      "type": "string-array"
+    },
+    "config": {
+      "type": "string"
+    },
+    "package": {
+      "type": "string"
+    },
+    "extension": {
+      "type": "string"
+    },
+    "file": {
+      "type": "string"
+    },
+    "ignore": {
+      "type": "string-array"
+    },
+    "recursive": {
+      "type": "boolean"
+    },
+    "require": {
+      "type": "string-array"
+    },
+    "sort": {
+      "type": "boolean"
+    },
+    "watch": {
+      "type": "boolean"
+    },
+    "watch-files": {
+      "type": "string"
+    },
+    "watch-ignore": {
+      "type": "string"
+    },
+    "fgrep": {
+      "type": "string"
+    },
+    "grep": {
+      "type": "string"
+    },
+    "invert": {
+      "type": "boolean"
+    },
+    "spec": {
+      "type": "string"
+    },
+    "enable-source-maps": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "allow-uncaught",
+    "async-only",
+    "bail",
+    "check-leaks",
+    "delay",
+    "exit",
+    "forbid-only",
+    "forbid-pending",
+    "global",
+    "jobs",
+    "parallel",
+    "retries",
+    "slow",
+    "timeout",
+    "ui",
+    "color",
+    "diff",
+    "full-trace",
+    "growl",
+    "inline-diffs",
+    "reporter",
+    "reporter-option",
+    "config",
+    "package",
+    "extension",
+    "file",
+    "ignore",
+    "recursive",
+    "require",
+    "sort",
+    "watch",
+    "watch-files",
+    "watch-ignore",
+    "fgrep",
+    "grep"
+  ]
+}

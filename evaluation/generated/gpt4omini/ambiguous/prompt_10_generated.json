@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vehicle Registration System",
+  "type": "object",
+  "properties": {
+    "vehicles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "registrationNumber": {
+            "type": "string",
+            "pattern": "^[A-Z0-9-]+$"
+          },
+          "owner": {
+            "type": "object",
+            "properties": {
+              "firstName": {
+                "type": "string"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "contactNumber": {
+                "type": "string",
+                "pattern": "^\\+?[0-9]{10,15}$"
+              }
+            },
+            "required": ["firstName", "lastName", "address", "contactNumber"]
+          },
+          "vehicleDetails": {
+            "type": "object",
+            "properties": {
+              "make": {
+                "type": "string"
+              },
+              "model": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer",
+                "minimum": 1886,
+                "maximum": 2023
+              },
+              "color": {
+                "type": "string"
+              },
+              "vin": {
+                "type": "string",
+                "pattern": "^[A-HJ-NPR-Z0-9]{17}$"
+              }
+            },
+            "required": ["make", "model", "year", "color", "vin"]
+          },
+          "registrationDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": ["registrationNumber", "owner", "vehicleDetails", "registrationDate", "expiryDate"]
+      }
+    }
+  },
+  "required": ["vehicles"]
+}

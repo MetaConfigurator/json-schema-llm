@@ -1,0 +1,1 @@
+The schema describes arguments for the remote procedure getPortfolioInfoEx. It is an object type. The main properties of the schema are: 'firm_id' is a string parameter firm_id, required. 'client_code' is a string parameter client_code, required. 'limit_kind' is a number parameter client_code, required. No additional properties are allowed at the root level.

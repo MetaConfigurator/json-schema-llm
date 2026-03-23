@@ -1,0 +1,1 @@
+The schema describes a response for version search. It is an object type. The main properties of the schema are: 'commitId' is a string that is optional. 'version' is a string that is optional. 'createdAt' is a string in date-time format that is optional. No additional properties are allowed at the root level.

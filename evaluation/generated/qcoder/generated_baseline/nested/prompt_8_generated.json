@@ -1,0 +1,48 @@
+```json
+{
+  "coord": {
+    "lat": 51.5074,
+    "lon": -0.1228
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "Good weather",
+      "icon": "clear-day"
+    }
+  ],
+  "base": "https://api.openweathermap.org/data/2.5/weather",
+  "main": {
+    "temp": 39.62,
+    "feels_like": 40.00,
+    "temp_min": 38.00,
+    "temp_max": 41.00,
+    "pressure": 1015,
+    "humidity": 60,
+    "sea_level": 1015,
+    "grnd_level": 1015
+  },
+  "visibility": 1000,
+  "wind": {
+    "speed": 15.0,
+    "deg": 180
+  },
+  "clouds": {
+    "all": 0
+  },
+  "dt": 163456000,
+  "sys": {
+    "type": 1,
+    "id": 500,
+    "message": 200,
+    "country": "United States",
+    "sunrise": 163456000,
+    "sunset": 163456000
+  },
+  "timezone": 0,
+  "id": 515074,
+  "name": "New York",
+  "cod": 200
+}
+```

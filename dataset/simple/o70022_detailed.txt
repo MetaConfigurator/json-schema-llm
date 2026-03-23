@@ -1,0 +1,1 @@
+The schema describes a saved game from Robbie. It is an object type. The main properties of the schema are: 'floors' is an array representing the different floors in the saved game. Each item in the array is an object with no defined properties. No additional properties are allowed at the root level.

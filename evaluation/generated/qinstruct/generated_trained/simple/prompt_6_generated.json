@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "strictSSL": {
+      "default": true,
+      "description": "Whether or not to enable strict SSL.",
+      "type": "boolean"
+    },
+    "proxy": {
+      "_format": "uri",
+      "description": "Any standard http-proxy supported by the request package.",
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    }
+  },
+  "title": "tsdrc",
+  "type": "object"
+}

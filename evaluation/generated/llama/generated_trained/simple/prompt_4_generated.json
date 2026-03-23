@@ -1,0 +1,33 @@
+{
+  "properties": {
+    "excludeFiles": {
+      "description": "Files that should be completely unavailable to guests when shared (e.g. secrets)",
+      "items": {
+        "type": "string"
+      },
+      "title": "Exclude Files",
+      "type": "array"
+    },
+    "gitignore": {
+      "default": "hide",
+      "description": "How.gitignore files should be treated with respect to excluding/hiding files from guests.",
+      "enum": [
+        "none",
+        "hide",
+        "exclude"
+      ],
+      "title": "Git Ignore",
+      "type": "string"
+    },
+    "hideFiles": {
+      "description": "Files that should be hidden from guest's file trees, but still accessible (e.g. when following the host)",
+      "items": {
+        "type": "string"
+      },
+      "title": "Hide Files",
+      "type": "array"
+    }
+  },
+  "title": "Live Share File Settings",
+  "type": "object"
+}

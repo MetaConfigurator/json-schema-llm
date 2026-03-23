@@ -1,0 +1,22 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "labels": [
+      {
+        "type": "array"
+      },
+      {
+        "type": "string"
+      }
+    ],
+    "template": {
+      "type": "string"
+    },
+    "repository": {
+      "type": "string"
+    }
+  },
+  "required": ["labels", "template", "repository"]
+}
+```

@@ -1,0 +1,140 @@
+```json
+{
+  "title": "Restaurant Ordering System",
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "A schema for a restaurant ordering system.",
+  "properties": {
+    "customerName": {
+      "type": "string"
+    },
+    "orderItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "totalCost": {
+      "type": "number"
+    }
+  },
+  "additionalProperties": false,
+  "esriDocumentation": {
+    "examples": [
+      {
+        "title": "Ordering a Meal",
+        "code": {
+          "restaurant": {
+            "id": "1c4f5b7d2a9e8c0cde",
+            "name": "Burger King",
+            "address": {
+              "street": "123 Main St",
+              "city": "New York",
+              "state": "NY",
+              "zip": "10001",
+              "country": "USA"
+            },
+            "phoneNumbers": [
+              {
+                "type": "text",
+                "value": "555-123-4567"
+              }
+            ]
+          },
+          "customers": [
+            {
+              "id": "1c4f5b7d2a9e8c0cde",
+              "name": "John Doe",
+              "email": "john.doe@example.com",
+              "phoneNumbers": [
+                {
+                  "type": "text",
+                  "value": "555-123-4567"
+                }
+              ],
+              "addresses": [
+                {
+                  "street": "123 Main St",
+                  "city": "New York",
+                  "state": "NY",
+                  "zip": "10001",
+                  "country": "USA"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "title": "Adding an Item to the Order",
+        "code": {
+          "restaurant": {
+            "id": "1c4f5b7d2a9e8c0cde",
+            "name": "Burger King",
+            "address": {
+              "street": "123 Main St",
+              "city": "New York",
+              "state": "NY",
+              "zip": "10001",
+              "country": "USA"
+            },
+            "phoneNumbers": [
+              {
+                "type": "text",
+                "value": "555-123-4567"
+              }
+            ]
+          },
+          "customers": [
+            {
+              "id": "1c4f5b7d2a9e8c0cde",
+              "name": "John Doe",
+              "email": "john.doe@example.com",
+              "phoneNumbers": [
+                {
+                  "type": "text",
+                  "value": "555-123-4567"
+                }
+              ],
+              "addresses": [
+                {
+                  "street": "123 Main St",
+                  "city": "New York",
+                  "state": "NY",
+                  "zip": "10001",
+                  "country": "USA"
+                }
+              ]
+            }
+          ]
+        },
+        "orderItems": [
+          {
+            "id": "1c4f5b7d2a9e8c0cde",
+            "name": "Whopper",
+            "price": 10.99,
+            "quantity": 1
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+This is a basic example of how you might structure your data in a RESTful API using JSON. The `restaurant` object contains information about the customer's location, phone numbers, and addresses. The `customers` array contains objects that represent individual customers, each with their own name, email address, phone number, and address.
+
+Each item in the `orderItems` array represents a single order item, including its ID, name, price, and quantity. This allows for easy querying and manipulation of orders. 
+
+Please note that this is just one possible way to design the schema based on the requirements of the problem. Depending on the specific needs of your application, you may need to modify or extend this schema.

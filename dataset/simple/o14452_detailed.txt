@@ -1,0 +1,1 @@
+The schema describes a temperature sensor's data. It is an object type. The main properties of the schema are: 'sensorId' is a string that is optional. 'temperature' is an object that is optional and contains properties: 'old', which is a number that is optional, and 'new', which is a number that is optional. No additional properties are allowed at the root level.

@@ -1,0 +1,154 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Crowdin",
+  "description": "Configuration for Crowdin, a crowd-translation platform.",
+  "type": "object",
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "description": "Identifies the project ID."
+    },
+    "project_id_env": {
+      "type": "string",
+      "description": "For the project ID environment variable"
+    },
+    "api_token": {
+      "type": "string",
+      "description": "For the API token"
+    },
+    "api_token_env": {
+      "type": "string",
+      "description": "For the API token environment variable"
+    },
+    "base_path": {
+      "type": "string",
+      "description": "For the base path"
+    },
+    "base_path_env": {
+      "type": "string",
+      "description": "For the base path environment variable"
+    },
+    "base_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "For the base URL"
+    },
+    "base_url_env": {
+      "type": "string",
+      "description": "For the base URL environment variable"
+    },
+    "preserve_hierarchy": {
+      "type": "boolean",
+      "description": "To preserve hierarchy"
+    },
+    "commit_message": {
+      "type": "string",
+      "description": "For the commit message"
+    },
+    "append_commit_message": {
+      "type": "boolean",
+      "description": "To append the commit message to the translation"
+    },
+    "export_languages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of specific languages to export"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "translation": {
+            "type": "string"
+          },
+          "ignore": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "translation_replace": {
+            "type": "object",
+            "properties": {
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          },
+          "excluded_target_languages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scheme": {
+            "type": "string"
+          },
+          "dest": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "update_option": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 3,
+            "default": 1
+          },
+          "translate_content": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+          },
+          "translate_attributes": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+          },
+          "content_segmentation": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+          },
+          "translatable_elements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "skip_untranslated_strings": {
+            "type": "boolean"
+          },
+          "skip_untranslated_files": {
+            "type": "boolean"
+          },
+          "export_only_approved": {
+            "type": "boolean"
+          },
+          "escape_quotes": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 3,
+            "default": 3
+          },
+          "escape_special_characters": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+          }
+        }
+      }
+    }
+  }
+}

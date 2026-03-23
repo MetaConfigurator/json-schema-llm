@@ -1,0 +1,10 @@
+```json
+{
+  "identifiers": false,
+  "ignore": null,
+  "jsx": false,
+  "reporter": "default",
+  "suppress": 100,
+  "threshold": 15
+}
+```

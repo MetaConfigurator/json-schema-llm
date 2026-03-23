@@ -1,0 +1,20 @@
+```json
+{
+  "sourcePrefixes": ["src", "components"],
+  "sectionPrefix": "sections",
+  "sectionNames": ["Home", "About", "Contact"],
+  "startImportBlockSign": ";",
+  "endImportBlockSign": ";",
+  "statementTerminator": ";",
+  "preCommands": [
+    {
+      "command": "npm install",
+      "system": "terminal"
+    },
+    {
+      "command": "yarn add",
+      "system": "terminal"
+    }
+  ]
+}
+```

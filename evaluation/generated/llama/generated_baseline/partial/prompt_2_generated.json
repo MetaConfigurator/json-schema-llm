@@ -1,0 +1,15 @@
+{ 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Product",
+    "type": "object",
+    "properties": {
+        "productId": {"type": "integer", "description": "Unique identifier for the product"},
+        "name": {"type": "string", "description": "Name of the product"},
+        "description": {"type": "string", "description": "Description of the product"},
+        "price": {"type": "number", "format": "decimal", "description": "Price of the product"},
+        "currency": {"type": "string", "enum": ["USD", "EUR", "GBP"], "description": "Currency of the product's price"},
+        "inStock": {"type": "boolean", "description": "Whether the product is in stock or not"},
+        "createdAt": {"type": "string", "format": "date-time", "description": "Date and time when the product was created"}
+    },
+    "required": ["productId", "name", "description", "price", "currency", "inStock", "createdAt"]
+}

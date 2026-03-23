@@ -1,0 +1,25 @@
+Modify the following schema:
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "Coordinates representing the position of an object.",
+    "properties": {
+        "x": {
+            "description": "The coordinate point on the x axis",
+            "type": "number"
+        },
+        "y": {
+            "description": "The coordinate point on the y axis",
+            "type": "number"
+        }
+    },
+    "required": [
+        "x",
+        "y"
+    ],
+    "title": "Object Position",
+    "type": "object"
+}
+
+Make the following changes:
+- Add a required property : z

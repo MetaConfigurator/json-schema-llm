@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Employee",
+  "description": "Employees in the company.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "esriDocumentation": {
+    "examples": [
+      {
+        "title": "Create an employee",
+        "code": {
+          "employees": [
+            {
+              "name": "John Doe",
+              "email": "john.doe@example.com",
+              "department": "Sales",
+              "jobTitle": "Sales Manager"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

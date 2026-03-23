@@ -1,0 +1,43 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "accountNumber": {
+      "type": "string",
+      "required": true,
+      "description": "A unique identifier for the bank account"
+    },
+    "balance": {
+      "type": "number",
+      "required": true,
+      "description": "The current balance of the bank account"
+    },
+    "transactions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "required": true,
+            "description": "The date when the transaction occurred"
+          },
+          "amount": {
+            "type": "number",
+            "required": true,
+            "description": "The amount of the transaction"
+          }
+        }
+      },
+      "required": true,
+      "description": "An array of transactions made on the bank account"
+    }
+  },
+  "required": [
+    "accountNumber",
+    "balance",
+    "transactions"
+  ],
+  "additionalProperties": false
+}
+```

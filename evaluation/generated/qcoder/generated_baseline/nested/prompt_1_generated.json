@@ -1,0 +1,121 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "allow-uncaught": {
+      "type": "boolean"
+    },
+    "async-only": {
+      "type": "boolean"
+    },
+    "bail": {
+      "type": "boolean"
+    },
+    "check-leaks": {
+      "type": "boolean"
+    },
+    "delay": {
+      "type": "boolean"
+    },
+    "exit": {
+      "type": "boolean"
+    },
+    "forbid-only": {
+      "type": "boolean"
+    },
+    "forbid-pending": {
+      "type": "boolean"
+    },
+    "global": {
+      "type": "string-array"
+    },
+    "jobs": {
+      "type": "int"
+    },
+    "parallel": {
+      "type": "bool"
+    },
+    "retries": {
+      "type": "int"
+    },
+    "slow": {
+      "type": "int"
+    },
+    "timeout": {
+      "type": "int"
+    },
+    "ui": {
+      "type": "string"
+    },
+    "color": {
+      "type": "bool"
+    },
+    "diff": {
+      "type": "bool"
+    },
+    "full-trace": {
+      "type": "bool"
+    },
+    "growl": {
+      "type": "bool"
+    },
+    "inline-diffs": {
+      "type": "bool"
+    },
+    "reporter": {
+      "type": "string"
+    },
+    "reporter-option": {
+      "type": "string-array"
+    },
+    "config": {
+      "type": "string"
+    },
+    "package": {
+      "type": "string"
+    },
+    "extension": {
+      "type": "string-array"
+    },
+    "file": {
+      "type": "string-array"
+    },
+    "ignore": {
+      "type": "string-array"
+    },
+    "recursive": {
+      "type": "bool"
+    },
+    "require": {
+      "type": "string-array"
+    },
+    "sort": {
+      "type": "bool"
+    },
+    "watch": {
+      "type": "bool"
+    },
+    "watch-files": {
+      "type": "string-array"
+    },
+    "watch-ignore": {
+      "type": "string-array"
+    },
+    "fgrep": {
+      "type": "string"
+    },
+    "grep": {
+      "type": "string"
+    },
+    "invert": {
+      "type": "bool"
+    },
+    "spec": {
+      "type": "string-array"
+    },
+    "enable-source-maps": {
+      "type": "bool"
+    }
+  }
+}
+```

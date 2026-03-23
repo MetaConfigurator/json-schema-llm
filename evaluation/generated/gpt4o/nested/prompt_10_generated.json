@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "sourcePrefixes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sectionPrefix": {
+      "type": "string"
+    },
+    "sectionNames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "startImportBlockSign": {
+      "type": "string",
+      "default": ""
+    },
+    "endImportBlockSign": {
+      "type": "string",
+      "default": ""
+    },
+    "statementTerminator": {
+      "type": "string",
+      "default": ";"
+    },
+    "preCommands": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "string",
+                "minLength": 1
+              },
+              "system": {
+                "type": "string",
+                "enum": ["vscode", "terminal"],
+                "default": "terminal"
+              }
+            },
+            "required": ["command"],
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

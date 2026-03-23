@@ -1,0 +1,28 @@
+```json
+{
+  "root": {
+    "title": "Embrace Mobile Monitoring SDK Configuration",
+    "description": "Configuration object for the Embrace mobile monitoring SDK.",
+    "schemaIdUrl": "https://json-schema.org/draft-04/schema#"
+  },
+  "app_id": "AppID",
+  "api_token": "APIToken",
+  "ndk_enabled": true,
+  "sdk_config": {
+    "report_disk_usage": true,
+    "capture_request_content_length": true,
+    "enable_native_monitoring": true,
+    "async_end": true,
+    "take_screenshot": true,
+    "startup_moment": true,
+    "tap_coordinates": true,
+    "webview_data_capture": true,
+    "enable": true,
+    "query_params": true,
+    "enable_native_monitoring": true,
+    "max_session_seconds": 60,
+    "capture_query_params": true,
+    "capture_coordinates": true
+  }
+}
+```

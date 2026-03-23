@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Bank Account",
+  "description": "A bank account is a type of financial account that allows users to store, transfer, and manage funds.",
+  "type": "object",
+  "properties": {
+    "accountNumber": {
+      "type": "string"
+    },
+    "accountName": {
+      "type": "string"
+    },
+    "accountType": {
+      "enum": [
+        "Savings",
+        "Checking",
+        "CreditCard",
+        "DebitCard",
+        "PrepaidCard",
+        "Other"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "esriDocumentation": {
+    "examples": [
+      {
+        "title": "Create Bank Account",
+        "code": {
+          "bankAccount": {
+            "accountNumber": "123456789012345678901234567890",
+            "accountName": "John Doe",
+            "accountType": "Savings"
+          }
+        }
+      },
+      {
+        "title": "Update Bank Account",
+        "code": {
+          "bankAccount": {
+            "accountNumber": "123456789012345678901234567890",
+            "accountName": "Jane Doe",
+            "accountType": "Checking"
+          }
+        }
+      }
+    ]
+  }
+}

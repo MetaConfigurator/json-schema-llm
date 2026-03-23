@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Bank Account",
+  "type": "object",
+  "properties": {
+    "accountNumber": {
+      "type": "string",
+      "pattern": "^[0-9]{10,12}$"
+    },
+    "accountHolder": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": ["firstName", "lastName", "dateOfBirth"]
+    },
+    "balance": {
+      "type": "number",
+      "minimum": 0
+    },
+    "accountType": {
+      "type": "string",
+      "enum": ["savings", "checking", "business"]
+    },
+    "createdDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "isActive": {
+      "type": "boolean"
+    }
+  },
+  "required": ["accountNumber", "accountHolder", "balance", "accountType", "createdDate", "isActive"]
+}

@@ -1,0 +1,40 @@
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "required": [
+      {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    ],
+    "additionalProperties": true,
+    "example": {
+      "title": "Travel Booking System",
+      "description": "A system for managing travel bookings.",
+      "required": [],
+      "additionalProperties": false,
+      "example": {
+        "name": "John Doe",
+        "email": "johndoe@example.com",
+        "phone": "+1234567890",
+        "address": "123 Main St, Anytown, USA",
+        "booking_date": "2023-01-01",
+        "total_cost": 1000,
+        "status": "confirmed"
+      }
+    }
+  },
+  "required": ["title", "description"],
+  "additionalProperties": false
+}
+```

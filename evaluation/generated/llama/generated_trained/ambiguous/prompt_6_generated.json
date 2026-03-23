@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Travel Booking System",
+  "description": "A simple travel booking system.",
+  "type": [
+    "object",
+    "null"
+  ],
+  "properties": {
+    "customer_id": {
+      "type": "string"
+    },
+    "destination": {
+      "type": "string"
+    },
+    "departure_date": {
+      "type": "string"
+    },
+    "arrival_date": {
+      "type": "string"
+    },
+    "traveler_name": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "esriDocumentation": {
+    "examples": [
+      {
+        "title": "Create a new booking",
+        "code": {
+          "travelBookingSystem": [
+            {
+              "travelBookingSystem": {
+                "destination": "Paris, France",
+                "departure_date": "2024-03-01",
+                "arrival_date": "2024-03-05",
+                "traveler_name": "John Doe"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": "Update an existing booking",
+        "code": {
+          "travelBookingSystem": [
+            {
+              "travelBookingSystem": {
+                "destination": "New York City, USA",
+                "departure_date": "2024-03-10",
+                "arrival_date": "2024-03-15",
+                "traveler_name": "Jane Smith"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

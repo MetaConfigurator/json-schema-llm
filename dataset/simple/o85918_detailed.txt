@@ -1,0 +1,1 @@
+The schema describes a dated trait. It is an object type. The main properties of the schema are: 'created_date' is a string when the content was originally created (RFC3339-formatted). 'last_updated_date' is a string when the content was last updated (RFC3339-formatted). No additional properties are allowed at the root level.

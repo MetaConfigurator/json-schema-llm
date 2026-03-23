@@ -1,0 +1,21 @@
+{
+  "description": "A collection of Azure Webjobs",
+  "properties": {
+    "WebJobs": {
+      "items": {
+        "properties": {
+          "filePath": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "filePath"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "title": "AzureWebjobCollection",
+  "type": "object"
+}

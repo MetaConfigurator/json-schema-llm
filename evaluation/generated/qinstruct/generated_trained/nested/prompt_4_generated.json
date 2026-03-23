@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Talismanrc",
+  "description": "A Talismanrc config file.",
+  "type": "object",
+  "properties": {
+    "fileignoreconfig": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "checksum": {
+            "type": "string"
+          },
+          "ignore_detectors": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "filecontent",
+                "filename",
+                "filesize"
+              ]
+            }
+          }
+        },
+        "required": [
+          "filename"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "scopeconfig": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scope": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "scope"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "allowed_patterns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^.*$"
+      }
+    },
+    "custom_patterns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^.*$"
+      }
+    },
+    "custom_severities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "detector": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        },
+        "required": [
+          "detector",
+          "severity"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "threshold": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "description": "The Talismanrc version."
+    }
+  },
+  "required": [
+    "version"
+  ],
+  "additionalProperties": false,
+  "esriDocumentation": {
+    "examples": [
+      {
+        "title": "Talismanrc",
+        "code": {
+          "fileignoreconfig": [
+            {
+              "filename": "test.txt",
+              "checksum": "1234567890abcdef01234567890abcdef",
+              "ignore_detectors": "filecontent"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

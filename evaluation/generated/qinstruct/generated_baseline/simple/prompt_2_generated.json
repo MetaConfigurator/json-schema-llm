@@ -1,0 +1,12 @@
+```json
+{
+  "webJobs": [
+    {
+      "filePath": "path/to/file1.txt"
+    },
+    {
+      "filePath": "path/to/file2.html"
+    }
+  ]
+}
+```

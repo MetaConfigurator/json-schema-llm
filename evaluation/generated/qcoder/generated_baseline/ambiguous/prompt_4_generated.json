@@ -1,0 +1,38 @@
+```json
+{
+  "type": "object",
+  "properties": {
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "required": true,
+            "description": "Unique identifier for the product"
+          },
+          "name": {
+            "type": "string",
+            "required": true,
+            "description": "Name of the product"
+          },
+          "price": {
+            "type": "number",
+            "required": true,
+            "description": "Price of the product in dollars"
+          },
+          "stock": {
+            "type": "number",
+            "required": true,
+            "description": "Number of available stock units"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "products"
+  ]
+}
+```

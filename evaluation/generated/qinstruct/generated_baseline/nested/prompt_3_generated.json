@@ -1,0 +1,26 @@
+```json
+{
+  "configuration": {
+    "apiLocation": "https://your-api-url.com",
+    "apiPort": 80,
+    "apiPrefix": "/api",
+    "appArtifactLocation": "build/your-app/artifact",
+    "appLocation": "static/app",
+    "build": true,
+    "customUrlScheme": ["http", "https"],
+    "devserverTimeout": 120000,
+    "host": "localhost",
+    "overridableErrorCode": [500],
+    "port": 3000,
+    "run": "npm run dev",
+    "ssl": false,
+    "sslCert": "",
+    "sslKey": "",
+    "swaConfigFilename": "staticwebapp.config.json",
+    "swaConfigFilenameLegacy": "routes.json",
+    "swaConfigLocation": "static/webapps",
+    "verbose": "true",
+    "context": ""
+  }
+}
+```

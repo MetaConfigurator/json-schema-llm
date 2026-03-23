@@ -1,0 +1,1 @@
+The schema describes the arguments for the AddLabel procedure. It is an object type. The main properties of the schema are: 'chart_tag' is a string required parameter for the chart_tag. 'label_params' is an object required parameter for the label_params, which allows additional properties of type string. No additional properties are allowed at the root level.
