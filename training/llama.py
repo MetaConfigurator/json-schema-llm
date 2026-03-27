@@ -1,0 +1,244 @@
+
+MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
+FINAL_MODEL_PATH = f"{MODEL_DIR}/llama"
+tokenizer = AutoTokenizer.from_pretrained(
+    MODEL_NAME,
+    use_fast=True
+)
+
+tokenizer.pad_token = tokenizer.eos_token
+tokenizer.padding_side = "right"
+
+class CausalLMPadCollator:
+    def __init__(self, tokenizer, pad_to_multiple_of=8):
+        self.tokenizer = tokenizer
+        self.pad_to_multiple_of = pad_to_multiple_of
+
+    def __call__(self, features):
+        # Extract input_ids and attention_mask
+        input_ids = [f["input_ids"] for f in features]
+        attention_mask = [f["attention_mask"] for f in features]
+
+        # Find max length
+        max_len = max(len(ids) for ids in input_ids)
+        if self.pad_to_multiple_of:
+            max_len = ((max_len + self.pad_to_multiple_of - 1) // self.pad_to_multiple_of) * self.pad_to_multiple_of
+
+        # Pad input_ids and attention_mask
+        padded_input_ids = [
+            ids + [self.tokenizer.pad_token_id] * (max_len - len(ids))
+            for ids in input_ids
+        ]
+        padded_attention_mask = [
+            mask + [0] * (max_len - len(mask))
+            for mask in attention_mask
+        ]
+
+        # Pad labels
+        labels = [f["labels"] for f in features]
+        padded_labels = [
+            l + [self.tokenizer.pad_token_id] * (max_len - len(l))
+            for l in labels
+        ]
+        # Mask padding for loss
+        padded_labels = [
+            [-100 if token == self.tokenizer.pad_token_id else token for token in l]
+            for l in padded_labels
+        ]
+
+        # Convert to tensors
+        batch = {
+            "input_ids": torch.tensor(padded_input_ids, dtype=torch.long),
+            "attention_mask": torch.tensor(padded_attention_mask, dtype=torch.long),
+            "labels": torch.tensor(padded_labels, dtype=torch.long),
+        }
+        return batch
+
+
+data_collator = CausalLMPadCollator(
+    tokenizer=tokenizer,
+    pad_to_multiple_of=8
+)
+
+
+
+# ---------------------------
+# Dataset
+# ---------------------------
+data_files = {
+    "train": f"{DATA_DIR}/train.jsonl",
+    "validation": f"{DATA_DIR}/val.jsonl"
+}
+
+dataset = load_dataset(
+    "json",
+    data_files=data_files
+)
+
+# ---------------------------
+# Preprocessing with filtering
+# ---------------------------
+# def preprocess_and_filter(example):
+#     prompt = (
+#         "You are a system that generates valid JSON Schema.\n"
+#         "You must output ONLY valid JSON.\n"
+#         "No explanations. No markdown.\n\n"
+#         f"User: {example['input']}\n"
+#         "Assistant:\n"
+#     )
+
+#     full_text = prompt + example["output"]
+
+#     tokens = tokenizer(
+#         full_text,
+#         truncation=True,
+#         max_length=2000,  # still used to limit input for tokenization
+#     )
+
+#     # Only keep samples with input_ids length < 2000
+#     if len(tokens["input_ids"]) >= 2000:
+#         return None  # this sample will be removed
+
+#     tokens["labels"] = tokens["input_ids"].copy()
+#     return tokens
+
+def preprocess_and_filter(example):
+
+    prompt_messages = [
+        {
+            "role": "system",
+            "content": (
+                "You are a JSON Schema generator.\n"
+                "Return ONLY valid JSON.\n"
+                "No markdown. No explanations.\n"
+                "The response must start with { and end with }."
+            )
+        },
+        {
+            "role": "user",
+            "content": example["input"]
+        }
+    ]
+
+    prompt_encoding = tokenizer.apply_chat_template(
+        prompt_messages,
+        tokenize=True,
+        add_generation_prompt=True
+    )
+    prompt_ids = prompt_encoding["input_ids"]  # <- key fix
+
+    answer_ids = tokenizer(
+        example["output"],
+        add_special_tokens=False
+    )["input_ids"]
+
+    input_ids = prompt_ids + answer_ids
+    labels = [-100] * len(prompt_ids) + answer_ids
+
+    if len(input_ids) > 2000:
+        return None
+
+    return {
+        "input_ids": input_ids,
+        "attention_mask": [1] * len(input_ids),
+        "labels": labels,
+    }
+
+# Map with filtering
+tokenized_dataset = dataset.map(
+    preprocess_and_filter,
+    remove_columns=dataset["train"].column_names,
+    batched=False
+)
+
+tokenized_dataset = tokenized_dataset.filter(
+    lambda example: example["input_ids"] is not None
+)
+
+train_dataset = tokenized_dataset["train"]
+val_dataset   = tokenized_dataset["validation"]
+
+lora_config = LoraConfig(
+    r=16,
+    lora_alpha=32,
+    target_modules=[
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+],
+    lora_dropout=0.05,
+    bias="none",
+    task_type="CAUSAL_LM"
+)
+
+
+training_args = TrainingArguments(
+    output_dir="./qwen-jsonschema",
+
+    per_device_train_batch_size=2,
+    per_device_eval_batch_size=1,
+    gradient_accumulation_steps=8,
+
+    num_train_epochs=8,
+    learning_rate=2e-5,
+    warmup_ratio=0.1,
+    lr_scheduler_type="cosine",
+
+    logging_steps=5,
+
+    eval_strategy="epoch",
+    save_strategy="epoch",
+
+    save_total_limit=5,
+
+    load_best_model_at_end=True,
+    metric_for_best_model="eval_loss",
+
+    fp16=True,
+    report_to="wandb",
+    weight_decay = 0
+)
+
+
+model = AutoModelForCausalLM.from_pretrained(
+    MODEL_NAME,
+    torch_dtype=torch.float16,
+    trust_remote_code=True
+)
+
+model.gradient_checkpointing_enable()
+model.config.use_cache = False
+
+model = get_peft_model(model, lora_config)
+model.print_trainable_parameters()
+
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=train_dataset,
+    eval_dataset=val_dataset,
+    data_collator=data_collator
+)
+
+trainer.train()
+
+# ---------------------------
+# Merge LoRA into base model
+# ---------------------------
+print("Merging LoRA weights into base model...")
+
+merged_model = model.merge_and_unload()
+
+# ---------------------------
+# Save merged model
+# ---------------------------
+merged_model.save_pretrained(FINAL_MODEL_PATH)
+tokenizer.save_pretrained(FINAL_MODEL_PATH)
+
+# Finish WandB
+
+wandb.finish()
