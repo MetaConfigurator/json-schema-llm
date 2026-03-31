@@ -1,0 +1,4 @@
+pandas
+deepdiff
+jsonref
+sentence_transformers

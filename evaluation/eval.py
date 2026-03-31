@@ -520,7 +520,7 @@ def evaluate_difficulty(difficulty):
     for i in range(1, 11):
         print(f"==================================={i}===========================================")
 
-        with open(f"{EVAL_DIR}/ground_truth/{difficulty}/prompt_{i}_expected.json", "r") as f:
+        with open(f"evaluation/ground_truth/{difficulty}/prompt_{i}_expected.json", "r") as f:
             gt_schema = json.load(f)
 
         keyword_count = count_schema_keywords(gt_schema)
@@ -531,7 +531,7 @@ def evaluate_difficulty(difficulty):
         "keyword_count": keyword_count
         })
 
-        generated_path = f"{EVAL_DIR}/generated/qcoder/generated_trained/{difficulty}/prompt_{i}_generated.json"
+        generated_path = f"evaluation/generated/qcoder/generated_trained/{difficulty}/prompt_{i}_generated.json"
 
         generated_schema, valid = load_json_safe(
             generated_path

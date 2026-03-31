@@ -29,17 +29,20 @@ Dataset Size:
 - Validation: 389
 - Test: 50
 
-## Training
-- Input: NL schema requirements
-- Output: JSON Schema
-- PEFT + LoRA to speed up fine-tuning on constrained hardware
+## How to Run
+###Training & Inference
+- Go to https://colab.research.google.com
+- Select File → Open notebook → GitHub and paste the repository URL, or upload the .ipynb file directly.
+- Runtime → Change runtime type → Hardware accelerator → T4 GPU
+- Run all the cells
 
-## Evaluation
-- Custom pipeline (no standard schema similarity metric exists)
+###Evaluation
+- cd evaluation
+- python eval.py
 
-Metrics:
-- Precision
-- Recall
-- Accuracy
-- Micro-F1
-- Macro-F1
+###Deployment
+1. Model deployment 
+  - cd deployment
+  - model_deployment.py -> Replace the folder_path and repo_id with your paths
+  - python model_deployment.py
+
